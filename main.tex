@@ -1,0 +1,234 @@
+% Version 1.0 by Sajid Mohamed, Geldrop, November 2022
+% Thanks - Joost van Pinxten, Joos Buijs
+% Use at your own risk.
+% Attribution is appreciated
+
+%The main PhD thesis file (compile this one for the full thesis), this file only calls other files for layout and contents, as little as possible should be declared here
+
+% Compiled without errors in Overleaf using 
+%---------------------------------------------------------
+%This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.12.13)  2 NOV 2022 20:09
+%entering extended mode
+% \write18 enabled.
+% %&-line parsing enabled.
+%**main.tex
+%(/compile/main.tex
+%LaTeX2e <2019-10-01> patch level 3
+%----------------------------------------------------------
+
+
+% \documentclass[draft,b5paper]{book}
+\documentclass[b5paper,openany]{book}
+
+%All style, macro and package definitions go here
+\input{metadata} % personal data and user ad-hoc commands
+\input{config}
+\input{commands}
+
+%Generate index 
+\makeindex
+
+\tikzset{
+    chapter pic/.style={
+        inner sep=0pt,
+        outer sep=0pt,
+        opacity=.5
+    },
+    chapter name/.style={
+        xshift=-25mm,
+        yshift=30mm,
+        font=\sffamily\bfseries\Huge,
+        text=black},
+    chapter number/.style={
+        white,
+        scale=15,
+        yshift=-1mm
+    },
+    chapter text/.style={
+        fill=black!80!black,
+        text=white,
+        font=\Huge\bfseries,
+        inner ysep=12pt,
+        inner xsep=20pt,
+        rounded rectangle,
+        xshift=-20mm,
+        yshift=7.5mm
+    },
+}
+
+
+\begin{document}
+
+%% uncomment below to include the cover page
+%\ifwebversion
+%\includepdf{cover-full.pdf}
+%\fi
+
+%\begin{comment} %uncomment to avoid the graphics on Chapter first pages
+\definecolor{chapopcolor}{cmyk}{0.95,0.75,0.5,0.7} % specific for my thesis
+\definecolor{covergold}{cmyk}{0.2,0.3,0.55,0.05} % specific for my thesis
+\makeatletter
+\titleformat{name=\chapter}{}{}{0pt}{
+    \Materialfalse%
+    \thispagestyle{empty}%
+\checkoddpage%
+\ifoddpage%
+    \clearpage%\cleartoevenpage%
+\fi
+    \thispagestyle{empty}%
+    \begin{tikzpicture}[overlay,remember picture]%
+    \node [anchor=south west, chapter pic,xshift=-3mm,yshift=-3mm] at (current page.south west) {\includegraphics{chapter-pages-bleed.pdf}};
+    \fill[chapopcolor,opacity=0.75] ([xshift=-5mm, yshift=-5mm] current page.south west) rectangle ([xshift=5mm, yshift=5mm] current page.north east);
+    \fill[chapopcolor,opacity=.75] ([yshift=-30mm] current page.west) rectangle (current page.south east);
+     \foreach \x in {-3,...,14}
+        \foreach \y in {-3,...,21} 
+        {
+            \pgfmathtruncatemacro{\odd}{mod(\y,2)}    
+            %    {\pgfmathtruncatemacro{\label}{\x - 5 *  \y +21}
+            \pgfmathrandominteger{\alea}{0}{4}
+            \node[covergold,circle,fill,inner sep=0em,minimum size=\alea*0.5em] (\x\y) at (1*\x + \odd*0.5,-1*\y) {}; 
+        }
+        \node [chapter number] at (current page.center) {{\fontfamily{qag}\selectfont\bfseries\Huge\thechapter}};
+    \end{tikzpicture}
+    \clearpage
+    \thispagestyle{plain}
+    \begin{tikzpicture}[overlay,remember picture]
+    \node [anchor=south east, chapter pic,xshift=3mm,yshift=-3mm] at (current page.south east) {\includegraphics{chapter-pages-bleed.pdf}};
+    \end{tikzpicture}
+    \vspace*{10mm}
+    \begin{flushright}
+        {\fontfamily{qag}\selectfont\bfseries\huge#1}
+    \end{flushright}
+    \vspace*{10mm}
+    \afterpage{}       
+}
+\titleformat{name=\chapter,numberless}{}{}{0pt}{
+    \Materialfalse
+    %\clearpage
+    %\thispagestyle{plain}
+    \begin{tikzpicture}[overlay,remember picture]
+    \node [anchor=south west, chapter pic,xshift=-3mm,yshift=-3mm] at (current page.south west) {\includegraphics{chapter-pages-bleed.pdf}};
+    \end{tikzpicture}
+    \thispagestyle{plain}
+    \begin{tikzpicture}[overlay,remember picture]
+    \node [anchor=south east, chapter pic,xshift=3mm,yshift=-3mm] at (current page.south east) {\includegraphics{chapter-pages-bleed.pdf}};
+    \end{tikzpicture}
+    \vspace*{10mm}
+    \begin{flushright}
+        {\fontfamily{qag}\selectfont\bfseries\huge#1}
+    \end{flushright}
+    \vspace*{10mm}
+}
+\makeatother
+\titlespacing*{\chapter}{0pt}{0pt}{0pt}    
+
+\frontmatter
+%\end{comment} %uncomment to avoid the graphics on Chapter first pages
+
+\pagenumbering{roman}
+% Frontmatter
+\include{FrontBackmatter/TitlepageOfficial}
+\include{FrontBackmatter/Titlepage}
+\include{FrontBackmatter/Titleback}
+\cleardoublepage
+
+\input{FrontBackmatter/Dedication}
+\patchcmd{\chapter}{\cleardoublepage}{\relax}{}{}
+\patchcmd{\chapter}{\clearpage}{\relax}{}{}
+\input{FrontBackmatter/Abstract}
+
+%Table of contents
+\tableofcontents
+
+% MAIN CHAPTERS
+%--------------
+% the \mainmatter was giving me some issues. Needed to modify it as below
+\makeatletter
+\renewcommand*\mainmatter{%
+  %\clearpage
+  \newpage
+  %\patchcmd{\chapter}{\clearpage}{\relax}{}{}
+  \@mainmattertrue
+}
+\makeatother
+%-------------
+
+\mainmatter
+
+\AddChapterBoxes
+
+\pagenumbering{arabic}
+%--- some numbering issues when using Chapter graphics. Introduction starts at page 3 without the below two commands. With the below commands, the Introduction starts at 1, but the Introduction at \toc is -1. Need to manually remove the '-' from the pdf file in the end
+\setcounter{page}{1}
+\addtocounter{page}{-2}
+%---
+%Introduction
+\subimport*{Chapters/}{01_Intro}
+
+%SPADe by Parallelism
+\subimport*{Chapters/}{05_Parallel}
+
+%SPADe by Pipelining
+\subimport*{Chapters/}{06_Pipelining}
+
+%SPADe by Pipelined Parallelism
+\subimport*{Chapters/}{07_PipelinedParallelism}
+
+%SPADe considering workload variations
+\subimport*{Chapters/}{03_WorkloadVariations}
+
+%Approximation-aware design
+\subimport*{Chapters/}{04_Approximation}
+
+% Conclusion
+\subimport*{Chapters/}{08_Conclusion}
+
+\Materialfalse
+
+\printglossary[nonumberlist]
+% Lists of figures and tables
+\listoffigures
+\listoftables
+
+%
+% Those things after the main chapters
+%
+
+%
+% APPENDICES
+%
+\begin{comment}
+\let\appendixpagenameorig\appendixpagename
+\renewcommand{\appendixpagename}{\sffamily\appendixpagenameorig}
+\appendix
+
+\begin{appendices}
+\addtocontents{toc}{\protect\setcounter{tocdepth}{0}}    
+    %    \Materialtrue
+    %\input{./Appendices/AppendixExample}
+    %
+    
+    \subimport*{Appendices/}{AppendixExample}
+
+    \clearpage
+    \pagestyle{empty}    
+\end{appendices}
+
+\end{comment}
+
+\input{./FrontBackmatter/Bibliography}
+
+%INDEX
+%\cleardoublepage
+\printindex
+
+\backmatter
+
+% %\cleardoublepage
+\input{FrontBackmatter/Acknowledgments}
+
+\input{FrontBackmatter/LoP}
+
+\input{FrontBackmatter/curriculumVitae}
+
+\end{document}

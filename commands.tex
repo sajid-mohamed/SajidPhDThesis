@@ -1,0 +1,221 @@
+%% user commands
+
+%% Symbols
+\newcommand{\argmax}{\textrm{arg}\max}
+\newcommand{\B}{{\mathbb B}}
+\newcommand{\Ce}{{\mathbb C}}
+\newcommand{\Expectation}[1]{\ensuremath{\mathds{E}[#1]}}
+\newcommand{\ExpectationBig}[1]{\ensuremath{\mathds{E}\Big[#1\Big]}}
+\newcommand{\F}{{\mathbb{F}}}
+\newcommand{\Inv}{{\mathrm{Inv}}}
+\newcommand{\N}{{\mathbb{N}}}
+\newcommand{\Natural}{\mathbb{N}}
+\newcommand{\Next}{{\mathrm{Next}}}
+\newcommand{\Pre}{\mathrm{Pre}}
+\newcommand{\Post}{\textrm{Post}}
+\newcommand{\Q}{{\mathbb{Q}}}
+\newcommand{\R}{{\mathbb{R}}}
+\renewcommand{\Re}{{\mathbb{R}}}
+\newcommand{\Reach}{{\mathrm{Reach}}}
+\newcommand{\Real}{\mathbb{R}}
+\newcommand{\reals}{\ensuremath{(\R, <, +, -, \cdot, 0,1)}}
+\newcommand{\T}{{\mathbb T}}
+\newcommand{\UP}{\textrm{UP}}
+\newcommand{\X}{{\mathbf{X}}}
+\newcommand{\Ze}{{\mathbb Z}}
+
+%% Miscellaneous
+\newcommand{\ea}{{\it et al }}
+\newcommand{\D}{\displaystyle}
+\newcommand{\kr}{\textrm{ker}}
+\renewcommand{\dim}{\mathrm{dim}}
+\newcommand{\lie}{\mathrm{Lie}}
+\newcommand{\cl}{\mathrm{cl}}
+\newcommand{\inte}{\mathrm{int}}
+\newcommand{\E}{\mathrm{End}}
+
+%% Dataflow
+\newcommand{\actorET}{e}
+\newcommand{\Actors}{\mathcal{A}}
+\newcommand{\anActor}{a}
+\newcommand{\atask}{t}
+\newcommand{\binding}{\mathcal{B}}
+\newcommand{\bindingAwareSDFG}[1]{\SDFG_{#1}^b}
+\newcommand{\bufferSize}{b}
+\newcommand{\Channels}{\mathcal{C}}
+\newcommand{\concurrencyVector}{\varphi}
+\newcommand{\Configuration}{\chi}
+\newcommand{\detector}{\mathcal{D}}
+\newcommand{\Edges}{\mathcal{E}}
+\newcommand{\FnScenarioToOutput}{m}
+\newcommand{\FnThroughput}{\nu}
+\newcommand{\FnWtoScenarios}{f}
+\newcommand{\fsmInitialState}{q_0}
+\newcommand{\fsmLabelling}{\nu}
+\newcommand{\fsmsadf}{\mathcal{F}}
+\newcommand{\fsmStates}{Q}
+\newcommand{\fsmTransition}{\delta}
+\newcommand{\initialTokens}{i}
+\newcommand{\latency}{l}
+\newcommand{\latencies}{\mathcal{L}}
+\newcommand{\Mapping}{\Gamma}
+\newcommand{\mapping}{\gamma}
+\newcommand{\maxplusLambda}[2]{\bm{\gamma_{#1}^{#2}}}
+\newcommand{\maxplusMatrix}{\bm{G}}
+\newcommand{\maxplusMatrixOutput}{\bm{H}}
+\newcommand{\parallelisationVector}{\varphi}
+\newcommand{\rate}{\mathcal{R}}
+\newcommand{\ratesSDFG}{r}
+\newcommand{\rateY}{z}
+\newcommand{\repetitionVector}{\rho}
+\newcommand{\replicationVector}{\varphi}
+\newcommand{\Scenarios}{\Sigma}
+\newcommand{\scenario}{s}
+\newcommand{\SDFG}{\mathcal{G}}
+\newcommand{\Tasks}{\mathrm{T}}
+\newcommand{\tileConnections}{\mathcal{T_C}}
+\newcommand{\tileLatency}{L}
+\newcommand{\tiles}{\mathcal{T}}
+\newcommand{\transformCamera}{Cam}
+\newcommand{\transformFixTiming}{ReT}
+\newcommand{\transformIFD}{\mathit{ifd}}
+\newcommand{\transformReplicate}{RepP}
+\newcommand{\transformParallel}{RepA}
+\newcommand{\transformPeriod}{Per}
+\newcommand{\transformSequential}{Pipe}
+\newcommand{\transformWorkload}{Wld}
+
+%% Platform-related
+\newcommand{\comm}{CA}
+\newcommand{\fd}{f_d}
+\newcommand{\fps}{\mathit{fps}}
+\newcommand{\fh}{f_h}
+\newcommand{\memory}{M}
+\newcommand{\nw}{NI}
+\newcommand{\processor}{P}
+\newcommand{\TsBCET}{\actorET_{ts}^{bc}}
+\newcommand{\TsWCET}{\actorET_{ts}^{wc}}
+
+%% SPADe CORE
+\newcommand\aWorkload{w}
+\newcommand\numCores{n_c}
+\newcommand\numCoresAvailable{n_c^{avl}}
+\newcommand\numCoresParallel{n_c^{//}}
+\newcommand\numPipes{p}
+\newcommand\maxCores{n_c^{max}}
+\newcommand\setW{W}
+\newcommand\sysScenario{\scenario_s}
+\newcommand\workloadScenario{\scenario_i}
+
+%% SPADe-related miscellaneous
+\newcommand\anApplication{a}
+\newcommand\Applications{\mathcal{A}}
+\newcommand\ECU{\psi}
+\newcommand\ECUTaskPriority{\taskPriority}
+\newcommand\pathsTG{\Pi}
+\newcommand\prodTime{\bm{p}}
+\newcommand\taskBCET{\actorET^{bc}}
+\newcommand\taskDeadline{d}
+\newcommand\taskJitter{j}
+\newcommand\taskOffset{o}
+\newcommand\taskPeriod{pd}
+\newcommand\taskPriority{\mathcal{P}}
+\newcommand\taskWCET{\actorET^{wc}}
+\newcommand\SF{\mathcal{B}}
+\newcommand\messagem{m}
+\newcommand\messageSize{size}
+\newcommand\commBus{\mathcal{B}}
+\newcommand\commMapping{\Gamma^m}
+\newcommand\platformConnections{\zeta}
+
+%% SPADe tasks
+\newcommand{\taskS}{S}
+\newcommand{\taskC}{C}
+\newcommand{\taskA}{A}
+\newcommand{\taskISP}{I}
+\newcommand{\taskRoID}{D}
+\newcommand{\taskRoIP}{P}
+\newcommand{\taskRoIM}{M}
+
+%% Control state-space 
+\newcommand{\Adyn}{A_{d}}
+\newcommand{\Bdyn}{B_{d}}
+\newcommand{\Cdyn}{C_{d}}
+\newcommand{\Ddyn}{D_{d}}
+\newcommand{\Acont}{A_{c}}
+\newcommand{\Bcont}{B_{c}}
+\newcommand{\Ccont}{C_{c}}
+\newcommand{\Dcont}{D_{c}}
+\newcommand{\Kgain}{K}
+\newcommand{\Fgain}{F}
+\newcommand{\Aaugi}{A_{aug,\workloadScenario}}
+\newcommand{\Baugi}{B_{aug,\workloadScenario}}
+\newcommand{\Caug}{C_{aug}}
+\newcommand{\Aaugs}{A_{aug,\sysScenario}}
+\newcommand{\Baugs}{B_{aug,\sysScenario}}
+
+%% Control-related
+\newcommand\Controllers{\mathcal{CTRL}}
+\newcommand\FnWtoTau{\lambda}
+\newcommand\MSE{MSE}
+\newcommand\qoc{\Phi}
+\newcommand\controlRef{r_{ref}}
+\newcommand\SwitchRealisable{\mathcal{RSM}}
+\newcommand\SwitchModes{\mathcal{SM}}
+\newcommand\Tau{\mathcal{T}}
+\newcommand\yL{{y_L}}
+
+%% algorithm-related
+\newcommand{\nosemic}{\renewcommand{\@endalgocfline}{\relax}}% Drop semi-colon ;
+\newcommand{\dosemic}{\renewcommand{\@endalgocfline}{\algocf@endline}}% Reinstate semi-colon ;
+\newcommand{\pushline}{\Indp}% Indent
+\newcommand{\popline}{\Indm}% Undent
+\let\oldnl\nl% Store \nl in \oldnl
+\newcommand{\nonl}{\renewcommand{\nl}{\let\nl\oldnl}}% Remove line number for one line
+
+
+%% Others
+\newcommand{\ActivationType}[1]{\xrightarrow{#1}}
+\newcommand{\ArrivalFunction}[2]{\alpha_{#1}^{#2}}
+\newcommand\CauseEffectChain{\Pi}
+\newcommand{\ServiceFunction}[2]{\beta_{#1}^{#2}}
+
+%% CDC 2019
+%********************************************************
+\usepackage{subcaption}
+\usepackage{cleveref}
+\captionsetup[subfigure]{subrefformat=simple,labelformat=simple}
+\renewcommand\thesubfigure{(\alph{subfigure})}
+
+\renewcommand{\dim}{\mathrm{dim}}
+\newcommand{\q}{\mathsf{q}}
+\newcommand{\p}{\mathsf{p}}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\sigalg}{\mathcal{F}}
+\newcommand{\filtration}{\mathds{F}}
+\newcommand{\insertref}{\textcolor{red}{[ref]}}
+\newcommand{\ul}{\underline}
+\newcommand{\ol}{\overline}
+\newcommand{\Let}{:=}
+\newcommand{\EE}{\mathds{E}}
+\newcommand{\PP}{\mathds{P}}
+\newcommand{\traj}[3]{#1_{#2#3}}
+\newcommand{\sstf}{ \textrm{SStF-}\textrm{M}_{2}}
+\newcommand{\ssf}{ \textrm{SSF-}\textrm{M}_{2}}
+\newcommand{\infgen}[1]{\mathcal{L}#1}
+\newcommand{\define}{\coloneqq}
+\newcommand{\Falgebra}{\ensuremath{\mathcal{F}}}
+\newcommand{\Pprob}{\ensuremath{\mathds{P}}}
+\newcommand{\ExtInputMap}{\ensuremath{\mathcal{U}}}
+\newcommand{\IntInputMap}{\ensuremath{\mathcal{W}}}
+\newcommand{\horizontalline}{\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}}
+\newcommand{\horizontalEqSep}{\noindent\rule{18cm}{0.4pt}}
+\newcommand{\expo}{\mathsf{e}}
+\newcommand{\diff}{\mathsf{d}}
+\newcommand{\defeq}{\vcentcolon=}
+\def\MZ#1{{\textcolor{red}{ {\bf MZ:} #1}}}
+\newcommand{\kinf}{$\mathcal{K}_{\infty}$}
+
+\def\ve{\varepsilon}
+\def\ts{\widetilde{S}}
+\def\q{\mathsf q}

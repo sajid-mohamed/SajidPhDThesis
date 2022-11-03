@@ -1,0 +1,78 @@
+% Version 1.0 by Joos Buijs, Eindhoven, August 2014
+% Use at your own risk.
+% Attribution is appreciated
+
+%
+% Dedicated TikZ configuration file to quickly access and set thesis-wide settings and definitions
+% This file should also load everything needed to compile particular tikz files stand-alone (eg using TikZEdt)
+%
+
+\usepackage{subcaption}     % For subfigures (subfig(ure) packages are deprecated!)
+
+\usepackage{pgfplots}       % Charts in LaTeX, or, even better, in TikZ!!!
+\usepgfplotslibrary{colormaps,groupplots,patchplots,statistics} %packages I used
+\pgfplotsset{% % NOTE that these worked for me, but are retained as an example
+ every axis/.append style={
+%      axis lines = left, %set the axis only on the left and bottom sides of the plot      , first $100$ generations
+      legend image post style={mark=none},
+      cycle list name = linestyles*},
+      yticklabel style={/pgf/number format/fixed,/pgf/number format/fixed zerofill,/pgf/number format/precision=3},
+      every axis plot /.append style={mark=none},
+      every colorbar/.append style={
+        colorbar sampled line,
+        colorbar horizontal,
+  },
+%  colormap={joos}{},
+  colormap/autumn,
+}
+\pgfplotsset{compat=1.10}
+\pgfplotscreateplotcyclelist{customLineList}{solid,dashed,dashdotted,dashdotdotted,dotted}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usepgfplotslibrary{external} 
+
+%I L-O-V-E TikZ!
+\usepackage{tikz}           % The 'normal' TikZ package
+\usepackage{tikz-qtree}     % And the QTree-TikZ hybrid package, to make it a lot easier to create process trees
+%Also using forest, a TikZ ~extension, see http://www.ctan.org/pkg/forest, mainly produces compacter trees
+\usepackage[external]{forest}         % forest can use externalization by adding [external] but it does not listen to the '\tikzsetfigurename{}' command
+%\usepackage{forest-qtree}  % prevents compilation :( but would require 'no' code change :D
+
+\usetikzlibrary{calc,decorations.pathreplacing,shapes, fit, intersections, decorations,patterns,arrows,automata,backgrounds,calc,decorations.pathmorphing,decorations.text,decorations.markings,fit,petri,positioning,scopes,shadows,shapes,spy}
+
+\usetikzlibrary{arrows.meta}
+
+%
+%
+% PGF Plots settings
+%
+\pgfplotsset{
+    every axis/.append style={
+        scale only axis,          %instead of scaling text too
+    },
+    label style={font=\footnotesize},
+    legend style={font=\footnotesize}
+}
+\usepackage{fp}
+%
+% Define utility macro \customrevertcolormap{X} to revert a color bar
+% FROM http://tex.stackexchange.com/a/141338/27955
+%
+\makeatletter
+\def\customrevertcolormap#1{%
+    \pgfplotsarraycopy{pgfpl@cm@#1}\to{custom@COPY}%
+    \c@pgf@counta=0
+    \c@pgf@countb=\pgfplotsarraysizeof{custom@COPY}\relax
+    \c@pgf@countd=\c@pgf@countb
+    \advance\c@pgf@countd by-1 %
+    \pgfutil@loop
+    \ifnum\c@pgf@counta<\c@pgf@countb
+        \pgfplotsarrayselect{\c@pgf@counta}\of{custom@COPY}\to\pgfplots@loc@TMPa
+        \pgfplotsarrayletentry\c@pgf@countd\of{pgfpl@cm@#1}=\pgfplots@loc@TMPa
+        \advance\c@pgf@counta by1 %
+        \advance\c@pgf@countd by-1 %
+    \pgfutil@repeat
+%\pgfplots@colormap@showdebuginfofor{#1}%
+}%
+\makeatother
