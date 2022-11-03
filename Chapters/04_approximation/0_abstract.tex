@@ -1,0 +1,12 @@
+\blfootnote{The content of this chapter is an adaptation of the following three papers:
+\begin{enumerate}
+    \item \bibentry{de2020access}.
+    \item \bibentry{de2020approximation}.
+    \item \bibentry{mohamed2019imacs}.
+\end{enumerate}
+}
+\Gls{ibc} systems are common in many modern applications. 
+In such systems, image-based sensing imposes massive compute workload, making it challenging to implement them on embedded platforms. 
+Approximate image processing is a way to handle this challenge. In essence, approximation reduces the workload at the cost of additional sensor noise. In this work, we propose an approximation-aware design approach for optimizing the memory and performance of an \gls{ibc} system, making it suitable for embedded implementation. We perform compute- and data-centric approximations and evaluate their impact on the memory utilization and closed-loop \gls{qoc} of the \gls{ibc} system. Further, an \gls{ibc} system operates under several environmental scenarios, e.g., weather conditions. We evaluate the sensitivity of the \gls{ibc} system to our approximation-aware design approach when operated under different scenarios and perform a \gls{fp} analysis using Monte-Carlo simulations to analyze the robustness of the approximate system. Further, we design an optimal approximation-aware controller that models the approximation error as sensor noise and show \gls{qoc} improvements. In essence, this is an alternative design paradigm in the \gls{spade} flow to deal with high compute workload, complementary to parallelisation and pipelining. We demonstrate the effectiveness of our approach through the \gls{lkas} case study using  a  heterogeneous  NVIDIA AGX  Xavier  embedded platform  in  a  \gls{hil} framework. Both the platform and the \gls{lkas} case study were already introduced in Chapter \ref{chap:intro}.
+We show substantial memory reductions and \gls{qoc} improvements with respect to the accurate implementation.
+Approximate computing also helps to improve energy efficiency of our design. This last aspect of the work, reported in~\cite{de2020access}, is excluded in this thesis as it is not the primary focus of this thesis.

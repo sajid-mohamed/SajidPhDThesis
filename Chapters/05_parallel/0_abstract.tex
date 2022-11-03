@@ -1,0 +1,14 @@
+\blfootnote{The content of this chapter is an adaptation of the following two papers:\\
+    \bibentry{mohamed2020scenario}.\\
+    \bibentry{mohamed2018optimising}.
+}
+\Gls{ibc} systems are increasingly being used in various domains including autonomous driving. The key challenge in \gls{ibc} is to deal with high computation demand while guaranteeing performance and safety requirements such as stability. 
+While modern industrial heterogeneous platforms, such as NVIDIA Drive, offer the necessary compute power, application development on these platforms with performance and safety guarantees is still challenging. Alternative time-predictable platforms are not yet in widespread use.
+
+A typical design flow for \gls{ibc} systems consists of three distinct elements: (i) \emph{mapping} tasks onto platform resources; (ii) \emph{timing analysis}, consisting of \emph{task-level} \gls{wcet} analysis and \emph{application-level} analysis to obtain worst-case performance bounds on aspects such as latency and throughput; (iii) \emph{controller design} using the obtained performance bounds, ensuring performance and safety. While such a three-step design process is modular in nature, it usually leads to over-dimensioned systems with sub-optimal performance, because task- and/or application-level timing bounds are pessimistic.
+
+\begin{sloppypar}
+We present a basic scenario- and platform-aware design flow for \gls{ibc} systems that exploits \textit{frequently occurring workload scenarios} to optimize performance. For industrial platforms, where tight task-level \gls{wcet} bounds are difficult to obtain, we moreover propose to use \textit{frequently occurring task execution times} instead of \gls{wcet} estimates to obtain tight application-level temporal bounds.  
+During controller design, we then optimize performance and guarantee stability by identifying appropriate \textit{system scenarios} and by designing a \textit{switched controller} that switches between those scenarios. We illustrate our method considering a predictable multiprocessor system-on-chip platform - the \gls{compsoc}. 
+We validate the proposed method using \gls{hil} experiments with an industrial heterogeneous multiprocessor platform - NVIDIA Drive PX2 - considering a \gls{lkas}. Both platforms and the \gls{lkas} case study were already introduced in Chapter \ref{chap:intro}. We obtain an improved control performance compared to state-of-the-art \gls{ibc} design.
+\end{sloppypar}

@@ -1,0 +1,165 @@
+We consider a setting for an \gls{ibc} system as shown in Fig.~\ref{fig:ch5_ibc_bd}. Our sensor is the camera module that captures the image stream. The image stream is then fed to an embedded multiprocessor platform at a fixed frame rate (\gls{fps}). The tasks in our application - compute-intensive image sensing and processing (\taskS), control computation (\taskC) and actuation (\taskA) - are then mapped to run on this multiprocessor. 
+
+\subsection{\Gls{lti} feedback control systems}
+We consider an \gls{lti} feedback control system given by:
+\begin{align}
+\label{eq:ch5_ch5_contsys}
+\dot{x}(t) &= \Acont x(t) +  \Bcont u(t), 
+\\
+y(t) &= \Ccont x(t),\nonumber
+\end{align}
+where $x(t) \in \R^n$ represents the \textit{state}, $y(t)\in\R$ represents the \textit{output} to be regulated and $u(t) \in \R$ represents the control \textit{input} of the system at any time
+$t \in \R_{\geq 0}$.
+$\Acont$, $\Bcont$ and $\Ccont$ represent the system, input and output matrices of appropriate dimensions.
+
+We illustrate our work using the motivating case study of a vision-based lateral control system model explained in Section~\ref{sec:lkas_case_Study}.
+The tasks in our \gls{lkas} - compute-intensive image sensing and processing (\taskS), control computation (\taskC), and actuation (\taskA) - need to be mapped to run onto a multiprocessor platform. \Gls{qoc} needs to be optimized.
+The state-space matrices of our \gls{lkas} for the vehicle speed of 15m/s are as follows,
+\\[1ex]
+\scalebox{1}{
+  $\arraycolsep=4pt
+  \Acont = \left[
+  \begin{array}{rrrrr}
+    -10.06 & -12.99 & 0 & 0 & 0\\
+    1.096 & -11.27 & 0 & 0 & 0\\
+    -1.000 & -15.00 & 0 & 15 & 0\\
+    0 & -1.000 & 0 & 0 & 15\\
+    0 & 0 & 0 & 0 & 0\\
+  \end{array}
+\right],\ \Bcont=\left[
+  \begin{array}{c}
+    75.47\\
+    50.14\\
+    0\\
+    0\\
+    0\\
+  \end{array}
+\right],\ \Ccont=\left[
+    \begin{array}{ccccc}
+         0 & 0 & 1 & 0 & 0 
+    \end{array}
+    \right].$ \\
+}
+\\[1ex]
+%\normalsize
+A fifth state is added for observability~\cite{kosecka1997vision} of our controller compared to the equations in Section~\ref{sec:lkas_case_Study}.
+The fifth state is the curvature of the road at the look-ahead distance, and helps to observe the road curvature. The control input $u(t)$ is the front wheel steering angle $\delta_f$ and the output $y(t)$ is the lateral deviation at the look-ahead distance $\yL$.
+
+\subsection{Embedded implementation}
+\label{sec:ch5_embedded_implementation}
+Implementation of an \gls{ibc} system involves the execution of three sequential tasks: \emph{sensing and processing} ($\taskS$), \emph{control computation} ($\taskC$) and \emph{actuation} ($\taskA$). These tasks repeat; let the start and finish times of the task instances be given by $t_s(.)$ and $t_f(.)$, respectively. The execution times of $\taskS^k$, $\taskC^k$ and $\taskA^k$ (the \emph{k}-th instance) are then given by,
+\begin{equation}%\label{eq:ch5_execution_times}
+  e^k_{T} = t_f(T^k) - t_s(T^k),\nonumber
+\end{equation}
+where $T \in \{\taskS, \taskC, \taskA\}$.
+The interval between two consecutive executions of sensing tasks $\taskS^k$ and $\taskS^{k+1}$ is then the \emph{sampling period} $h^k$ for the \emph{k}-th instance.
+The time interval between the starting time of $\taskS^k$ and finishing time of $\taskA^k$ is the \emph{sensor-to-actuator delay} $\tau^k$ for the \emph{k}-th instance.
+\begin{eqnarray}
+h^k = t_s(\taskS^{k+1}) - t_s(\taskS^{k}),\hspace{2em} \tau^k = t_f(\taskA^{k}) - t_s(\taskS^{k}).
+\nonumber
+\end{eqnarray}
+We consider a time-triggered implementation of tasks $\taskS,\ \taskC$ and $\taskA$.
+A camera captures the images
+at discrete intervals, e.g., 30 fps, and the image frame arrival period $\fh$ is given by,
+\begin{eqnarray}
+\fh=\frac{1}{\text{frame rate}}; \text{ for 30 fps, } \fh=\frac{1}{30}s=33.33\ \text{ms}.\nonumber
+\end{eqnarray}
+This means that the sampling period $h$ needs to be an
+integer multiple of $\fh$.
+Sensor processing is followed by control computation and actuation operations which generally take a short and nearly constant time for execution.
+A sensing operation takes much longer time, i.e.,
+\begin{eqnarray}
+\actorET_\taskS \gg \actorET_\taskC + \actorET_\taskA\nonumber
+\end{eqnarray}
+where $\actorET_\taskS,\ \actorET_\taskC$ and $\actorET_\taskA$ are the worst-case execution times of sensing and processing, control computation and actuation, introduced above. Moreover, $t_s(\taskC^k) = t_s(\taskS^k) + \actorET_\taskS$ and $t_s(\taskA^k) = t_s(\taskC^k) + \actorET_\taskC$.
+The total (worst-case) execution time of the control loop is then given by $\actorET_{\text{total}} = \actorET_\taskS+\actorET_\taskC+\actorET_\taskA$.
+
+The effective sensor-to-actuator delay $\tau$ and sampling period $h$ are then given by,
+\begin{eqnarray}
+\tau= \actorET_{\text{total}},\ h=\lceil \frac{\actorET_{\text{total}}}{\fh}\rceil \fh.\
+\nonumber
+\end{eqnarray}
+
+We assume that the start of sensor data processing is aligned with the camera frame arrival and the actuation is delayed to guarantee constant sensor-to-actuator delay.
+With sensor-to-actuator delay $\tau$ and a zero-order-hold mechanism with sampling
+period $h \in \R$, $u(t)$ becomes piecewise constant in the intervals $t \in [kh + \tau,\ (k + 1)h + \tau ]$ for $k \in \Ze_{\geq 0}$. 
+
+Image-processing workloads may vary, e.g., depending on image content. In Fig.~\ref{fig:ch5_intro}, for example, the number of features in an image determines the workload. Each workload scenario $\workloadScenario$ is annotated with a pair $(h_i,\tau_i)$ that models the sampling period and delay associated with it.
+ A zero-order sample-and-hold approach can then be used to discretize the system based on the workload scenario $\workloadScenario$. Eq.~(\ref{eq:ch5_ch5_contsys}) can be reformulated as follows:
+ \begin{align}
+ \label{eq:ch5_ch5_sd_1}
+x[k+1] &= A_{\workloadScenario} x[k] + B_{0,\workloadScenario} u[k] + B_{1,\workloadScenario} u[k-1],\nonumber \\
+y[k] &= \Ccont x[k]
+\end{align}
+where,
+\small
+\begin{eqnarray}
+A_{\workloadScenario} &=& e^{\Acont h_i}, \nonumber\\ 
+~B_{0,\workloadScenario} &=& \int_{0}^{h_i-\tau_i} e^{\Acont s}ds\cdot \Bcont,~B_{1,\workloadScenario} = \int_{h_i-\tau_i}^{h_i} e^{\Acont s}ds\cdot \Bcont   ~\label{eq:ch5_ch5_A_sk}
+\end{eqnarray}
+\normalsize
+
+In Eq.~(\ref{eq:ch5_ch5_sd_1}), we assume that $u[-1]=0$ for $k=0$. We define new system states $z[k]=\left[ \begin{array}{cc} x[k] &  u[k-1] \end{array} \right]^T$ with $z[0]=\left[ \begin{array}{cc} x[0] &  0 \end{array} \right]^T$ to obtain a higher-order augmented system as follows to obtain a delay-free state space:
+\begin{align}
+\label{eq:ch5_ch5_cld2}
+z[k+1]= \Aaugi z[k] + \Baugi u[k],\ y[k]= \Caug z[k] \vspace{-2mm}
+\end{align}
+where,
+\begin{eqnarray}
+\Aaugi  = \left[ \begin{array}{cc} A_{\workloadScenario} &  B_{1,\workloadScenario} \\  0 & 0 \end{array} \right],\ 
+\Baugi = \left[ \begin{array}{c} B_{0,\workloadScenario} \\  I \end{array} \right],\ 
+\Caug = \left[ \begin{array}{cc} \Ccont &  0 \end{array} \right].
+\label{eq:ch5_ch5_aug}
+\nonumber
+\end{eqnarray}
+$0$ and $I$ represent the zero and identity matrices of appropriate dimensions. A check for controllability~\cite{dorf2011modern} is done for this augmented system.
+If the system is not controllable, controllability decomposition is done to obtain a controllable subsystem. We can apply standard control design techniques for the delay-free state-space model shown in Eq.~(\ref{eq:ch5_ch5_cld2}). 
+ 
+\subsection{Control law and control configurations}
+\label{sec:ch5_ch5_control law}
+In view of the augmented system of  Eq.~(\ref{eq:ch5_ch5_cld2}), we use a \emph{state feedback} controller $u[k]$ of the following form,
+ \begin{align}
+		u[k] = \Kgain_{\workloadScenario} z[k] + \Fgain_{\workloadScenario} \controlRef
+% 		\label{eqn:ch5_u}
+        \nonumber
+ \end{align}
+where $\Kgain_{\workloadScenario}$ is the state feedback gain and $\Fgain_{\workloadScenario}$ is the feedforward gain both designed for the workload scenario $\workloadScenario$. $\controlRef$ is the reference value for the controller. The design of gains can be done with state-of-the-art control design techniques such as \gls{lqr} or pole-placement~\cite{dorf2011modern}. 
+Note that any other state-of-the-art control design technique can also be used for designing these gains.
+
+For each workload scenario $\workloadScenario$, we then define a \emph{control configuration} $\Configuration_{\workloadScenario}^c$ as a tuple $\Configuration_{\workloadScenario}^c = (h_{i},\tau_{i}, \Kgain_{\workloadScenario}, \Fgain_{\workloadScenario})$.
+
+\subsection{Controller stability}
+\label{sec:ch5_controller_stability}
+At runtime, the workload scenarios are switching based on the image workload variations and/or platform load. 
+This switching behaviour can lead to system instability. Therefore, we must \emph{guarantee} stability of the overall system while improving \gls{qoc}.
+
+\begin{theorem}
+\emph{(Stability criterion~\cite{12_sunstability})}
+% \label{ch5_th4}
+Consider $\Aaugi$ to be discrete-time \gls{lti} systems. $V(z)=z^T P z$ is the \gls{cqlf} of the systems $\Aaugi$ if there exist $P=P^T>0$, $Q=Q^T>0$ and $P$ is the simultaneous solution of the discrete-time Lyapunov equations,
+\begin{eqnarray}
+\Aaugi^T P \Aaugi - P= - Q < 0.
+\label{eq:ch5_cqlf}
+\end{eqnarray}
+The existence of a \gls{cqlf} is a sufficient condition for the stability of a system with switching subsystems.
+\end{theorem}
+We transform the stability condition (Eq.~(\ref{eq:ch5_cqlf})) into \glspl{lmi} to analyse for the existence of a \gls{cqlf}. The analysis equation, Eq.~(\ref{eq:ch5_cqlfAnalysis}), is obtained by performing the following operations: i) substitute $\Aaugi$ in Eq.~(\ref{eq:ch5_cqlf}) with $\Aaugi=\Aaugi+\Baugi \Kgain_{\workloadScenario}$, ii) apply Schur complement, and iii) left- and right- multiplication by diag($P^{ - 1}, I$) and set $Q = P^{ - 1}$.
+\small
+\begin{eqnarray}
+& \left[ \begin{array}{cc} -Q & Q A_{*}^T + Q \Kgain_{\workloadScenario}^T B_{*}^T  \\ A_{*} Q + B_{*} \Kgain_{\workloadScenario} Q & -Q \end{array} \right] < 0,\ Q > 0  \label{eq:ch5_cqlfAnalysis}
+\end{eqnarray}
+\normalsize
+where $A_{*}= \Aaugi$, $B_{*} = \Baugi$ for each scenario $\workloadScenario$. If a solution exists, then the switching subsystems are stable. The choice of scenarios need to be modifies if a solution does not exist. A less aggressive mode with poorer performance is usually more likely to meet the stability condition. Failure to guarantee switching stability would result in a classical worst-case based design.
+
+An alternate controller synthesis method is proposed for this setting using a \gls{mjls} formulation in Chapter~\ref{chap:workloadVariations}.
+
+\subsection{Control performance: \acrfull{mse}}
+\label{sec:ch5_MSE}
+The \gls{mse} is the mean of the cumulative sum of the squared errors, i.e.:
+\begin{eqnarray}
+     \MSE &=& \frac{1}{n}\sum_{k=1}^{n}(y[k] - \controlRef)^2 \nonumber
+	\label{eqn:ch5_MSE}
+\end{eqnarray}
+\noindent where $n$ is the number of observations, $y[k]$ is the value of the $k^{th}$ observation and $\controlRef$ is the reference value. 
+The \gls{mse} quantifies, in essence, how fast the output $y(t)$ reaches the reference $\controlRef$.  
+A lower \gls{mse} implies a better \gls{qoc}.

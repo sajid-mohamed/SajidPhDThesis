@@ -1,0 +1,118 @@
+\section{Research challenges and contributions}
+\label{chap:challenges}
+\begin{quote}
+\centering
+The primary research question addressed in this thesis is:\\ \textbf{How to cope with the long variable sensing delay in an \gls{ibc} system?}
+\end{quote}
+This thesis deals with challenges to cope with the long variable sensing delay in an \gls{ibc} system and the scientific contributions are broadly classified into two directions -- exploitation of the benefits of the multiprocessor platforms through a platform-aware design and exploitation of the application-specific \gls{ibc} system characteristics. 
+
+ In this context, along the first line of research, we exploit the benefits of the multiprocessor platforms through application parallelisation and pipelining of the control loop. 
+ The approaches proposed in this thesis maximise the \gls{qoc} of the controller implementation for a given multiprocessor platform allocation.
+In the following, we outline the three scientific contributions related to parallelisation, pipelining and pipelined parallelism.
+\\[1ex]
+\noindent
+\textbf{Contribution 1 (\Gls{spade} flow for \Gls{ibc} system design considering parallelisation):}
+Parallelisation refers to executing sensing subtasks in parallel and thereby reducing the delay compared to the sequential implementation considered before. A parallel implementation is possible when multiple cores are allocated for the sensing algorithm. 
+It is, however, limited by the degree of parallelism of the sensing algorithms. The state-of-the-art literature related to parallel implementation for an \gls{ibc} system does not consider workload variations which is crucial for maintaining optimal closed-loop performance or \gls{qoc}, as already explained. Moreover, a parallel implementation in an \gls{ibc} system is highly influenced by platform-specific parameters such as camera frame-rate, number of available cores and so on. At the end, these design aspects lead to the two important control design parameters --  sampling period and delay. Starting with a given, often pessimistic, sampling period and delay, like what can be noticed in the state-of-the-art \cite{krautgartner1998performance}, the overall design often leads to a low \gls{qoc}.
+
+In this thesis, first, we introduce the \gls{spade} approach for parallel implementation. The \gls{spade} approach uses a formal model-of-computation -- dataflow -- for the entire \gls{ibc} system including sensor processing. This enables us to model workload variation as well as platform-specific design parameters that are crucial for design optimality of a \gls{ibc} system. The contribution of this thesis concerning this case is the relation between dataflow timing analysis and control timing parameters to obtain a tight predictable sensing delay considering implementation constraints.
+The image workload variations are captured in workload scenarios and modelled using a \gls{sadf}. 
+Then, workload scenarios are mapped to the given platform allocation considering the platform constraints such as the camera frame rate and the number of available cores.
+Mapping an \gls{sadf} results in a binding-aware graph. 
+
+In this thesis, we relate the latency and throughput of the binding-aware graph to the delay and sampling period of the controller design. Our approach enables a scenario- and platform-aware design and optimisation of the \gls{ibc} system.
+Our approach exploits frequently occurring workload scenarios to optimise control performance.
+During controller design, we then optimize performance and guarantee stability by identifying appropriate system scenarios and by designing a switched controller that switches between those scenarios.
+The initial proposed approach assumes that the platform is predictable, i.e., the \gls{wcet} of the sensing algorithm for the same image input is bounded and predictable over multiple executions on the platform. 
+However, the execution times cannot be bounded for industrial platforms. 
+In this thesis, we also show how we can adapt our \gls{spade} approach for parallelisation for an industrial platform where we propose to use frequently occurring task execution times instead of \gls{wcet}.
+
+The first contribution has been published in:
+\begin{itemize}
+    \item \bibentry{mohamed2020scenario}.
+    \item \bibentry{mohamed2018optimising}.
+\end{itemize}
+With respect to the state of the art, this thesis proposes the first formal model-based design framework for the \gls{ibc} system co-design that relates dataflow analysis and controller design. 
+The \gls{spade} approach brings together dataflow and control formalisms in the same framework.
+This relation allows to bring in the optimisation techniques from the dataflow domain into the control timing parameter optimisation.
+The proposed \gls{spade} approach also makes a step forward towards real-life implementation by detailing how the flow can be adapted for industrial platforms. Both academic and industrial platforms could implement the \gls{spade} approach. \gls{sil} and \gls{hil} simulation results validate our claim.
+\\[1ex]
+\noindent
+\textbf{Contribution 2 (Extending the \gls{spade} flow considering pipelining for \gls{ibc} system design):}
+Pipelining refers to the pipelined execution of the control loop over multiple processing cores. It is an alternative to exploit the availability of multiple cores on the platform to address the challenge of long delay in an \gls{ibc} system. In an \gls{ibc} system, a pipelined implementation implies the start of processing a new camera frame while one or more frames are still being processed. In essence, this increases the processing throughput of the frames, which reduces the closed-loop sampling period $h$ (the time between the start of two successive sensing tasks). Although such implementation does not reduce the sensing delay, a shorter sampling period opens the door for achieving a higher \gls{qoc} with an appropriate controller design. 
+
+Given that multiple frames are processed simultaneously, a crucial aspect are the inter-frame dependencies that some of the sensing algorithms might impose. Inter-frame dependencies refer to the data or algorithmic dependencies between consecutive frame processing, e.g., due to video coding \cite{li2015lagrangian} or visual tracking \cite{smeulders2013visual}. Moreover, for a real-life implementation, it is crucial to consider system nonlinearities and constraints
+on system variables. System nonlinearities refer to the variations in system dynamics, and constraints need to be imposed on the system variables. For example, the maximum steering angle of the Udacity self-driving car is set to +/- 25 degree \cite{tian2018deeptest} and the vehicle velocity is kept constant for the simulations in \cite{kosecka1997vision}. While pipelined implementations for the \gls{ibc} system is considered in the state-of-the-art as potential direction \cite{medina2019designing}, \cite{krautgartner1998performance}, the existing approaches do not consider several key practical aspects needed for their real-life adoption. 
+
+As a contribution, this thesis presents an extended \gls{spade} approach with an adaptive predictive control formulation based on linear parameter-varying (LPV) input/output (I/O) models for a pipelined multiprocessor implementation of \gls{ibc} systems while considering workload variations, inter-frame dependencies, system nonlinearities and constraints, and thus makes a step forward towards real-life adoption. The inter-frame dependencies are characterised using the platform constraints - camera frame rate and the number of available cores, and the control timing parameters - delay and sampling period. 
+
+The second contribution has been published in:
+\begin{itemize}
+    \item \bibentry{mohamed2020adaptive}.
+\end{itemize}
+The state-of-the-art pipelined multiprocessor IBC implementation approaches do not consider inter-frame dependencies, system nonlinearities and constraints on system variables. This thesis proposes a \gls{mpc} formulation that consider these aspects and makes a step forward towards real-life adoption. The simulation results and discussions validate our claim.
+\\[1ex]
+\noindent
+\textbf{Contribution 3 (Extending the \gls{spade} flow considering pipelined parallelism for \gls{ibc} system design\footnote{The \gls{spade} flow controller design is open sourced and can be accessed on github: https://github.com/sajid-mohamed/SPADeControlDesign}):}
+In an \gls{ibc} system, a long variable sensing delay results in a long sampling period and a long delay from the controller viewpoint. To deal with them, modern multiprocessor \gls{ibc} implementations consider either parallelisation of the sensing task or pipelining of the control loop. In a pipelined implementation, the sampling period is shortened while the delay remains long. Such implementation does not require knowledge of the internal processing structure of the sensing workload. The benefit of such methods is restricted by the platform parameters such as number of available cores and camera frame-rate. On the other hand, in a parallelised implementation, the delay is shortened allowing for a shorter sampling period. This line of approaches require computational insight (i.e., model-of-computation) of the sensing task for a parallelised implementation. Similar to the pipelined case, the benefits of parallelization methods are restricted by the number of available cores and the degree of parallelism present in the sensing algorithms.  The impact of both parallelisation and pipelining together on the \gls{qoc} of \gls{ibc} systems is not explored in the literature while it is rather obvious direction given their complimentary nature. 
+
+This thesis proposes a model-based design method for multiprocessor \gls{ibc} implementation, considering both parallelisation and pipelining together. It presents model transformations for modelling, analysis
+and mapping \gls{ibc} systems using \gls{sadf}. The model transformations allow to relate the dataflow timing analysis to the control timing parameters and to optimise the mapping while considering pipelining and parallelism together.
+In this thesis, the particular problem we address is: For a given platform allocation, what is the optimal degree of pipelining and degree of parallelisation required to maximise the \gls{qoc}?
+A unified \gls{spade} algorithm is proposed that takes into account image-workload variations, inter-frame dependencies and platform constraints.
+The application is efficiently modelled and analysed using a scenario-aware dataflow graph, and an implementation-aware switched controller is designed that optimises \gls{qoc} and guarantees stability.
+Two types of platforms are considered - predictable, e.g., \gls{compsoc}, and industrial platforms, e.g., NVIDIA AGX Xavier.
+The \gls{spade} approach performs the best when the platform is predictable and the execution times are bounded. 
+In an industrial platform where the execution times cannot be bounded, an adaptation of the \gls{spade} approach is also proposed. 
+
+The third contribution has been published in:
+\begin{itemize}
+    \item \bibentry{mohamed2021access}.
+\end{itemize}
+The state-of-the-art multiprocessor IBC implementation approaches do not consider pipelined parallelism explicitly. This thesis details the pipelined parallelism implementation along with the required model transformations for realizing \gls{spade} using the \gls{sadf} \gls{moc}.
+This thesis also details the adaptation of the \gls{spade} approach for industrial platforms for pipelined parallelism. \gls{sil} and \gls{hil} simulation results validate our claim.
+
+Further, as already explained, this thesis exploits the opportunities of two appli\-cation-specific characteristics - image-workload variations and approximate computing. In the following, we outline the specific scientific contributions along these two directions. 
+\\[1ex] 
+\noindent
+\textbf{Contribution 4 (\gls{ibc} system design considering workload variation):} For sensing, an \gls{ibc} system needs to process image workload, which is data-intensive and experiences significant variation. Image-workload variations occur due to the variations in: i) the number of features in the captured images, and ii) the platform load. Typically, an \gls{ibc} system considers the worst-case image workload \cite{saidi2018future} and the impact of these variations are not explicitly considered in the controller design. Moreover, the platform constraints such as the number of available cores and camera frame-rate are not considered in the state-of-the-art design approaches. Since such approaches are built upon the worst-case characteristics, they often lead to low overall \gls{qoc} of the system for a given platform allocation. 
+
+In our proposed approach in this thesis, we profile all the workload relevant for the \gls{ibc} system, identify the frequently occurring workload scenarios, and model the workload variations using a \gls{dtmc}. A \gls{dtmc} characterises the frequently occurring workload scenarios and the probability of transition between these different scenarios. For a given workload scenario, we further perform platform-aware optimization including binding and mapping to multiple cores as well as optimized controller design. 
+When the number of the workload scenarios becomes high, it often become challenging to ensure stability and high \gls{qoc}.
+Then, system scenarios that abstract multiple workload scenarios are identified based on platform constraints. 
+Finally, a \gls{mjls} controller is designed for the system scenarios.
+We demonstrate significant improvement in terms of \gls{qoc} using the proposed method over the state-of-the-art worst-case-based designs. With respect to the \gls{spade} flow, the \gls{mjls} controller is an alternative controller design method that explicitly models workload variation. 
+
+The fourth contribution has been published in:
+\begin{itemize}
+    \item \bibentry{mohamed2019designing}.
+\end{itemize}
+In literature, variable sensor-to-actuator delay (resulting from the variable workload) was dealt with through switched linear controllers with either known or unknown sequences of delay occurrences. These solutions either suffer from poor performance (from unknown arbitrary delay sequences) or unrealistic assumptions (when knowledge of the exact delay sequence is not available in reality). 
+This thesis proposes an alternative controller design method based on the \gls{mjls} formulation that models the delay occurrences as a \gls{dtmc}. The simulation results and discussions show that the proposed approach performs better when sufficient system knowledge is available.
+\\[1ex]
+\noindent
+\textbf{Contribution 5 (Approximation-aware \gls{ibc} system design):}
+Approximate computing trades off accuracy in the signal processing for gains in response time and energy. 
+In this thesis, the focus is on how we use approximate computing for gains in response time which is further exploited in the \gls{ibc} system design.
+The gains in energy, reported in \cite{de2020access}, is excluded in this thesis as it is not the key goal in this thesis.
+The camera \gls{isp} pipeline transforms a RAW image in the Bayer domain to pixels in the RGB domain through a series of image enhancing stages. Approximating the camera \gls{isp} pipeline helps to drastically reduce the sensing delay at the cost of errors in the sensing processing. There are various classes of approximation -- fine grained and coarse grained. In an \gls{ibc} system, a few of these compute-intensive image enhancing stages could potentially be skipped/approximated without compromising the \gls{ibc} system functionality.
+Generally, usage of approximate computing for \gls{isp} is an interesting direction given its potential to reduce the sensing delay (which is a key challenge for designing an \gls{ibc} system). However, approximate computing for the feedback control system is an unknown territory in literature. There are two key challenges -- (i) how to model the effect of approximation in the \gls{ibc} system and guarantee stability and \gls{qoc} in presence of approximation in the feedback signal processing, (ii) how to test and evaluate the impact of such a design paradigm since it is an important step to identify when and how much approximation is suitable for a given design problem. 
+
+In this thesis, we first propose an integrated performance evaluation framework that combines environments, controller design and computation platform. The \gls{imacs} framework\footnote{The \gls{imacs} framework is open sourced and can be accessed on github: https://github.com/sajid-mohamed/imacs} helps to test and evaluate the impact of approximation in closed-loop feedback systems.
+First, the resilience of the given \gls{ibc} system to different approximation choices is analysed. Second, for each approximation choice, the sensing delay is computed, and the error due to approximations is quantified using the \gls{imacs} framework.
+Then, an approximation-aware controller is designed, for each approximation choice, by considering the sensing delay and modelling the quantified error due to approximations as sensor noise. The approximation-aware design offers alternatives in terms of sensing (with approximate \gls{isp}) and controller (i.e., approximation-aware controller) in \gls{spade} flow.
+
+\sloppypar
+The \gls{imacs} framework is published in:
+\begin{itemize}
+    \item \bibentry{mohamed2019imacs}.
+\end{itemize}
+In literature, a performance evaluation framework that can analyse the impact of injecting errors in the image processing on the closed-loop \gls{ibc} system performance was not present. \Gls{imacs} is the first open-source framework that enables the performance evaluation of image approximation in closed-loop \gls{ibc} systems. \gls{sil} and \gls{hil} simulation results validate our claim.
+
+The approximation-aware controller design is published in:
+\begin{itemize}
+    \item \bibentry{de2020access}.
+    \item \bibentry{de2020approximation}.
+\end{itemize}
+In literature, image approximation and platform constraints are not explicitly considered in the design of the controller of the \gls{ibc} system. 
+This thesis proposes an approximation-aware control design that takes as input the quantified error due to approximation. \gls{sil} and \gls{hil} simulation results validate our claim.

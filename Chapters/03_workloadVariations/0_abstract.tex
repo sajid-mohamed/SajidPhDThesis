@@ -1,0 +1,12 @@
+\blfootnote{The content of this chapter is an adaptation of the following paper:\\ \bibentry{mohamed2019designing}.}
+
+We consider the problem of designing an \gls{ibc} application mapped to a multiprocessor platform. Sensing in \gls{ibc} consists of compute-intensive image-processing algorithms whose execution times are dependent on image workload.
+The challenge is that the \gls{ibc} systems have a high (worst-case) workload with significant workload variations. 
+Designing controllers for such \gls{ibc} systems typically consider the worst-case workload that results in a long sensing delay with suboptimal \gls{qoc}. The challenge is: how to improve the \gls{qoc} of \gls{ibc} for a given multiprocessor platform allocation while exploiting workload variations?
+
+In the previous chapters, we addressed this problem by considering a switched system where the switching is assumed to be arbitrary (Chapters \ref{chap:parallelisation} and \ref{chap:pipelined_parallelism}) or using a compute-intensive adaptive \gls{mpc} formulation based on an input-output model (Chapter \ref{chap:pipelined}).
+In this chapter, we present a controller synthesis method based on a \gls{mjls} formulation considering workload variations.
+Our method assumes that system knowledge is available for modelling the workload variations as a Markov chain.
+In real-life situations, switching is not arbitrary and the switching probabilities can be modelled as transition probabilities in the Markov chain.
+We compare the \gls{mjls}-based method with two relevant control paradigms - \gls{lqr} control considering worst-case workload, and switched linear control - with respect to \gls{qoc} and available system knowledge. 
+Our results show that taking into account knowledge about switching probabilities in workload variations in controller design benefits \gls{qoc} compared to the controller design methods using switched \gls{lqr} presented in Chapters \ref{chap:parallelisation} and \ref{chap:pipelined_parallelism}. We then provide design guidelines on the control paradigm to choose for an \gls{ibc} application given the requirements and the system knowledge.

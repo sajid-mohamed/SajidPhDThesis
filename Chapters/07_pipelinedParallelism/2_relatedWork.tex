@@ -1,0 +1,33 @@
+\section{Related work}
+\label{sec:ch7_relatedWork}
+This work deals with an effective model-based design flow for multiprocessor \gls{ibc} implementation, considering both pipelining and parallelism together. 
+Relevant literature deals with the questions: What are the relevant design approaches for such embedded control problems? What are the techniques for \gls{ibc} system design to deal with long delays in a feedback control loop? What are the relevant \gls{ibc} system modelling and analysis techniques?\\
+
+\noindent\textbf{Design approaches:} An \gls{ibc} system is often designed based on the \emph{separation-of-concerns} principle between the control theory and embedded systems disciplines~\cite{arzen2000introduction,saidi2018future}.
+Co-design of control and scheduling is another design paradigm explored in the literature~\cite{cervin2003does}.
+The emphasis is on platform-based design methods that take into account platform resource constraints while designing the controller~\cite{arzen2000introduction,goswami2013multirate}.
+Contract-based design~\cite{sangiovanni2012taming} is a platform-based design paradigm for cyber-physical systems where the interactions between control theory and embedded design are defined based on contracts.
+
+From the embedded-systems discipline, a system-scenario-based design approach~\cite{gheorghita2009system} is proposed where different behaviours (scenarios) of an application are explicitly considered to avoid over-dimensioning or sub-optimal performance due to worst-case design. 
+Identifying, characterising and modelling these scenarios and dealing with the runtime scenario transitions are specific for each application and generally not trivial. 
+
+The \gls{spade} approach for non-pipelined \gls{ibc} systems is proposed in~\cite{mohamed2019designing,mohamed2020scenario} where the concepts of the system-scenario-based design and platform-based design methods for \gls{ibc} are combined into a co-design approach that jointly develops and optimises the image-processing implementation and the controller design.
+In this work, we extend the \gls{spade} approach~\cite{mohamed2020scenario} by considering pipelining of the control loop along with parallelism and formalising the \gls{ibc} system modelling.
+\\[1ex]
+\noindent\textbf{\gls{ibc} system design:}
+The main challenge in designing an \gls{ibc} system is to cope with the long sensing delay.
+Control engineers tackle a long delay using advanced state estimation~\cite{wang2014multirate}, robust design~\cite{kawamura2012robust}, predictive control~\cite{macesanu2014time}, observer-based~\cite{van2018data}, and multi-rate
+sampling~\cite{fujimoto2003visual} methods. 
+These methods rely heavily on the system model and are vulnerable to modelling errors with longer delays.
+Embedded systems engineers aim to reduce processing delay and period by parallel implementations of the algorithms using heterogeneous multiprocessor platforms having specialised hardware such as GPUs~\cite{agrawal2014gpu,mohamed2020scenario} and FPGAs~\cite{kestur2012emulating}. 
+Pipelined control~\cite{krautgartner1998performance,medina2019designing} is another approach targeting homogeneous multiprocessor implementations that reduce the effective sampling period without changing the processing delay.
+However, both pipelining and parallelism together for \gls{ibc} systems implementation is not explored in the current literature. 
+\\[1ex]
+\noindent\textbf{\gls{ibc} system modelling:} Model-based design~\cite{lee1998framework,thiele2000real} approaches focus on designing applications based on abstract models of application and platform such that the implementation is guaranteed to behave with predictable performance. 
+Numerous models-of-computation (MoC) are available in literature~\cite{theelen2006scenario,stuijk2010predictable, ChakrabortyKT03, DavisBBL07}. 
+Our approach does not depend on a specific MoC.
+It needs a MoC that can capture the dynamic behaviours (scenarios) of the application, can analyse timing and has support for platform-aware mapping analysis. We choose \gls{sadf}~\cite{theelen2006scenario} as our MoC as it inherently supports modelling scenarios and has tool support for timing analysis and platform-aware mapping.
+The graph transformations we propose in this work are, however, specific for SADF.
+
+Existing literature does not model or explore the impact of both pipelining and parallelism together on the QoC of an \gls{ibc} system.
+Inter-frame dependencies, e.g. due to video coding~\cite{li2015lagrangian} or visual tracking~\cite{smeulders2013visual}, and resource sharing between pipes, which are crucial aspects for a practical \gls{ibc} system implementation, are also not explicitly considered in the literature.

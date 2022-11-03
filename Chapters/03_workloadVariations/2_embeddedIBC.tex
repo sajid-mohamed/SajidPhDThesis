@@ -1,0 +1,48 @@
+We consider a setting for an \gls{ibc} system as shown in Fig.~\ref{fig:ch3_IBC_block_diagram}. Our sensor is the camera module that captures the image stream.
+The image stream is then fed to an embedded platform, e.g., a \gls{mpsoc}, at a fixed frame rate (fps), e.g., 30 fps. The tasks in our \gls{ibc} application - compute-intensive image sensing and processing (\taskS), control computation (\taskC) and actuation (\taskA) -
+are then mapped to run on this \gls{mpsoc}.
+
+\subsection{\Gls{lti} systems}~\label{sec:ch3_LTI}
+We consider an \gls{lti} system of the following form:
+\begin{align}
+\dot{x}(t) &= \Acont x(t) + \Bcont u(t), \label{eq:ch3_contsys}\\
+y(t) &=  \Ccont x(t),\nonumber
+\end{align}
+where $x(t) \in \Real^n$ represents the {\it state}, $y(t) \in \Real$ represents the {\it output}  and $u(t) \in \Real$ represents the control {\it input} of the system at any time $t \in \Real_{\geq 0}$. $\Acont$, $\Bcont$ and $\Ccont$ represent the state, input and output matrices of the system, respectively. 
+
+We illustrate our work using the motivating case study of a vision-based lateral control system model explained in Section \ref{sec:lkas_case_Study}. We consider the \gls{lti} model with $v_x=15$$m/s$, and
+\\
+
+%\vspace{2em}
+\scalebox{0.8}{
+  $\Acont = \left[
+  \begin{array}{rrrrr}
+    -10.06 & -12.99 & 0 & 0 & 0\\
+    1.096 & -11.27 & 0 & 0 & 0\\
+    -1.000 & -15.00 & 0 & 15 & 0\\
+    0 & -1.000 & 0 & 0 & 15\\
+    0 & 0 & 0 & 0 & 0\\
+  \end{array}
+\right],\ \Bcont=\left[
+  \begin{array}{c}
+    75.47\\
+    50.14\\
+    0\\
+    0\\
+    0\\
+  \end{array}
+\right].$ \\
+}
+\\[1.5ex]
+The fifth system state captures the curvature of the road at the look-ahead distance. The fifth state is required for observability of road curvature. The control input $u(t)$ is the front wheel steering angle $\delta_f$ and the output $y(t)$ is the look-ahead distance $y_L$ leading to $\Ccont = [0\ 0\ 1\ 0\ 0]$.
+
+\subsection{Implementation, control law and control configurations}~\label{sec:ch3_control law}
+The discrete-time control implementation we consider is already explained in Section~\ref{sec:ch5_embedded_implementation}.
+The control input $u[k]$ is a \emph{state feedback} controller of the following form,
+ \begin{align}
+		u[k] = \Kgain_{\workloadScenario} z[k] + \Fgain_{\workloadScenario} \controlRef \nonumber
+% 		\label{eqn:u}
+ \end{align}
+where $\Kgain_{\workloadScenario}$ is the state feedback gain and $\Fgain_{\workloadScenario}$ is the feedforward gain both designed for the workload scenario $\workloadScenario$. $\controlRef$ is the reference value for the controller. The approaches we use for designing the gains are explained in Section~\ref{sec:ch3_control_design}.
+
+For each workload scenario $\workloadScenario$, we then define a control configuration $\Configuration_{\workloadScenario}^c$ as a tuple $\Configuration_{\workloadScenario}^c = (h_{\workloadScenario},\tau_{\workloadScenario}, \Kgain_{\workloadScenario}, \Fgain_{\workloadScenario})$.

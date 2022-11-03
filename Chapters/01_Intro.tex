@@ -1,0 +1,45 @@
+\chapter{Introduction}%
+\label{chap:intro}
+\glsresetall
+
+% \gls, \glspl, \Glspl, \acrlong{cpm}
+Technology has been growing exponentially over the last few decades.
+The constant evolution of computers, the internet, wireless telecommunication, smartphones, cameras, and other modern technologies are drastically transforming the world we perceive and are improving our standard of living.
+If not for the cameras that captured my childhood days through photos and videos as memoirs, the world I grew up in would have been nothing but fiction for the current and future generations.
+Nowadays, cameras have become an integral part of our daily lives - be it for taking selfies using our smartphone to post on social media or for collaborating with my colleagues over a video call.
+Cameras, as sensors, have also become the "eyes" to perceive the surroundings for modern automotive systems, robots, autonomous systems and manufacturing systems.
+
+\Gls{ibc} systems that use cameras as sensors, are increasingly popular due to their low-cost and high versatility. 
+Cameras enable the perception of depth, relative position, geometry, relative distance, colour, and tracking of the object-of-interest. 
+As such, \gls{ibc} systems are now an integral part of industrial \glspl{cps}.
+\Glspl{cps} refer to a class of modern industrial systems with tight interaction between computation, communication and control elements (the cyber part), and physical processes such as motion, heating/cooling, vibration, wear and tear (the physical part) within these systems.
+Designing \glspl{cps} requires an integrative design approach that allows for optimisation coping with the tight coordination between the cyber and the physical components~\cite{lee2008cyber,gunes2014survey,sanislav2012cyber}.
+The \gls{ibc} system is compute-intensive and a standalone \gls{ibc} system behaves similar to a \gls{cps}.
+
+This thesis focuses on optimising the design and implementation of \gls{ibc} systems in the resource-constrained \gls{cps} domain.
+The case study used throughout this thesis is a \gls{lkas}, though the methods are directly applicable to similar systems in the \gls{cps} domain.
+In this introductory chapter, first, the history of the camera and its modern significance are briefly explained.
+Second, the context, definition and scope of \gls{ibc} systems are illustrated.
+Then, an overview of the state-of-the-art is given and the research challenges with the contributions of this thesis are enumerated. 
+After providing an overview of the design and optimization flow elaborated in this thesis, finally, the motivating case study and the thesis outline are detailed.
+
+\input{01_intro/evolutionOfCamera}
+
+\input{01_intro/ibc_systems}
+
+\input{01_intro/platforms}
+
+\input{01_intro/sota}
+
+\input{01_intro/challenges_v2}
+
+\input{01_intro/spade_overview}
+
+\input{01_intro/lkas_case_study}
+
+
+\section{Thesis outline}
+This thesis is organized along the research challenges and scientific contributions outlined in Section \ref{chap:challenges}. Accordingly, the five scientific contributions are reported in Chapter \ref{chap:parallelisation} to Chapter \ref{chap:approximation}. 
+Chapters \ref{chap:parallelisation}, \ref{chap:pipelined} and \ref{chap:pipelined_parallelism} focus on platform-aware design aspects where the research focus has been on reducing sampling period and delay by parallel implementation (Chapter \ref{chap:parallelisation}), pipelined implementation (Chapter \ref{chap:pipelined}) or their combination (Chapter \ref{chap:pipelined_parallelism}). Chapters \ref{chap:workloadVariations} and  \ref{chap:approximation} report design approaches exploiting application-specific characteristics. Chapter \ref{chap:workloadVariations} reports the proposed approach on dealing with workload variation in a sequential \gls{ibc} implementation. Chapter \ref{chap:approximation} presents the approximation-aware design of an \gls{ibc} system. It presents the \gls{imacs} framework for approximate computing in closed-loop systems. Chapter \ref{chap:concl} makes some concluding remarks and outlines a number of relevant future extensions. 
+
+\vfill

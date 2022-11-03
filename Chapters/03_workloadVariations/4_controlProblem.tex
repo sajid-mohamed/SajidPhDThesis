@@ -1,0 +1,12 @@
+We consider a regulation problem for the \gls{ibc} system. That is, the control objective is to design $u[k]$ such that $y[k] \rightarrow \controlRef$ (a constant reference) as $k \rightarrow \infty$. 
+The control objectives can be performance-oriented, control effort/energy-oriented or a combination of both. The control performance quantifies, in essence, how fast the output $y[k]$ reaches the reference $\controlRef$.  The control effort is the amount of energy or power necessary for the controller to perform regulation. 
+The control performance and effort are parameters that can be tuned in the cost function for the \gls{lqr} design and \gls{mjls} synthesis using the state and input weights. We evaluate \gls{qoc} of an \gls{ibc} application considering the following metrics: two commonly used control performance metrics - \gls{mse} (explained in Section \ref{sec:ch5_MSE}) and \gls{st} (explained in Section \ref{sec:ch7_QoC_metrics}) and two commonly used metrics to evaluate control effort/energy - \gls{psd} and \gls{mce}. 
+ 
+\noindent\textbf{\Acrfull{psd}:}
+The \gls{psd} of a signal describes the power present in the signal as a function of frequency, per unit frequency. It tells us where the average power is distributed as a function of frequency.
+We use Welch's overlapped segment averaging spectral estimation method~\cite{welch1967use} to compute \gls{psd} of our control input.
+Lower \gls{psd} for the control input signal implies that the energy required is less and hence \gls{qoc} is better.
+
+\noindent\textbf{\Acrfull{mce}:}
+We define the maximum control effort as $\max_{k} \norm{u[k]}$.
+A lower \gls{mce} means better \gls{qoc}. \gls{mce} can also be used to identify input saturation, if any.

@@ -1,0 +1,48 @@
+\section{Multiprocessor \texorpdfstring{\gls{ibc}}{IBC} implementation}
+\label{sec:ch7_embeddedIBC}
+We consider a typical setting for an \gls{ibc} system as shown in Fig.~\ref{fig:ch7_ibc_intro}~(a) having the workload distribution as illustrated in Fig.~\ref{fig:ch7_ibc_intro}~(c). The main sensor is a camera module that captures the image stream. The image stream is then fed to an embedded multiprocessor platform at a fixed \gls{fps}, e.g.\ 60 fps and image arrival period~$\fh$ given by ${\fh=1/60=16.67\text{~ms}}$. 
+The tasks include compute-intensive image sensing and processing (\taskS), control computation (\taskC), and actuation (\taskA), which are then mapped to run on a multiprocessor platform.
+We illustrate our work using the motivating case study of a vision-based lateral control system model explained in Section~\ref{sec:lkas_case_Study}.
+Further, we consider predictable and composable \gls{mpsoc} platform \gls{compsoc} (explained in Section~\ref{sec:compsoc}) for illustrating the \gls{spade} flow for pipelined parallelism. We also adapt the \gls{spade} approach for the industrial platform NVIDIA AGX Xavier (explained in Section~\ref{sec:nvidia_agx}) to demonstrate its applicability in an industrial context.
+
+\subsection{Control system and embedded implementation}
+We consider a \gls{lti} feedback control system model for \gls{ibc} given by:
+\begin{align}
+\label{eq:ch7_contsys}
+\dot{x}(t) &= \Acont x(t) +  \Bcont u(t),\\
+y(t) &= \Ccont x(t) + \Dcont u(t),\nonumber
+\end{align}
+where $x(t) \in \R^n$ represents the \textit{state} vector, $y(t)\in\R$ contains the measured \textit{output} and $u(t) \in \R$ represents the control \textit{input} of the system at any time $t \in \R_{\geq 0}$.
+$\Acont$, $\Bcont$, $\Ccont$ and $\Dcont$ represent the system, input, output and feedforward matrices of appropriate dimensions. 
+
+The model of Eq.\ \ref{eq:ch7_contsys} is a slight generalization of the model used in Chapter~\ref{chap:parallelisation}, including the feedforward matrix. The embedded implementation we consider is already explained in Section~\ref{sec:ch5_embedded_implementation}.
+We assume that the start of sensor-data processing is aligned with the camera frame arrival, i.e., $h$ is an integer multiple of $\fh$. Also, the control computation task and actuation task are delayed, if needed, to guarantee a constant $\tau$ such that $t_s(\taskC^k) = t_s(\taskS^k)+\tau-\actorET_\taskC-\actorET_\taskA$, and $t_s(\taskA^k) = t_s(\taskC^k) + \actorET_\taskC$.
+For a non-pipelined implementation (see Fig.~\ref{fig:ch7_ibc_gantt}~(a)), $\tau \le h$, i.e., $t_s(\taskS^{k+1}) \ge t_s(\taskS^k) + \tau$.
+For a pipelined implementation (see Fig.~\ref{fig:ch7_ibc_gantt}~(b),~(c)), $\tau > h$, i.e. $t_s(\taskS^{k+1}) < t_s(\taskS^k) + \tau$.
+With sensor-to-actuator delay $\tau$ and a zero-order-hold mechanism with sampling period $h \in \R$, $u(t)$ becomes piecewise constant in the intervals $t \in [kh + \tau,\ (k + 1)h + \tau ]$ for $k \in \Ze_{\geq 0}$.
+
+The main challenge here is to compute tight $\tau$ and $h$ for a multiprocessor \gls{ibc} implementation.
+Identifying the optimal mapping that guarantees a constant $\tau$ and $h$, considering both pipelining and parallelism together, is non-trivial.
+
+\subsection{\texorpdfstring{\Gls{qoc}}{QoC} metrics for control stability and performance}
+\label{sec:ch7_QoC_metrics}
+We evaluate the \gls{qoc} of our \gls{ibc} system design choices by considering stability and performance.
+Stability margins - gain and phase margins~\cite{12_sunstability} - quantify the control stability and give an analytical basis to compare two different \gls{ibc} system design choices and thus allow us to identify the optimal degree of pipelining and application parallelism.
+Once we make a choice, we can further optimise the controller with respect to performance, considering \gls{mse} (explained in Section \ref{sec:ch5_MSE}) and \gls{st}.
+
+The gain margin and phase margin quantify the additional gain and phase lag that makes the system marginally stable.
+Systems with greater stability margins can withstand greater changes in system parameters before becoming unstable.
+Gain margin and phase margin are computed analytically from the system model.
+On the other hand, \gls{mse} and \gls{st} can be analysed only through simulations.
+
+\noindent\textbf{\Acrfull{gm}:} The \gls{gm} is defined as the change in open-loop gain expressed in decibels (dB), required at 180 degrees of phase shift to make the system unstable. 
+The \gls{gm} is the difference between the magnitude curve and 0dB at the point corresponding to the frequency that gives us a phase of -180 degrees (the phase cross-over frequency).
+ 
+\noindent\textbf{\Acrfull{pm}:} The \gls{gm} is the change in open-loop phase shift required at unity gain to make a closed-loop system unstable.
+The \gls{gm} is the difference in phase between the phase curve and -180 degrees at the point corresponding to the frequency that gives us a gain of 0dB (the gain cross-over frequency).
+
+The control performance quantifies, in essence, how fast the output $y(t)$ reaches the reference $\controlRef$. 
+The control performance can be tuned in the cost function for the control gains' design using the state and input weights~\cite{mohamed2019designing}.
+
+\noindent\textbf{\Acrfull{st}:}
+The settling time is defined as the time required for the output $y(t)$ to reach and stay within a range of a certain percentage (usually 5\% or 2\%) of the final (reference) value $\controlRef$ forever without external disturbances.

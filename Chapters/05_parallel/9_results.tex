@@ -1,0 +1,52 @@
+\subsection{Design-space exploration at design time: \gls{qoc} vs utilisation trade-offs}
+The \gls{qoc} is defined as the inverse \gls{mse} (defined in Section~\ref{sec:ch5_MSE}) so that a lower \gls{mse} means a better \gls{qoc}.
+The utilisation at design time is defined based on the estimated time spent by the application in \gls{gpu} kernel calls. We use this definition for the utilisation metric as this could be computed in an actual implementation as well. 
+A \gls{dse} to obtain different system configurations is performed for each of the variants defined in Table~\ref{table:variants} by choosing different mapping options for $\taskS$, $\taskC$ and $\taskA$ tasks.
+Note that the task mappings are allowed to span over two Tegra \glspl{soc} and the subtasks of $\taskS$ (shown in Fig.~\ref{fig:ch5_SandPP}(a)) can also be mapped to separate \glspl{gpu}. Pareto-optimal system configurations are then identified for each variant through Pareto optimisation. 
+For each variant, \gls{dse}, profiling and timing analysis provide different configurations with variable task execution times.
+This results in variable delay for each variant and hence multiple system configurations with variable sampling period due to the characteristics of the industrial platform.
+As a basis for system-scenario identification, we  select the Pareto-optimal system configurations for each variant with delay and sampling period derived from the configuration with frequently occurring task execution times.
+ 
+The $\tau_i$ and $h_i$ from these Pareto-optimal configurations for each variant are shown in Table~\ref{table:tau_h}. The
+$v.i$ in Fig.~\ref{fig:ch5_Pareto} correspond to the predicted \gls{qoc} vs.\ utilisation design points using our design flow. In Fig.~\ref{fig:ch5_Pareto}, the \gls{mse} for $v.8$ with the largest $\tau_i$ among different variants is the poorest. The \gls{mse} for different variants tends to aggregate based on the $h_i$. System scenarios can then be identified based on the requirements, e.g. if \gls{qoc} is the only criterion, we can select variants $v.1,\ v.7,$ and the worst case as system scenarios. 
+
+The pessimistic $\tau_{wc}$ and $h_{wc}$ are estimated as explained in Section~\ref{sec:ch5_relation} to be 0.150~s and 5/30~s respectively.
+Note that $h_7$ is only 2/30~s and the identified worst-case variant $v.8$ has $h_8=0.100$~s.
+ This means that a control design for $h_{wc}$ would see a much worse \gls{mse} than any of the variants.  
+ 
+\subsection{\Acrlong{hil} validation using NVIDIA Drive PX2}
+\label{sec:ch5_HiL}
+A design-time analysis alone is insufficient as the runtime behaviour of an industrial platform cannot be predicted.
+We implement the 10 different variants mentioned in Table~\ref{table:variants} using a \gls{hil} simulator for \gls{lkas} (shown in Fig.~\ref{fig:ch5_IBC_setting}) and compare its performance with the design-time analysis. 
+Our \gls{hil} simulator uses webots~\cite{michel2004cyberbotics} as the physics simulation engine and interacts with NVIDIA Drive PX2 using the \gls{tcpip}. This setup uses webots for multi-camera \gls{lkas} with support for turning at a junction (or at user input).
+This setup is part of the \gls{imacs} framework (a contribution of this thesis).
+
+The performance metrics we consider are \gls{mse} (explained in Section~\ref{sec:ch5_MSE}) and \gls{gpu} utilisation.
+\textit{\gls{gpu} utilisation} is measured by the proprietary NVIDIA Nsight software~\cite{nsight20133}. \gls{gpu} utilisation  gives the measure of the time spent by the application in \gls{gpu} kernel calls. For compute-intensive image-based applications sharing the platform, minimising the utilisation is better.
+
+\begin{table}
+\scriptsize
+\caption{Bounded $\tau_i$ and $h_i$ of  selected Pareto-optimal system configurations (corresponding to the frequently occurring task execution times) per variant, providing the basis for the definition of system scenarios.}
+\label{table:tau_h}
+\vspace{-1em}
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+variants               & v.1  & v.2  & v.3  & v.4  & v.5  & v.6  & v.7  & v.8  & v.9  & v.10 \\ \hline
+$\tau_i$ in s & 0.028 & 0.042 & 0.034 & 0.066 & 0.040 & 0.069 & 0.051 & 0.100 & 0.038 & 0.045 \\ \hline
+$h_i$ in s                  & 1/30 & 2/30 & 2/30 & 2/30 & 2/30 & 3/30 & 2/30 & 3/30 & 2/30 & 2/30 \\ \hline
+\end{tabular}
+\vspace{-1em}
+\end{table}
+
+\begin{figure}[tb]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/pareto_new.eps}
+    \vspace{-1.5em}
+    \caption{Validating the design time Pareto-optimal system configurations for each variant $v.i$ with the corresponding \gls{hil} implementation $v.i'$.}
+    \label{fig:ch5_Pareto}
+    %\vspace{-2em}
+\end{figure}
+
+The $v.i$ in Fig.~\ref{fig:ch5_Pareto} correspond, as already explained, to the predicted design points using our design flow and the $v.i'$ correspond to the design points obtained from actual implementation using the \gls{hil} simulator. Even though the numbers vary between our design flow prediction and actual implementation, the trends we observe for the different variants are the same. Recall that we used measured third quartile execution times instead of \gls{wcet} in our models. At run time, when we encounter the \gls{wcet} or any violation of the ($\tau_{i},h_{i}$) for $v.i$, we execute the worst-case controller designed for ($\tau_{wc},h_{wc}$).
+At runtime, a switched controller considering the different variants has a much better \gls{mse} than the worst-case as there is no aggressive switching, i.e. once we are running in a particular variant, the runtime situation persists for some time. Notice that the \gls{qoc} improves at runtime since the controller executes in the frequently occurring system scenario.

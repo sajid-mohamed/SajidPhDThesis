@@ -1,0 +1,1588 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%%Title: 
+%%Creator: PScript5.dll Version 5.2.2
+%%CreationDate: 3/12/2019 21:31:34
+%%For: smohamed
+%%BoundingBox: 0 0 833 400
+%%Pages: 1
+%%Orientation: Portrait
+%%PageOrder: Ascend
+%%DocumentNeededResources: (atend)
+%%DocumentSuppliedResources: (atend)
+%%DocumentData: Clean7Bit
+%%TargetDevice: () (52.3) 320
+%%LanguageLevel: 1
+%%EndComments
+
+%%BeginDefaults
+%%PageBoundingBox: 0 0 833 400
+%%ViewingOrientation: 1 0 0 1
+%%EndDefaults
+
+%%BeginProlog
+%%BeginResource: file Pscript_WinNT_VMErrorHandler 5.0 0
+/currentpacking where{pop/oldpack currentpacking def/setpacking where{pop false
+setpacking}if}if/$brkpage 64 dict def $brkpage begin/prnt{dup type/stringtype
+ne{=string cvs}if dup length 6 mul/tx exch def/ty 10 def currentpoint/toy exch
+def/tox exch def 1 setgray newpath tox toy 2 sub moveto 0 ty rlineto tx 0
+rlineto 0 ty neg rlineto closepath fill tox toy moveto 0 setgray show}bind def
+/nl{currentpoint exch pop lmargin exch moveto 0 -10 rmoveto}def/=={/cp 0 def
+typeprint nl}def/typeprint{dup type exec}readonly def/lmargin 72 def/rmargin 72
+def/tprint{dup length cp add rmargin gt{nl/cp 0 def}if dup length cp add/cp
+exch def prnt}readonly def/cvsprint{=string cvs tprint( )tprint}readonly def
+/integertype{cvsprint}readonly def/realtype{cvsprint}readonly def/booleantype
+{cvsprint}readonly def/operatortype{(--)tprint =string cvs tprint(-- )tprint}
+readonly def/marktype{pop(-mark- )tprint}readonly def/dicttype{pop
+(-dictionary- )tprint}readonly def/nulltype{pop(-null- )tprint}readonly def
+/filetype{pop(-filestream- )tprint}readonly def/savetype{pop(-savelevel- )
+tprint}readonly def/fonttype{pop(-fontid- )tprint}readonly def/nametype{dup
+xcheck not{(/)tprint}if cvsprint}readonly def/stringtype{dup rcheck{(\()tprint
+tprint(\))tprint}{pop(-string- )tprint}ifelse}readonly def/arraytype{dup rcheck
+{dup xcheck{({)tprint{typeprint}forall(})tprint}{([)tprint{typeprint}forall(])
+tprint}ifelse}{pop(-array- )tprint}ifelse}readonly def/packedarraytype{dup
+rcheck{dup xcheck{({)tprint{typeprint}forall(})tprint}{([)tprint{typeprint}
+forall(])tprint}ifelse}{pop(-packedarray- )tprint}ifelse}readonly def/courier
+/Courier findfont 10 scalefont def end errordict/handleerror{systemdict begin
+$error begin $brkpage begin newerror{/newerror false store vmstatus pop pop 0
+ne{grestoreall}if initgraphics courier setfont lmargin 720 moveto errorname
+(VMerror)eq{version cvi 2016 ge{userdict/ehsave known{clear userdict/ehsave get
+restore 2 vmreclaim}if vmstatus exch pop exch pop PrtVMMsg}if}if systemdict
+/showpage get exec(%%[ Error: )print errorname =print(; OffendingCommand: )
+print/command load =print( ]%%)= flush}if end end end}dup 0 systemdict put dup
+4 $brkpage put bind readonly put/currentpacking where{pop/setpacking where{pop
+oldpack setpacking}if}if
+%%EndResource
+%%BeginProcSet: Pscript_Res_Emul 5.0 0
+/defineresource where{pop}{userdict begin/defineresource{userdict/Resources 2
+copy known{get begin}{15 dict dup begin put}ifelse exch readonly exch
+currentdict 1 index known not{dup 30 dict def}if load 3 -1 roll 2 index put
+end}bind readonly def/findresource{userdict/Resources get exch get exch get}
+bind readonly def/resourceforall{pop pop pop pop}bind readonly def
+/resourcestatus{userdict/Resources 2 copy known{get exch 2 copy known{get exch
+known{0 -1 true}{false}ifelse}{pop pop pop false}ifelse}{pop pop pop pop false}
+ifelse}bind readonly def end}ifelse
+%%EndProcSet
+userdict /Pscript_WinNT_Incr 230 dict dup begin put
+%%BeginResource: file Pscript_FatalError 5.0 0
+userdict begin/FatalErrorIf{{initgraphics findfont 1 index 0 eq{exch pop}{dup
+length dict begin{1 index/FID ne{def}{pop pop}ifelse}forall/Encoding
+{ISOLatin1Encoding}stopped{StandardEncoding}if def currentdict end
+/ErrFont-Latin1 exch definefont}ifelse exch scalefont setfont counttomark 3 div
+cvi{moveto show}repeat showpage quit}{cleartomark}ifelse}bind def end
+%%EndResource
+userdict begin/PrtVMMsg{vmstatus exch sub exch pop gt{[
+(Deze taak vereist meer geheugen dan beschikbaar is op deze printer.)100 500
+(Voer een van de onderstaande stappen uit en druk opnieuw af.)100 485
+(Selecteer Geoptimaliseerd voor draagbaarheid als de uitvoerindeling.)115 470
+(Zorg ervoor dat de instelling Beschikbaar Postscript-geheugen op de pagina Apparaatinstellingen accuraat is.)
+115 455(Verminder het aantal lettertypen in het document. )115 440
+(Druk het documenten in gedeelten af.)115 425 12/Times-Roman showpage
+(%%[ PrinterError: Low Printer VM ]%%)= true FatalErrorIf}if}bind def end
+version cvi 2016 ge{/VM?{pop}bind def}{/VM? userdict/PrtVMMsg get def}ifelse
+%%BeginResource: file Pscript_Win_Basic 5.0 0
+/d/def load def/,/load load d/~/exch , d/?/ifelse , d/!/pop , d/`/begin , d/^
+/index , d/@/dup , d/+/translate , d/$/roll , d/U/userdict , d/M/moveto , d/-
+/rlineto , d/&/currentdict , d/:/gsave , d/;/grestore , d/F/false , d/T/true ,
+d/N/newpath , d/E/end , d/Ac/arc , d/An/arcn , d/A/ashow , d/D/awidthshow , d/C
+/closepath , d/V/div , d/O/eofill , d/L/fill , d/I/lineto , d/-c/curveto , d/-M
+/rmoveto , d/+S/scale , d/Ji/setfont , d/Lc/setlinecap , d/Lj/setlinejoin , d
+/Lw/setlinewidth , d/Lm/setmiterlimit , d/sd/setdash , d/S/show , d/LH/showpage
+, d/K/stroke , d/W/widthshow , d/R/rotate , d/L2? false/languagelevel where{pop
+languagelevel 2 ge{pop true}if}if d L2?{/xS/xshow , d/yS/yshow , d/zS/xyshow ,
+d}if/b{bind d}bind d/bd{bind d}bind d/xd{~ d}bd/ld{, d}bd/bn/bind ld/lw/Lw ld
+/lc/Lc ld/lj/Lj ld/sg/setgray ld/ADO_mxRot null d/self & d/OrgMx matrix
+currentmatrix d/reinitialize{: OrgMx setmatrix[/TextInit/GraphInit/UtilsInit
+counttomark{@ where{self eq}{F}?{cvx exec}{!}?}repeat cleartomark ;}b
+/initialize{`{/Pscript_Win_Data where{!}{U/Pscript_Win_Data & put}?/ADO_mxRot ~
+d/TextInitialised? F d reinitialize E}{U/Pscript_Win_Data 230 dict @ ` put
+/ADO_mxRot ~ d/TextInitialised? F d reinitialize}?}b/terminate{!{& self eq
+{exit}{E}?}loop E}b/suspend/terminate , d/resume{` Pscript_Win_Data `}b U `
+/lucas 21690 d/featurebegin{countdictstack lucas[}b/featurecleanup{stopped
+{cleartomark @ lucas eq{! exit}if}loop countdictstack ~ sub @ 0 gt{{E}repeat}
+{!}?}b E/snap{transform 0.25 sub round 0.25 add ~ 0.25 sub round 0.25 add ~
+itransform}b/dsnap{dtransform round ~ round ~ idtransform}b/nonzero_round{@ 0.5
+ge{round}{@ -0.5 lt{round}{0 ge{1}{-1}?}?}?}b/nonzero_dsnap{dtransform
+nonzero_round ~ nonzero_round ~ idtransform}b U<04>cvn{}put/rr{1 ^ 0 - 0 ~ -
+neg 0 - C}b/irp{4 -2 $ + +S fx 4 2 $ M 1 ^ 0 - 0 ~ - neg 0 -}b/rp{4 2 $ M 1 ^ 0
+- 0 ~ - neg 0 -}b/solid{[]0 sd}b/g{@ not{U/DefIf_save save put}if U/DefIf_bool
+2 ^ put}b/DefIf_El{if U/DefIf_bool get not @{U/DefIf_save get restore}if}b/e
+{DefIf_El !}b/UDF{L2?{undefinefont}{!}?}b/UDR{L2?{undefineresource}{! !}?}b
+/freeVM{/Courier findfont[40 0 0 -40 0 0]makefont Ji 2 vmreclaim}b/hfRedefFont
+{findfont @ length dict `{1 ^/FID ne{d}{! !}?}forall & E @ ` ~{/CharStrings 1
+dict `/.notdef 0 d & E d}if/Encoding 256 array 0 1 255{1 ^ ~/.notdef put}for d
+E definefont !}bind d/hfMkCIDFont{/CIDFont findresource @ length 2 add dict `{1
+^ @/FID eq ~ @/XUID eq ~/UIDBase eq or or{! !}{d}?}forall/CDevProc ~ d/Metrics2
+16 dict d/CIDFontName 1 ^ d & E 1 ^ ~/CIDFont defineresource ![~]composefont !}
+bind d
+%%EndResource
+%%BeginResource: file Pscript_Win_Utils_L1 5.0 0
+/rf{N rp L}b/fx{1 1 dtransform @ 0 ge{1 sub 1}{1 add -0.25}? 3 -1 $ @ 0 ge{1
+sub 1}{1 add -0.25}? 3 1 $ 4 1 $ idtransform 4 -2 $ idtransform}b/BZ{4 -2 $
+snap + +S fx rf}b/rs{N rp C K}b/rc{N rp clip N}b/UtilsInit{}b/setcolorspace{!}b
+/scol{[/setgray/setrgbcolor/setcolor/setcmykcolor/setcolor/setgray]~ get cvx
+exec}b/colspRefresh{}b/AddFontInfoBegin{/FontInfo 8 dict @ `}bind d/AddFontInfo
+{/GlyphNames2Unicode 16 dict d/GlyphNames2HostCode 16 dict d}bind d
+/AddFontInfoEnd{E d}bind d
+%%EndResource
+end
+%%EndProlog
+
+%%BeginSetup
+[ 1 0 0 1 0 0 ] false Pscript_WinNT_Incr dup /initialize get exec
+1 setlinecap 1 setlinejoin
+/mysetup [ 72 600 V 0 0 -72 600 V 0 399.9685 ] def 
+%%EndSetup
+
+%%Page: 1 1
+%%PageBoundingBox: 0 0 833 400
+%%EndPageComments
+%%BeginPageSetup
+/DeviceRGB dup setcolorspace /colspABC exch def
+mysetup concat colspRefresh
+%%EndPageSetup
+
+Pscript_WinNT_Incr begin
+%%BeginResource: file Pscript_Win_GdiObject 5.0 0
+/SavedCTM null d/CTMsave{/SavedCTM SavedCTM currentmatrix d}b/CTMrestore
+{SavedCTM setmatrix}b/mp null d/ADO_mxRot null d/GDIHMatrix null d
+/GDIHPatternDict 22 dict d GDIHPatternDict `/PatternType 1 d/PaintType 2 d/Reps
+L2?{1}{5}? d/XStep 8 Reps mul d/YStep XStep d/BBox[0 0 XStep YStep]d/TilingType
+1 d/PaintProc{` 1 Lw[]0 sd PaintData , exec E}b/FGnd null d/BGnd null d
+/HS_Horizontal{horiz}b/HS_Vertical{vert}b/HS_FDiagonal{fdiag}b/HS_BDiagonal
+{biag}b/HS_Cross{horiz vert}b/HS_DiagCross{fdiag biag}b/MaxXYStep XStep YStep
+gt{XStep}{YStep}? d/horiz{Reps{0 4 M XStep 0 - 0 8 +}repeat 0 -8 Reps mul + K}b
+/vert{Reps{4 0 M 0 YStep - 8 0 +}repeat 0 -8 Reps mul + K}b/biag{Reps{0 0 M
+MaxXYStep @ - 0 YStep neg M MaxXYStep @ - 0 8 +}repeat 0 -8 Reps mul + 0 YStep
+M 8 8 - K}b/fdiag{Reps{0 0 M MaxXYStep @ neg - 0 YStep M MaxXYStep @ neg - 0 8
++}repeat 0 -8 Reps mul + MaxXYStep @ M 8 -8 - K}b E/makehatch{4 -2 $/yOrg ~ d
+/xOrg ~ d GDIHPatternDict/PaintData 3 -1 $ put CTMsave GDIHMatrix setmatrix
+GDIHPatternDict matrix xOrg yOrg + mp CTMrestore ~ U ~ 2 ^ put}b/h0{/h0
+/HS_Horizontal makehatch}b/h1{/h1/HS_Vertical makehatch}b/h2{/h2/HS_FDiagonal
+makehatch}b/h3{/h3/HS_BDiagonal makehatch}b/h4{/h4/HS_Cross makehatch}b/h5{/h5
+/HS_DiagCross makehatch}b/GDIBWPatternMx null d/pfprep{save 8 1 $
+/PatternOfTheDay 8 1 $ GDIBWPatternDict `/yOrg ~ d/xOrg ~ d/PaintData ~ d/yExt
+~ d/Width ~ d/BGnd ~ d/FGnd ~ d/Height yExt RepsV mul d/mx[Width 0 0 Height 0
+0]d E build_pattern ~ !}b/pfbf{/fEOFill ~ d pfprep hbf fEOFill{O}{L}? restore}b
+/GraphInit{GDIHMatrix null eq{/SavedCTM matrix d : ADO_mxRot concat 0 0 snap +
+: 0.48 @ GDIHPatternDict ` YStep mul ~ XStep mul ~ nonzero_dsnap YStep V ~
+XStep V ~ E +S/GDIHMatrix matrix currentmatrix readonly d ; : 0.24 -0.24 +S
+GDIBWPatternDict ` Width Height E nonzero_dsnap +S/GDIBWPatternMx matrix
+currentmatrix readonly d ; ;}if}b
+%%EndResource
+%%BeginResource: file Pscript_Win_GdiObject_L1 5.0 0
+/GDIBWPatternDict 25 dict @ `/PatternType 1 d/PaintType 2 d/RepsV 6 d/RepsH 5 d
+/BBox[0 0 RepsH 1]d/TilingType 1 d/XStep 1 d/YStep 1 d/Height 8 RepsV mul d
+/Width 8 d/mx[Width 0 0 Height neg 0 Height]d/FGnd null d/BGnd null d
+/SetBGndFGnd{}b/PaintProc{` SetBGndFGnd RepsH{Width Height F mx PaintData
+imagemask Width 0 +}repeat E}b E d/GDIpattfill{@ ` BGnd null ne PaintType 2 eq
+and{: BGnd aload ! scol fEOFill{O}{L}? ; FGnd aload ! U/iCol 2 ^ put @ 0 eq{!
+2}{@ 1 eq ~ 2 eq or{4}{5}?}? -1 $}if E @ patterncalc : 4 ^/PaintType get 2 eq
+{iCol 0 eq{6 -1 $}if iCol 1 eq iCol 2 eq or{8 -3 $}if iCol 3 eq iCol 4 eq or{9
+-4 $}if iCol scol}if fEOFill{eoclip}{clip}? N patternfill ; N}b/hbf
+{GDIpattfill}b/hfMain{/fEOFill ~ d ~/iCol ~ d GDIpattfill}b/hf{: hfMain ;}b
+/mpstr 1 string d/mp{~ @ length 12 add dict copy `/PatternCTM matrix
+currentmatrix d/PatternMatrix ~ d/PatWidth XStep mpstr length mul d/PatHeight
+YStep d/FontType 3 d/Encoding 256 array d 3 string 0 1 255{Encoding ~ @ 3 ^ cvs
+cvn put}for !/FontMatrix matrix d/FontBBox BBox d/BuildChar{! @ ` XStep 0
+FontBBox aload ! setcachedevice/PaintProc , E : exec ;}b & E ~ @ 3 -1 $
+definefont}b/build_pattern{: GDIBWPatternDict ` Width Height E dsnap +S
+/GDIBWPatternMx matrix currentmatrix d ; CTMsave GDIBWPatternMx setmatrix
+GDIBWPatternDict @ ` xOrg yOrg E matrix + mp CTMrestore}b/patterncalc{` :
+PatternCTM setmatrix PatternMatrix concat BBox aload ! ! ! + pathbbox ;
+PatHeight V ceiling 4 1 $ PatWidth V ceiling 4 1 $ PatHeight V floor 4 1 $
+PatWidth V floor 4 1 $ 2 ^ sub cvi abs ~ 3 ^ sub cvi abs ~ 4 2 $ PatHeight mul
+~ PatWidth mul ~ E}b/patternfill{5 -1 $ @ ` Ji PatternCTM setmatrix
+PatternMatrix concat 0 2 ^ 2 ^ M 0 1 mpstr length 1 sub{1 ^ mpstr 3 1 $ put}for
+! 2 ^{currentpoint 5 ^{mpstr S}repeat YStep add M}repeat ! ! ! ! E}b/pbf{: 14
+dict `/fGray ~ d/fEOFill ~ d/yOrg ~ d/xOrg ~ d/PaintData ~ d/OutputBPP ~ d
+/Height ~ d/Width ~ d/mx xOrg yOrg matrix + d fGray{/PaintProc{` Width Height
+OutputBPP mx PaintData image E}b}{/PaintProc{` Width Height 8 mx PaintData F
+OutputBPP 8 idiv colorimage E}b}? pathbbox fEOFill{eoclip}{clip}?/Top ~ d/Right
+~ d/Bottom ~ d/Left ~ d Top Height neg Bottom 1 sub{Left Width Right 1 sub{1 ^
+2 copy + & PaintProc neg ~ neg ~ +}bind for !}bind for E ;}b
+%%EndResource
+end reinitialize
+: 0 0 6943 3333 rc N 0 0 M 0 3334 I 6944 3334 I 6944 0 I 0 0 I C 
+1 1 1 1 scol  O N 0 0 M 0 3334 I 6944 3334 I 6944 0 I 0 0 I C 
+ O ; N 902 309 M 902 2784 I 6284 2784 I 6284 309 I 902 309 I C 
+1 1 1 1 scol  O 0.148 0.148 0.148 1 scol 1 Lj 0 Lc 13 Lw solid N 902 2784 M 6284 2784 I : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 902 309 M 6284 309 I : [ 0.27 0 0 0.27 0 0 ] concat K 
+; 27 Lw N 902 2784 M 902 2730 I : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2696 2784 M 2696 2730 I : [ 0.133 0 0 0.133 0 0 ] concat K 
+; 13 Lw N 4490 2784 M 4490 2730 I : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 6284 2784 M 6284 2730 I : [ 0.27 0 0 0.27 0 0 ] concat K 
+; 27 Lw N 902 309 M 902 363 I : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2696 309 M 2696 363 I : [ 0.133 0 0 0.133 0 0 ] concat K 
+; 13 Lw N 4490 309 M 4490 363 I : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 6284 309 M 6284 363 I : [ 0.27 0 0 0.27 0 0 ] concat K 
+; Pscript_WinNT_Incr begin
+%%BeginResource: file Pscript_Text 5.0 0
+/TextInit{TextInitialised? not{/Pscript_Windows_Font & d/TextInitialised? T d
+/fM[1 0 0 1 0 0]d/mFM matrix d/iMat[1 0 0.212557 1 0 0]d}if}b/copyfont{1 ^
+length add dict `{1 ^/FID ne{d}{! !}?}forall & E}b/EncodeDict 11 dict d/bullets
+{{/bullet}repeat}b/rF{3 copyfont @ ` ~ EncodeDict ~ get/Encoding ~ 3 ^/0 eq{&
+/CharStrings known{CharStrings/Eth known not{! EncodeDict/ANSIEncodingOld get}
+if}if}if d E}b/mF{@ 7 1 $ findfont ~{@/Encoding get @ StandardEncoding eq{! T}{
+{ISOLatin1Encoding}stopped{! F}{eq}?{T}{@ ` T 32 1 127{Encoding 1 ^ get
+StandardEncoding 3 -1 $ get eq and}for E}?}?}{F}?{1 ^ ~ rF}{0 copyfont}? 6 -2 $
+! ! ~ !/pd_charset @ where{~ get 128 eq{@ FDV 2 copy get @ length array copy
+put pd_CoverFCRange}if}{!}? 2 ^ ~ definefont fM 5 4 -1 $ put fM 4 0 put fM
+makefont Pscript_Windows_Font 3 1 $ put}b/sLT{: Lw -M currentpoint snap M 0 - 0
+Lc K ;}b/xUP null d/yUP null d/uW null d/xSP null d/ySP null d/sW null d/sSU{N
+/uW ~ d/yUP ~ d/xUP ~ d}b/sU{xUP yUP uW sLT}b/sST{N/sW ~ d/ySP ~ d/xSP ~ d}b/sT
+{xSP ySP sW sLT}b/sR{: + R 0 0 M}b/sRxy{: matrix astore concat 0 0 M}b/eR/; , d
+/AddOrigFP{{&/FontInfo known{&/FontInfo get length 6 add}{6}? dict `
+/WinPitchAndFamily ~ d/WinCharSet ~ d/OrigFontType ~ d/OrigFontStyle ~ d
+/OrigFontName ~ d & E/FontInfo ~ d}{! ! ! ! !}?}b/mFS{makefont
+Pscript_Windows_Font 3 1 $ put}b/mF42D{0 copyfont `/FontName ~ d 2 copy ~ sub 1
+add dict `/.notdef 0 d 2 copy 1 ~{@ 3 ^ sub Encoding ~ get ~ d}for & E
+/CharStrings ~ d ! ! & @ E/FontName get ~ definefont}b/mF42{15 dict ` @ 4 1 $
+FontName ~ d/FontType 0 d/FMapType 2 d/FontMatrix[1 0 0 1 0 0]d 1 ^ 254 add 255
+idiv @ array/Encoding ~ d 0 1 3 -1 $ 1 sub{@ Encoding 3 1 $ put}for/FDepVector
+Encoding length array d/CharStrings 2 dict `/.notdef 0 d & E d 0 1 Encoding
+length 1 sub{@ @ 10 lt{! FontName length 1 add string}{100 lt{FontName length 2
+add string}{FontName length 3 add string}?}? @ 0 FontName @ length string cvs
+putinterval @ 3 -1 $ @ 4 1 $ 3 string cvs FontName length ~ putinterval cvn 1 ^
+256 mul @ 255 add 3 -1 $ 4 ^ findfont mF42D FDepVector 3 1 $ put}for & @ E
+/FontName get ~ definefont ! ! ! mF}b/mF_OTF_V{~ ! ~ ! 4 -1 $ ! findfont 2 ^ ~
+definefont fM @ @ 4 6 -1 $ neg put 5 0 put 90 matrix R matrix concatmatrix
+makefont Pscript_Windows_Font 3 1 $ put}b/mF_TTF_V{3{~ !}repeat 3 -1 $ !
+findfont 1 ^ ~ definefont Pscript_Windows_Font 3 1 $ put}b/UmF{L2?
+{Pscript_Windows_Font ~ undef}{!}?}b/UmF42{@ findfont/FDepVector get{/FontName
+get undefinefont}forall undefinefont}b
+%%EndResource
+end reinitialize
+Pscript_WinNT_Incr begin
+%%BeginResource: file Pscript_Encoding256 5.0 0
+/CharCol256Encoding[/.notdef/breve/caron/dotaccent/dotlessi/fi/fl/fraction
+/hungarumlaut/Lslash/lslash/minus/ogonek/ring/Zcaron/zcaron/.notdef/.notdef
+/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+/.notdef/.notdef/.notdef/.notdef/.notdef/space/exclam/quotedbl/numbersign
+/dollar/percent/ampersand/quotesingle/parenleft/parenright/asterisk/plus/comma
+/hyphen/period/slash/zero/one/two/three/four/five/six/seven/eight/nine/colon
+/semicolon/less/equal/greater/question/at/A/B/C/D/E/F/G/H/I/J/K/L/M/N/O/P/Q/R/S
+/T/U/V/W/X/Y/Z/bracketleft/backslash/bracketright/asciicircum/underscore/grave
+/a/b/c/d/e/f/g/h/i/j/k/l/m/n/o/p/q/r/s/t/u/v/w/x/y/z/braceleft/bar/braceright
+/asciitilde/.notdef/Euro/.notdef/quotesinglbase/florin/quotedblbase/ellipsis
+/dagger/daggerdbl/circumflex/perthousand/Scaron/guilsinglleft/OE/.notdef
+/.notdef/.notdef/.notdef/quoteleft/quoteright/quotedblleft/quotedblright/bullet
+/endash/emdash/tilde/trademark/scaron/guilsinglright/oe/.notdef/.notdef
+/Ydieresis/.notdef/exclamdown/cent/sterling/currency/yen/brokenbar/section
+/dieresis/copyright/ordfeminine/guillemotleft/logicalnot/.notdef/registered
+/macron/degree/plusminus/twosuperior/threesuperior/acute/mu/paragraph
+/periodcentered/cedilla/onesuperior/ordmasculine/guillemotright/onequarter
+/onehalf/threequarters/questiondown/Agrave/Aacute/Acircumflex/Atilde/Adieresis
+/Aring/AE/Ccedilla/Egrave/Eacute/Ecircumflex/Edieresis/Igrave/Iacute
+/Icircumflex/Idieresis/Eth/Ntilde/Ograve/Oacute/Ocircumflex/Otilde/Odieresis
+/multiply/Oslash/Ugrave/Uacute/Ucircumflex/Udieresis/Yacute/Thorn/germandbls
+/agrave/aacute/acircumflex/atilde/adieresis/aring/ae/ccedilla/egrave/eacute
+/ecircumflex/edieresis/igrave/iacute/icircumflex/idieresis/eth/ntilde/ograve
+/oacute/ocircumflex/otilde/odieresis/divide/oslash/ugrave/uacute/ucircumflex
+/udieresis/yacute/thorn/ydieresis]def EncodeDict/256 CharCol256Encoding put
+%%EndResource
+end reinitialize
+
+%%IncludeResource: font Times-Roman
+F /F0 0 /256 T /Times-Roman mF 
+/F0SD8YFFFFFF27 F0 [216.512 0 0 -216.496 0 0 ] mFS
+F0SD8YFFFFFF27 Ji 
+849 3042 M (0)S 
+2643 3042 M (5)S 
+4381 3042 M (1)S 
+4490 3042 M (0)S  
+6176 3042 M (1)S 
+6284 3042 M (5)S  
+: 3259 3096 669 237 rc 3259 3291 M (t)S 
+3320 3291 M (i)S  3381 3291 M (m)S  3550 3291 M (e)S  3646 3291 M ( )S  3700 3291 M (\()S  3772 3291 M (s)S  3856 3291 M (\))S  
+; 27 Lw N 902 2784 M 902 309 I : [ 0.133 0 0 0.133 0 0 ] concat K 
+; 13 Lw N 6284 2784 M 6284 309 I : [ 0.27 0 0 0.27 0 0 ] concat K 
+; 27 Lw N 902 2784 M 956 2784 I : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 902 2371 M 956 2371 I : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 902 1959 M 956 1959 I : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 902 1546 M 956 1546 I : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 902 1134 M 956 1134 I : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 902 722 M 956 722 I : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 902 309 M 956 309 I : [ 0.133 0 0 0.133 0 0 ] concat K 
+; 13 Lw N 6284 2784 M 6230 2784 I : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 6284 2371 M 6230 2371 I : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 6284 1959 M 6230 1959 I : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 6284 1546 M 6230 1546 I : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 6284 1134 M 6230 1134 I : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 6284 722 M 6230 722 I : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 6284 309 M 6230 309 I : [ 0.27 0 0 0.27 0 0 ] concat K 
+; 662 2862 M (-)S 
+734 2862 M (3)S  
+662 2451 M (-)S 
+734 2451 M (2)S  
+662 2037 M (-)S 
+734 2037 M (1)S  
+736 1626 M (0)S 
+736 1212 M (1)S 
+736 799 M (2)S 
+736 388 M (3)S 
+/F0S00IFFFFFF27YFFFFFF27 F0 [0 -216.512 -216.496 0 0 0 ] mFS
+F0S00IFFFFFF27YFFFFFF27 Ji 
+597 1704 M (u)S 
+597 1596 M (\()S 
+597 1524 M (t)S 
+597 1464 M (\))S 
+N 934 260 M 934 259 935 258 935 257 -c 980 212 I 935 167 I 935 166 934 165 934 164 -c 934 163 935 162 935 161 -c 936 160 937 160 938 160 -c 940 160 941 160 942 161 -c 987 206 I 1031 161 I 1033 160 1034 160 1035 160 -c 1036 160 1037 160 1038 161 -c 1038 162 1039 163 1039 164 -c 1039 165 1039 166 1038 167 -c 993 212 I 1038 257 I 1039 258 1039 259 1039 260 -c 1039 261 1038 262 1038 263 -c 1037 264 1036 264 1035 264 -c 1033 264 1032 264 1031 262 -c 987 218 I 942 262 I 941 264 940 264 938 264 -c 937 264 936 264 935 263 -c 935 262 934 261 934 260 -c C 
+ L F0SD8YFFFFFF27 Ji 
+1072 266 M (1)S 
+1181 266 M (0)S  
+/F0SADYFFFFFF52 F0 [173.207 0 0 -173.195 0 0 ] mFS
+F0SADYFFFFFF52 Ji 
+1289 160 M (-)S 
+1348 160 M (3)S  
+1 0 0 1 scol 27 Lw N 902 1546 M 909 1546 I 920 2067 I 956 1660 I 962 2043 I 974 2010 I 1010 1579 I 1016 1803 I 1028 1779 I 1064 1529 I 1070 1651 I 1082 1636 I 1118 1503 I 1124 1563 I 1136 1553 I 1171 1491 I 1178 1514 I 1190 1509 I 1225 1488 I 1231 1490 I 1243 1487 I 1279 1489 I 1285 1480 I 1297 1478 I 1333 1493 I 1339 1478 I 1351 1477 I 1387 1498 I 1393 1481 I 1405 1480 I 1440 1503 I 1447 1486 I 1459 1486 I 1494 1508 I 1500 1492 I 1512 1492 I 1548 1513 I 1554 1498 I 1566 1498 I 1602 1517 I 1608 1504 I 1620 1504 I 1656 1522 I 1662 1509 I 1674 1510 I 1710 1525 I 1716 1514 I 1728 1514 I 1764 1528 I 1769 1519 I 1781 1519 I 1817 1531 I 1823 1523 I 1835 1523 I 1871 1533 I 1877 1526 I 1889 1526 I 1925 1535 I 1931 1529 I 1943 1529 I 1979 1537 I 1985 1532 I 1997 1532 I 2033 1538 I 2039 1534 I 2050 1534 I 2086 1539 I 2092 1536 I 2104 1536 I 2140 1540 I 2146 1537 I 2158 1537 I 2194 1541 I 2200 1539 I 2212 1539 I 2248 1542 I 2254 1540 I 2266 1540 I 2302 1543 I 2308 1541 I 2320 1541 I 2355 1543 I 2361 1542 I 2373 1542 I 2409 1544 I 2415 1542 I 2427 1542 I 2463 1544 I 2469 1543 I 2481 1543 I 2517 1545 I 2523 1543 I 2535 1543 I 2571 1545 I 2577 1544 I 2589 1544 I 2624 1545 I 2630 1544 I 2642 1544 I 2678 1545 I 2684 1545 I 2696 1545 I 2702 471 I 2714 512 I 2750 1451 I 2756 948 I 2768 1001 I 2804 1564 I 2810 1286 I 2822 1320 I 2858 1625 I 2864 1484 I 2876 1505 I 2911 1654 I 2917 1594 I 2930 1607 I 2965 1663 I 2971 1651 I 2983 1658 I 3019 1662 I 3025 1676 I 3037 1680 I 3073 1655 I 3079 1683 I 3091 1685 I 3127 1646 I 3133 1679 I 3145 1680 I 3181 1635 I 3187 1670 I 3199 1670 I 3235 1625 I 3240 1658 I 3252 1658 I 3288 1615 I 3294 1646 I 3306 1646 I 3342 1606 I 3348 1634 I 3360 1634 I 3396 1598 I 3402 1623 I 3414 1622 I 3450 1591 I 3456 1613 I 3468 1612 I 3504 1585 I 3510 1604 I 3522 1603 I 3557 1579 I 3563 1596 I 3575 1595 I 3611 1575 I 3617 1589 I 3629 1588 I 3665 1570 I 3671 1583 I 3683 1582 I 3719 1567 I 3725 1578 I 3737 1577 I 3773 1564 I 3779 1573 I 3791 1573 I 3826 1562 I 3832 1569 I 3844 1569 I 3880 1559 I 3886 1566 I 3898 1566 I 3934 1557 I 3940 1563 I 3952 1563 I 3988 1556 I 3994 1561 I 4006 1560 I 4042 1555 I 4048 1559 I 4060 1559 I 4095 1553 I 4101 1557 I 4113 1557 I 4149 1552 I 4155 1555 I 4167 1555 I 4203 1552 I 4209 1554 I 4221 1554 I 4257 1551 I 4263 1553 I 4275 1553 I 4311 1550 I 4317 1552 I 4329 1552 I 4365 1550 I 4371 1551 I 4382 1551 I 4419 1549 I 4425 1550 I 4436 1550 I 4472 1549 I 4478 1550 I 4490 1550 I 4496 2623 I 4508 2583 I 4544 1642 I 4550 2146 I 4562 2093 I 4598 1529 I 4604 1808 I 4616 1775 I 4652 1468 I 4658 1610 I 4669 1589 I 4706 1440 I 4712 1500 I 4723 1487 I 4759 1430 I 4765 1443 I 4777 1435 I 4813 1431 I 4819 1418 I 4831 1413 I 4867 1438 I 4873 1411 I 4885 1408 I 4921 1447 I 4927 1415 I 4939 1413 I 4975 1458 I 4981 1424 I 4993 1423 I 5028 1468 I 5034 1435 I 5046 1435 I 5082 1478 I 5088 1447 I 5100 1447 I 5136 1487 I 5142 1459 I 5154 1460 I 5190 1495 I 5196 1470 I 5208 1471 I 5244 1502 I 5250 1481 I 5262 1481 I 5297 1509 I 5303 1490 I 5315 1490 I 5351 1514 I 5357 1497 I 5369 1498 I 5405 1519 I 5411 1504 I 5423 1505 I 5459 1523 I 5465 1510 I 5477 1511 I 5513 1526 I 5519 1516 I 5531 1516 I 5566 1529 I 5572 1520 I 5584 1520 I 5620 1532 I 5626 1524 I 5638 1524 I 5674 1534 I 5680 1527 I 5692 1527 I 5728 1536 I 5734 1530 I 5746 1530 I 5782 1537 I 5788 1533 I 5800 1533 I 5836 1539 I 5842 1534 I 5853 1534 I 5890 1540 I 5896 1536 I 5907 1536 I 5943 1541 I 5949 1538 I 5961 1538 I 5997 1542 I 6003 1539 I 6015 1539 I 6051 1542 I 6057 1540 I 6069 1540 I 6105 1543 I 6111 1541 I 6123 1541 I 6159 1543 I 6165 1542 I 6177 1542 I 6212 1544 I 6218 1543 I 6230 1543 I 6266 1544 I 6272 1543 I 6284 1543 I : [ 0.27 0 0 0.27 0 0 ] concat K 
+; 0 Lj 53 Lw N 916 1545 M 916 1537 909 1531 901 1531 -c 893 1531 887 1537 887 1545 -c 887 1553 893 1560 901 1560 -c 909 1560 916 1553 916 1545 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 922 1545 M 922 1537 915 1531 907 1531 -c 899 1531 893 1537 893 1545 -c 893 1553 899 1560 907 1560 -c 915 1560 922 1553 922 1545 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 934 2066 M 934 2058 927 2051 919 2051 -c 911 2051 905 2058 905 2066 -c 905 2074 911 2080 919 2080 -c 927 2080 934 2074 934 2066 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 970 1659 M 970 1651 963 1644 955 1644 -c 947 1644 941 1651 941 1659 -c 941 1667 947 1673 955 1673 -c 963 1673 970 1667 970 1659 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 976 2042 M 976 2034 969 2028 961 2028 -c 953 2028 947 2034 947 2042 -c 947 2050 953 2057 961 2057 -c 969 2057 976 2050 976 2042 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 987 2009 M 987 2001 981 1994 973 1994 -c 965 1994 959 2001 959 2009 -c 959 2017 965 2023 973 2023 -c 981 2023 987 2017 987 2009 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1023 1578 M 1023 1570 1017 1564 1009 1564 -c 1001 1564 994 1570 994 1578 -c 994 1586 1001 1593 1009 1593 -c 1017 1593 1023 1586 1023 1578 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1029 1802 M 1029 1794 1023 1787 1015 1787 -c 1007 1787 1000 1794 1000 1802 -c 1000 1810 1007 1816 1015 1816 -c 1023 1816 1029 1810 1029 1802 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1041 1778 M 1041 1770 1035 1763 1027 1763 -c 1019 1763 1012 1770 1012 1778 -c 1012 1786 1019 1792 1027 1792 -c 1035 1792 1041 1786 1041 1778 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1077 1528 M 1077 1520 1071 1514 1063 1514 -c 1055 1514 1048 1520 1048 1528 -c 1048 1536 1055 1542 1063 1542 -c 1071 1542 1077 1536 1077 1528 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1083 1650 M 1083 1642 1077 1635 1069 1635 -c 1061 1635 1054 1642 1054 1650 -c 1054 1658 1061 1664 1069 1664 -c 1077 1664 1083 1658 1083 1650 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1095 1634 M 1095 1627 1089 1620 1081 1620 -c 1073 1620 1066 1627 1066 1634 -c 1066 1642 1073 1649 1081 1649 -c 1089 1649 1095 1642 1095 1634 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1131 1502 M 1131 1494 1125 1487 1117 1487 -c 1109 1487 1102 1494 1102 1502 -c 1102 1510 1109 1516 1117 1516 -c 1125 1516 1131 1510 1131 1502 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1137 1562 M 1137 1554 1131 1547 1123 1547 -c 1115 1547 1108 1554 1108 1562 -c 1108 1570 1115 1576 1123 1576 -c 1131 1576 1137 1570 1137 1562 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1149 1552 M 1149 1544 1142 1538 1134 1538 -c 1126 1538 1120 1544 1120 1552 -c 1120 1560 1126 1567 1134 1567 -c 1142 1567 1149 1560 1149 1552 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1185 1490 M 1185 1482 1178 1475 1170 1475 -c 1162 1475 1156 1482 1156 1490 -c 1156 1498 1162 1504 1170 1504 -c 1178 1504 1185 1498 1185 1490 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1191 1513 M 1191 1505 1184 1499 1176 1499 -c 1168 1499 1162 1505 1162 1513 -c 1162 1521 1168 1528 1176 1528 -c 1184 1528 1191 1521 1191 1513 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1203 1508 M 1203 1500 1196 1493 1188 1493 -c 1180 1493 1174 1500 1174 1508 -c 1174 1516 1180 1522 1188 1522 -c 1196 1522 1203 1516 1203 1508 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1239 1486 M 1239 1478 1232 1472 1224 1472 -c 1216 1472 1210 1478 1210 1486 -c 1210 1494 1216 1501 1224 1501 -c 1232 1501 1239 1494 1239 1486 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1245 1489 M 1245 1481 1238 1475 1230 1475 -c 1222 1475 1216 1481 1216 1489 -c 1216 1497 1222 1503 1230 1503 -c 1238 1503 1245 1497 1245 1489 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1257 1486 M 1257 1478 1250 1471 1242 1471 -c 1234 1471 1228 1478 1228 1486 -c 1228 1494 1234 1500 1242 1500 -c 1250 1500 1257 1494 1257 1486 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1292 1488 M 1292 1480 1286 1473 1278 1473 -c 1270 1473 1263 1480 1263 1488 -c 1263 1496 1270 1502 1278 1502 -c 1286 1502 1292 1496 1292 1488 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1298 1479 M 1298 1471 1292 1464 1284 1464 -c 1276 1464 1269 1471 1269 1479 -c 1269 1487 1276 1493 1284 1493 -c 1292 1493 1298 1487 1298 1479 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1310 1477 M 1310 1469 1304 1463 1296 1463 -c 1288 1463 1281 1469 1281 1477 -c 1281 1485 1288 1491 1296 1491 -c 1304 1491 1310 1485 1310 1477 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1346 1492 M 1346 1484 1340 1477 1332 1477 -c 1324 1477 1317 1484 1317 1492 -c 1317 1500 1324 1506 1332 1506 -c 1340 1506 1346 1500 1346 1492 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1352 1477 M 1352 1469 1346 1463 1338 1463 -c 1330 1463 1323 1469 1323 1477 -c 1323 1485 1330 1491 1338 1491 -c 1346 1491 1352 1485 1352 1477 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1364 1476 M 1364 1468 1358 1461 1350 1461 -c 1342 1461 1335 1468 1335 1476 -c 1335 1484 1342 1490 1350 1490 -c 1358 1490 1364 1484 1364 1476 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1400 1496 M 1400 1489 1394 1482 1386 1482 -c 1378 1482 1371 1489 1371 1496 -c 1371 1504 1378 1511 1386 1511 -c 1394 1511 1400 1504 1400 1496 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1406 1480 M 1406 1472 1400 1465 1392 1465 -c 1384 1465 1377 1472 1377 1480 -c 1377 1488 1384 1494 1392 1494 -c 1400 1494 1406 1488 1406 1480 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1418 1479 M 1418 1471 1412 1465 1404 1465 -c 1396 1465 1389 1471 1389 1479 -c 1389 1487 1396 1493 1404 1493 -c 1412 1493 1418 1487 1418 1479 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1454 1502 M 1454 1494 1447 1487 1439 1487 -c 1431 1487 1425 1494 1425 1502 -c 1425 1510 1431 1516 1439 1516 -c 1447 1516 1454 1510 1454 1502 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1460 1485 M 1460 1477 1453 1470 1445 1470 -c 1437 1470 1431 1477 1431 1485 -c 1431 1493 1437 1499 1445 1499 -c 1453 1499 1460 1493 1460 1485 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1472 1484 M 1472 1476 1465 1470 1457 1470 -c 1449 1470 1443 1476 1443 1484 -c 1443 1492 1449 1499 1457 1499 -c 1465 1499 1472 1492 1472 1484 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1508 1507 M 1508 1499 1501 1493 1493 1493 -c 1485 1493 1479 1499 1479 1507 -c 1479 1515 1485 1522 1493 1522 -c 1501 1522 1508 1515 1508 1507 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1514 1491 M 1514 1483 1507 1476 1499 1476 -c 1491 1476 1485 1483 1485 1491 -c 1485 1498 1491 1505 1499 1505 -c 1507 1505 1514 1498 1514 1491 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1526 1491 M 1526 1483 1519 1476 1511 1476 -c 1503 1476 1497 1483 1497 1491 -c 1497 1498 1503 1505 1511 1505 -c 1519 1505 1526 1498 1526 1491 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1562 1512 M 1562 1504 1555 1498 1547 1498 -c 1539 1498 1533 1504 1533 1512 -c 1533 1520 1539 1526 1547 1526 -c 1555 1526 1562 1520 1562 1512 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1568 1497 M 1568 1489 1561 1482 1553 1482 -c 1545 1482 1538 1489 1538 1497 -c 1538 1505 1545 1511 1553 1511 -c 1561 1511 1568 1505 1568 1497 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1579 1497 M 1579 1489 1573 1482 1565 1482 -c 1557 1482 1551 1489 1551 1497 -c 1551 1505 1557 1511 1565 1511 -c 1573 1511 1579 1505 1579 1497 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1615 1516 M 1615 1508 1609 1502 1601 1502 -c 1593 1502 1586 1508 1586 1516 -c 1586 1524 1593 1531 1601 1531 -c 1609 1531 1615 1524 1615 1516 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1621 1503 M 1621 1495 1615 1488 1607 1488 -c 1599 1488 1592 1495 1592 1503 -c 1592 1511 1599 1517 1607 1517 -c 1615 1517 1621 1511 1621 1503 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1633 1503 M 1633 1495 1627 1488 1619 1488 -c 1611 1488 1604 1495 1604 1503 -c 1604 1511 1611 1517 1619 1517 -c 1627 1517 1633 1511 1633 1503 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1669 1520 M 1669 1512 1663 1506 1655 1506 -c 1647 1506 1640 1512 1640 1520 -c 1640 1528 1647 1535 1655 1535 -c 1663 1535 1669 1528 1669 1520 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1675 1508 M 1675 1500 1669 1494 1661 1494 -c 1653 1494 1646 1500 1646 1508 -c 1646 1516 1653 1523 1661 1523 -c 1669 1523 1675 1516 1675 1508 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1687 1508 M 1687 1500 1681 1494 1673 1494 -c 1665 1494 1658 1500 1658 1508 -c 1658 1516 1665 1523 1673 1523 -c 1681 1523 1687 1516 1687 1508 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1723 1524 M 1723 1516 1716 1509 1708 1509 -c 1701 1509 1694 1516 1694 1524 -c 1694 1532 1701 1538 1708 1538 -c 1716 1538 1723 1532 1723 1524 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1729 1513 M 1729 1505 1722 1499 1715 1499 -c 1707 1499 1700 1505 1700 1513 -c 1700 1521 1707 1528 1715 1528 -c 1722 1528 1729 1521 1729 1513 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1741 1513 M 1741 1505 1734 1499 1726 1499 -c 1718 1499 1712 1505 1712 1513 -c 1712 1521 1718 1528 1726 1528 -c 1734 1528 1741 1521 1741 1513 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1777 1527 M 1777 1519 1770 1512 1762 1512 -c 1754 1512 1748 1519 1748 1527 -c 1748 1535 1754 1541 1762 1541 -c 1770 1541 1777 1535 1777 1527 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1783 1518 M 1783 1510 1776 1503 1768 1503 -c 1760 1503 1754 1510 1754 1518 -c 1754 1526 1760 1532 1768 1532 -c 1776 1532 1783 1526 1783 1518 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1795 1518 M 1795 1510 1788 1503 1780 1503 -c 1772 1503 1766 1510 1766 1518 -c 1766 1526 1772 1532 1780 1532 -c 1788 1532 1795 1526 1795 1518 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1831 1529 M 1831 1522 1824 1515 1816 1515 -c 1808 1515 1802 1522 1802 1529 -c 1802 1537 1808 1544 1816 1544 -c 1824 1544 1831 1537 1831 1529 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1837 1522 M 1837 1514 1830 1507 1822 1507 -c 1814 1507 1808 1514 1808 1522 -c 1808 1529 1814 1536 1822 1536 -c 1830 1536 1837 1529 1837 1522 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1849 1522 M 1849 1514 1842 1507 1834 1507 -c 1826 1507 1820 1514 1820 1522 -c 1820 1530 1826 1536 1834 1536 -c 1842 1536 1849 1530 1849 1522 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1884 1532 M 1884 1524 1878 1517 1870 1517 -c 1862 1517 1855 1524 1855 1532 -c 1855 1540 1862 1546 1870 1546 -c 1878 1546 1884 1540 1884 1532 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1890 1525 M 1890 1517 1884 1510 1876 1510 -c 1868 1510 1861 1517 1861 1525 -c 1861 1533 1868 1539 1876 1539 -c 1884 1539 1890 1533 1890 1525 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1902 1525 M 1902 1517 1896 1511 1888 1511 -c 1880 1511 1873 1517 1873 1525 -c 1873 1533 1880 1539 1888 1539 -c 1896 1539 1902 1533 1902 1525 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1938 1534 M 1938 1526 1932 1519 1924 1519 -c 1916 1519 1909 1526 1909 1534 -c 1909 1542 1916 1548 1924 1548 -c 1932 1548 1938 1542 1938 1534 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1944 1528 M 1944 1520 1938 1513 1930 1513 -c 1922 1513 1915 1520 1915 1528 -c 1915 1536 1922 1542 1930 1542 -c 1938 1542 1944 1536 1944 1528 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1956 1528 M 1956 1520 1950 1514 1942 1514 -c 1934 1514 1927 1520 1927 1528 -c 1927 1536 1934 1542 1942 1542 -c 1950 1542 1956 1536 1956 1528 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1992 1535 M 1992 1527 1986 1521 1978 1521 -c 1970 1521 1963 1527 1963 1535 -c 1963 1543 1970 1550 1978 1550 -c 1986 1550 1992 1543 1992 1535 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1998 1530 M 1998 1522 1991 1516 1984 1516 -c 1976 1516 1969 1522 1969 1530 -c 1969 1538 1976 1545 1984 1545 -c 1991 1545 1998 1538 1998 1530 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2010 1530 M 2010 1522 2004 1516 1996 1516 -c 1988 1516 1981 1522 1981 1530 -c 1981 1538 1988 1545 1996 1545 -c 2004 1545 2010 1538 2010 1530 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2046 1537 M 2046 1529 2039 1522 2031 1522 -c 2023 1522 2017 1529 2017 1537 -c 2017 1545 2023 1551 2031 1551 -c 2039 1551 2046 1545 2046 1537 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2052 1532 M 2052 1524 2045 1518 2037 1518 -c 2029 1518 2023 1524 2023 1532 -c 2023 1540 2029 1547 2037 1547 -c 2045 1547 2052 1540 2052 1532 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2064 1533 M 2064 1525 2057 1518 2049 1518 -c 2041 1518 2035 1525 2035 1533 -c 2035 1541 2041 1547 2049 1547 -c 2057 1547 2064 1541 2064 1533 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2100 1538 M 2100 1530 2093 1524 2085 1524 -c 2077 1524 2071 1530 2071 1538 -c 2071 1546 2077 1553 2085 1553 -c 2093 1553 2100 1546 2100 1538 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2106 1534 M 2106 1526 2099 1520 2091 1520 -c 2083 1520 2077 1526 2077 1534 -c 2077 1542 2083 1549 2091 1549 -c 2099 1549 2106 1542 2106 1534 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2118 1534 M 2118 1527 2111 1520 2103 1520 -c 2095 1520 2089 1527 2089 1534 -c 2089 1542 2095 1549 2103 1549 -c 2111 1549 2118 1542 2118 1534 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2154 1539 M 2154 1531 2147 1525 2139 1525 -c 2131 1525 2125 1531 2125 1539 -c 2125 1547 2131 1554 2139 1554 -c 2147 1554 2154 1547 2154 1539 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2160 1536 M 2160 1528 2153 1522 2145 1522 -c 2137 1522 2131 1528 2131 1536 -c 2131 1544 2137 1550 2145 1550 -c 2153 1550 2160 1544 2160 1536 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2171 1536 M 2171 1528 2165 1522 2157 1522 -c 2149 1522 2142 1528 2142 1536 -c 2142 1544 2149 1550 2157 1550 -c 2165 1550 2171 1544 2171 1536 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2207 1540 M 2207 1532 2201 1526 2193 1526 -c 2185 1526 2178 1532 2178 1540 -c 2178 1548 2185 1555 2193 1555 -c 2201 1555 2207 1548 2207 1540 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2213 1537 M 2213 1529 2207 1523 2199 1523 -c 2191 1523 2184 1529 2184 1537 -c 2184 1545 2191 1552 2199 1552 -c 2207 1552 2213 1545 2213 1537 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2225 1537 M 2225 1529 2219 1523 2211 1523 -c 2203 1523 2196 1529 2196 1537 -c 2196 1545 2203 1552 2211 1552 -c 2219 1552 2225 1545 2225 1537 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2261 1541 M 2261 1533 2255 1526 2247 1526 -c 2239 1526 2232 1533 2232 1541 -c 2232 1549 2239 1555 2247 1555 -c 2255 1555 2261 1549 2261 1541 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2267 1539 M 2267 1531 2261 1524 2253 1524 -c 2245 1524 2238 1531 2238 1539 -c 2238 1547 2245 1553 2253 1553 -c 2261 1553 2267 1547 2267 1539 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2279 1539 M 2279 1531 2273 1524 2265 1524 -c 2257 1524 2250 1531 2250 1539 -c 2250 1547 2257 1553 2265 1553 -c 2273 1553 2279 1547 2279 1539 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2315 1542 M 2315 1534 2308 1527 2300 1527 -c 2292 1527 2286 1534 2286 1542 -c 2286 1550 2292 1556 2300 1556 -c 2308 1556 2315 1550 2315 1542 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2321 1539 M 2321 1532 2314 1525 2306 1525 -c 2298 1525 2292 1532 2292 1539 -c 2292 1547 2298 1554 2306 1554 -c 2314 1554 2321 1547 2321 1539 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2333 1540 M 2333 1532 2326 1525 2318 1525 -c 2310 1525 2304 1532 2304 1540 -c 2304 1547 2310 1554 2318 1554 -c 2326 1554 2333 1547 2333 1540 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2369 1542 M 2369 1534 2362 1528 2354 1528 -c 2346 1528 2340 1534 2340 1542 -c 2340 1550 2346 1557 2354 1557 -c 2362 1557 2369 1550 2369 1542 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2375 1540 M 2375 1532 2368 1526 2360 1526 -c 2352 1526 2346 1532 2346 1540 -c 2346 1548 2352 1555 2360 1555 -c 2368 1555 2375 1548 2375 1540 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2387 1540 M 2387 1532 2380 1526 2372 1526 -c 2364 1526 2358 1532 2358 1540 -c 2358 1548 2364 1555 2372 1555 -c 2380 1555 2387 1548 2387 1540 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2423 1543 M 2423 1535 2416 1528 2408 1528 -c 2400 1528 2394 1535 2394 1543 -c 2394 1551 2400 1557 2408 1557 -c 2416 1557 2423 1551 2423 1543 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2429 1541 M 2429 1533 2422 1527 2414 1527 -c 2406 1527 2400 1533 2400 1541 -c 2400 1549 2406 1556 2414 1556 -c 2422 1556 2429 1549 2429 1541 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2441 1541 M 2441 1533 2434 1527 2426 1527 -c 2418 1527 2412 1533 2412 1541 -c 2412 1549 2418 1556 2426 1556 -c 2434 1556 2441 1549 2441 1541 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2476 1543 M 2476 1535 2470 1529 2462 1529 -c 2454 1529 2447 1535 2447 1543 -c 2447 1551 2454 1557 2462 1557 -c 2470 1557 2476 1551 2476 1543 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2482 1542 M 2482 1534 2476 1527 2468 1527 -c 2460 1527 2453 1534 2453 1542 -c 2453 1550 2460 1556 2468 1556 -c 2476 1556 2482 1550 2482 1542 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2494 1542 M 2494 1534 2488 1527 2480 1527 -c 2472 1527 2465 1534 2465 1542 -c 2465 1550 2472 1556 2480 1556 -c 2488 1556 2494 1550 2494 1542 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2530 1543 M 2530 1535 2524 1529 2516 1529 -c 2508 1529 2501 1535 2501 1543 -c 2501 1551 2508 1558 2516 1558 -c 2524 1558 2530 1551 2530 1543 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2536 1542 M 2536 1534 2530 1528 2522 1528 -c 2514 1528 2507 1534 2507 1542 -c 2507 1550 2514 1557 2522 1557 -c 2530 1557 2536 1550 2536 1542 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2548 1542 M 2548 1534 2542 1528 2534 1528 -c 2526 1528 2519 1534 2519 1542 -c 2519 1550 2526 1557 2534 1557 -c 2542 1557 2548 1550 2548 1542 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2584 1544 M 2584 1536 2578 1529 2570 1529 -c 2562 1529 2555 1536 2555 1544 -c 2555 1552 2562 1558 2570 1558 -c 2578 1558 2584 1552 2584 1544 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2590 1543 M 2590 1535 2584 1528 2576 1528 -c 2568 1528 2561 1535 2561 1543 -c 2561 1551 2568 1557 2576 1557 -c 2584 1557 2590 1551 2590 1543 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2602 1543 M 2602 1535 2595 1528 2588 1528 -c 2580 1528 2573 1535 2573 1543 -c 2573 1551 2580 1557 2588 1557 -c 2595 1557 2602 1551 2602 1543 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2638 1544 M 2638 1536 2631 1529 2623 1529 -c 2615 1529 2609 1536 2609 1544 -c 2609 1552 2615 1558 2623 1558 -c 2631 1558 2638 1552 2638 1544 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2644 1543 M 2644 1535 2637 1529 2629 1529 -c 2621 1529 2615 1535 2615 1543 -c 2615 1551 2621 1557 2629 1557 -c 2637 1557 2644 1551 2644 1543 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2656 1543 M 2656 1535 2649 1529 2641 1529 -c 2633 1529 2627 1535 2627 1543 -c 2627 1551 2633 1558 2641 1558 -c 2649 1558 2656 1551 2656 1543 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2692 1544 M 2692 1536 2685 1530 2677 1530 -c 2669 1530 2663 1536 2663 1544 -c 2663 1552 2669 1559 2677 1559 -c 2685 1559 2692 1552 2692 1544 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2698 1543 M 2698 1535 2691 1529 2683 1529 -c 2675 1529 2669 1535 2669 1543 -c 2669 1551 2675 1558 2683 1558 -c 2691 1558 2698 1551 2698 1543 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2710 1543 M 2710 1535 2703 1529 2695 1529 -c 2687 1529 2681 1535 2681 1543 -c 2681 1551 2687 1558 2695 1558 -c 2703 1558 2710 1551 2710 1543 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2716 470 M 2716 462 2709 456 2701 456 -c 2693 456 2687 462 2687 470 -c 2687 478 2693 485 2701 485 -c 2709 485 2716 478 2716 470 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2728 511 M 2728 503 2721 496 2713 496 -c 2705 496 2699 503 2699 511 -c 2699 519 2705 525 2713 525 -c 2721 525 2728 519 2728 511 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2763 1450 M 2763 1442 2757 1436 2749 1436 -c 2741 1436 2734 1442 2734 1450 -c 2734 1458 2741 1465 2749 1465 -c 2757 1465 2763 1458 2763 1450 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2769 947 M 2769 939 2763 933 2755 933 -c 2747 933 2740 939 2740 947 -c 2740 955 2747 962 2755 962 -c 2763 962 2769 955 2769 947 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2781 1000 M 2781 992 2775 986 2767 986 -c 2759 986 2752 992 2752 1000 -c 2752 1008 2759 1014 2767 1014 -c 2775 1014 2781 1008 2781 1000 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2817 1563 M 2817 1555 2811 1549 2803 1549 -c 2795 1549 2788 1555 2788 1563 -c 2788 1571 2795 1578 2803 1578 -c 2811 1578 2817 1571 2817 1563 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2823 1285 M 2823 1277 2817 1270 2809 1270 -c 2801 1270 2794 1277 2794 1285 -c 2794 1293 2801 1299 2809 1299 -c 2817 1299 2823 1293 2823 1285 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2835 1319 M 2835 1311 2829 1304 2821 1304 -c 2813 1304 2806 1311 2806 1319 -c 2806 1326 2813 1333 2821 1333 -c 2829 1333 2835 1326 2835 1319 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2871 1624 M 2871 1616 2865 1609 2857 1609 -c 2849 1609 2842 1616 2842 1624 -c 2842 1632 2849 1638 2857 1638 -c 2865 1638 2871 1632 2871 1624 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2877 1483 M 2877 1475 2871 1469 2863 1469 -c 2855 1469 2848 1475 2848 1483 -c 2848 1491 2855 1497 2863 1497 -c 2871 1497 2877 1491 2877 1483 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2889 1504 M 2889 1496 2883 1489 2875 1489 -c 2867 1489 2860 1496 2860 1504 -c 2860 1512 2867 1518 2875 1518 -c 2883 1518 2889 1512 2889 1504 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2925 1652 M 2925 1644 2918 1638 2910 1638 -c 2902 1638 2896 1644 2896 1652 -c 2896 1660 2902 1667 2910 1667 -c 2918 1667 2925 1660 2925 1652 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2931 1593 M 2931 1585 2924 1579 2916 1579 -c 2908 1579 2902 1585 2902 1593 -c 2902 1601 2908 1608 2916 1608 -c 2924 1608 2931 1601 2931 1593 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2943 1606 M 2943 1598 2936 1591 2928 1591 -c 2920 1591 2914 1598 2914 1606 -c 2914 1614 2920 1620 2928 1620 -c 2936 1620 2943 1614 2943 1606 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2979 1662 M 2979 1654 2972 1648 2964 1648 -c 2956 1648 2950 1654 2950 1662 -c 2950 1670 2956 1677 2964 1677 -c 2972 1677 2979 1670 2979 1662 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2985 1650 M 2985 1642 2978 1635 2970 1635 -c 2962 1635 2956 1642 2956 1650 -c 2956 1658 2962 1664 2970 1664 -c 2978 1664 2985 1658 2985 1650 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2997 1657 M 2997 1649 2990 1643 2982 1643 -c 2974 1643 2968 1649 2968 1657 -c 2968 1665 2974 1672 2982 1672 -c 2990 1672 2997 1665 2997 1657 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3033 1661 M 3033 1653 3026 1647 3018 1647 -c 3010 1647 3004 1653 3004 1661 -c 3004 1669 3010 1675 3018 1675 -c 3026 1675 3033 1669 3033 1661 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3039 1675 M 3039 1667 3032 1660 3024 1660 -c 3016 1660 3010 1667 3010 1675 -c 3010 1683 3016 1689 3024 1689 -c 3032 1689 3039 1683 3039 1675 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3050 1679 M 3050 1671 3044 1665 3036 1665 -c 3028 1665 3022 1671 3022 1679 -c 3022 1687 3028 1694 3036 1694 -c 3044 1694 3050 1687 3050 1679 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3086 1654 M 3086 1646 3080 1640 3072 1640 -c 3064 1640 3057 1646 3057 1654 -c 3057 1662 3064 1669 3072 1669 -c 3080 1669 3086 1662 3086 1654 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3092 1681 M 3092 1673 3086 1667 3078 1667 -c 3070 1667 3063 1673 3063 1681 -c 3063 1689 3070 1696 3078 1696 -c 3086 1696 3092 1689 3092 1681 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3104 1684 M 3104 1676 3098 1669 3090 1669 -c 3082 1669 3075 1676 3075 1684 -c 3075 1692 3082 1698 3090 1698 -c 3098 1698 3104 1692 3104 1684 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3140 1645 M 3140 1637 3134 1630 3126 1630 -c 3118 1630 3111 1637 3111 1645 -c 3111 1653 3118 1659 3126 1659 -c 3134 1659 3140 1653 3140 1645 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3146 1678 M 3146 1670 3140 1663 3132 1663 -c 3124 1663 3117 1670 3117 1678 -c 3117 1686 3124 1692 3132 1692 -c 3140 1692 3146 1686 3146 1678 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3158 1679 M 3158 1671 3152 1665 3144 1665 -c 3136 1665 3129 1671 3129 1679 -c 3129 1687 3136 1693 3144 1693 -c 3152 1693 3158 1687 3158 1679 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3194 1634 M 3194 1626 3187 1620 3179 1620 -c 3171 1620 3165 1626 3165 1634 -c 3165 1642 3171 1649 3179 1649 -c 3187 1649 3194 1642 3194 1634 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3200 1669 M 3200 1661 3193 1654 3185 1654 -c 3178 1654 3171 1661 3171 1669 -c 3171 1677 3178 1683 3185 1683 -c 3193 1683 3200 1677 3200 1669 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3212 1669 M 3212 1661 3205 1655 3197 1655 -c 3189 1655 3183 1661 3183 1669 -c 3183 1677 3189 1684 3197 1684 -c 3205 1684 3212 1677 3212 1669 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3248 1624 M 3248 1616 3241 1609 3233 1609 -c 3225 1609 3219 1616 3219 1624 -c 3219 1632 3225 1638 3233 1638 -c 3241 1638 3248 1632 3248 1624 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3254 1657 M 3254 1649 3247 1643 3239 1643 -c 3231 1643 3225 1649 3225 1657 -c 3225 1665 3231 1671 3239 1671 -c 3247 1671 3254 1665 3254 1657 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3266 1657 M 3266 1649 3259 1643 3251 1643 -c 3243 1643 3237 1649 3237 1657 -c 3237 1665 3243 1672 3251 1672 -c 3259 1672 3266 1665 3266 1657 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3302 1614 M 3302 1606 3295 1599 3287 1599 -c 3279 1599 3273 1606 3273 1614 -c 3273 1622 3279 1628 3287 1628 -c 3295 1628 3302 1622 3302 1614 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3308 1645 M 3308 1637 3301 1630 3293 1630 -c 3285 1630 3279 1637 3279 1645 -c 3279 1653 3285 1659 3293 1659 -c 3301 1659 3308 1653 3308 1645 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3320 1645 M 3320 1637 3313 1630 3305 1630 -c 3297 1630 3291 1637 3291 1645 -c 3291 1653 3297 1659 3305 1659 -c 3313 1659 3320 1653 3320 1645 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3355 1605 M 3355 1597 3349 1591 3341 1591 -c 3333 1591 3326 1597 3326 1605 -c 3326 1613 3333 1619 3341 1619 -c 3349 1619 3355 1613 3355 1605 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3361 1633 M 3361 1625 3355 1618 3347 1618 -c 3339 1618 3332 1625 3332 1633 -c 3332 1641 3339 1647 3347 1647 -c 3355 1647 3361 1641 3361 1633 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3373 1633 M 3373 1625 3367 1618 3359 1618 -c 3351 1618 3344 1625 3344 1633 -c 3344 1641 3351 1647 3359 1647 -c 3367 1647 3373 1641 3373 1633 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3409 1597 M 3409 1589 3403 1582 3395 1582 -c 3387 1582 3380 1589 3380 1597 -c 3380 1605 3387 1611 3395 1611 -c 3403 1611 3409 1605 3409 1597 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3415 1622 M 3415 1614 3409 1607 3401 1607 -c 3393 1607 3386 1614 3386 1622 -c 3386 1630 3393 1636 3401 1636 -c 3409 1636 3415 1630 3415 1622 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3427 1621 M 3427 1613 3421 1607 3413 1607 -c 3405 1607 3398 1613 3398 1621 -c 3398 1629 3405 1636 3413 1636 -c 3421 1636 3427 1629 3427 1621 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3463 1590 M 3463 1582 3457 1575 3449 1575 -c 3441 1575 3434 1582 3434 1590 -c 3434 1598 3441 1604 3449 1604 -c 3457 1604 3463 1598 3463 1590 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3469 1611 M 3469 1604 3463 1597 3455 1597 -c 3447 1597 3440 1604 3440 1611 -c 3440 1619 3447 1626 3455 1626 -c 3463 1626 3469 1619 3469 1611 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3481 1611 M 3481 1603 3475 1597 3467 1597 -c 3459 1597 3452 1603 3452 1611 -c 3452 1619 3459 1626 3467 1626 -c 3475 1626 3481 1619 3481 1611 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3517 1583 M 3517 1575 3510 1569 3502 1569 -c 3494 1569 3488 1575 3488 1583 -c 3488 1591 3494 1598 3502 1598 -c 3510 1598 3517 1591 3517 1583 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3523 1602 M 3523 1594 3516 1588 3508 1588 -c 3500 1588 3494 1594 3494 1602 -c 3494 1610 3500 1617 3508 1617 -c 3516 1617 3523 1610 3523 1602 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3535 1602 M 3535 1594 3528 1588 3520 1588 -c 3512 1588 3506 1594 3506 1602 -c 3506 1610 3512 1617 3520 1617 -c 3528 1617 3535 1610 3535 1602 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3571 1578 M 3571 1570 3564 1564 3556 1564 -c 3548 1564 3542 1570 3542 1578 -c 3542 1586 3548 1592 3556 1592 -c 3564 1592 3571 1586 3571 1578 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3577 1594 M 3577 1586 3570 1580 3562 1580 -c 3554 1580 3548 1586 3548 1594 -c 3548 1602 3554 1609 3562 1609 -c 3570 1609 3577 1602 3577 1594 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3589 1594 M 3589 1586 3582 1580 3574 1580 -c 3566 1580 3560 1586 3560 1594 -c 3560 1602 3566 1609 3574 1609 -c 3582 1609 3589 1602 3589 1594 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3624 1573 M 3624 1565 3618 1559 3610 1559 -c 3602 1559 3596 1565 3596 1573 -c 3596 1581 3602 1588 3610 1588 -c 3618 1588 3624 1581 3624 1573 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3630 1588 M 3630 1580 3624 1573 3616 1573 -c 3608 1573 3602 1580 3602 1588 -c 3602 1596 3608 1602 3616 1602 -c 3624 1602 3630 1596 3630 1588 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3642 1587 M 3642 1579 3636 1573 3628 1573 -c 3620 1573 3613 1579 3613 1587 -c 3613 1595 3620 1602 3628 1602 -c 3636 1602 3642 1595 3642 1587 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3678 1569 M 3678 1561 3672 1555 3664 1555 -c 3656 1555 3649 1561 3649 1569 -c 3649 1577 3656 1584 3664 1584 -c 3672 1584 3678 1577 3678 1569 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3684 1582 M 3684 1574 3678 1567 3670 1567 -c 3662 1567 3655 1574 3655 1582 -c 3655 1589 3662 1596 3670 1596 -c 3678 1596 3684 1589 3684 1582 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3696 1581 M 3696 1573 3690 1567 3682 1567 -c 3674 1567 3667 1573 3667 1581 -c 3667 1589 3674 1596 3682 1596 -c 3690 1596 3696 1589 3696 1581 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3732 1566 M 3732 1558 3726 1551 3718 1551 -c 3710 1551 3703 1558 3703 1566 -c 3703 1574 3710 1580 3718 1580 -c 3726 1580 3732 1574 3732 1566 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3738 1576 M 3738 1568 3732 1562 3724 1562 -c 3716 1562 3709 1568 3709 1576 -c 3709 1584 3716 1591 3724 1591 -c 3732 1591 3738 1584 3738 1576 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3750 1576 M 3750 1568 3744 1562 3736 1562 -c 3728 1562 3721 1568 3721 1576 -c 3721 1584 3728 1591 3736 1591 -c 3744 1591 3750 1584 3750 1576 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3786 1563 M 3786 1555 3779 1548 3771 1548 -c 3763 1548 3757 1555 3757 1563 -c 3757 1571 3763 1577 3771 1577 -c 3779 1577 3786 1571 3786 1563 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3792 1572 M 3792 1564 3785 1557 3777 1557 -c 3769 1557 3763 1564 3763 1572 -c 3763 1580 3769 1586 3777 1586 -c 3785 1586 3792 1580 3792 1572 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3804 1572 M 3804 1564 3797 1557 3789 1557 -c 3781 1557 3775 1564 3775 1572 -c 3775 1580 3781 1586 3789 1586 -c 3797 1586 3804 1580 3804 1572 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3840 1560 M 3840 1552 3833 1546 3825 1546 -c 3817 1546 3811 1552 3811 1560 -c 3811 1568 3817 1575 3825 1575 -c 3833 1575 3840 1568 3840 1560 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3846 1568 M 3846 1560 3839 1554 3831 1554 -c 3823 1554 3817 1560 3817 1568 -c 3817 1576 3823 1582 3831 1582 -c 3839 1582 3846 1576 3846 1568 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3858 1568 M 3858 1560 3851 1553 3843 1553 -c 3835 1553 3829 1560 3829 1568 -c 3829 1576 3835 1582 3843 1582 -c 3851 1582 3858 1576 3858 1568 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3894 1558 M 3894 1550 3887 1544 3879 1544 -c 3871 1544 3865 1550 3865 1558 -c 3865 1566 3871 1573 3879 1573 -c 3887 1573 3894 1566 3894 1558 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3899 1565 M 3899 1557 3893 1550 3885 1550 -c 3877 1550 3871 1557 3871 1565 -c 3871 1573 3877 1579 3885 1579 -c 3893 1579 3899 1573 3899 1565 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3912 1565 M 3912 1557 3905 1550 3897 1550 -c 3889 1550 3883 1557 3883 1565 -c 3883 1573 3889 1579 3897 1579 -c 3905 1579 3912 1573 3912 1565 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3947 1556 M 3947 1548 3941 1542 3933 1542 -c 3925 1542 3918 1548 3918 1556 -c 3918 1564 3925 1571 3933 1571 -c 3941 1571 3947 1564 3947 1556 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3953 1562 M 3953 1554 3947 1547 3939 1547 -c 3931 1547 3924 1554 3924 1562 -c 3924 1570 3931 1576 3939 1576 -c 3947 1576 3953 1570 3953 1562 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3965 1562 M 3965 1554 3959 1547 3951 1547 -c 3943 1547 3936 1554 3936 1562 -c 3936 1570 3943 1576 3951 1576 -c 3959 1576 3965 1570 3965 1562 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 4001 1555 M 4001 1547 3995 1540 3987 1540 -c 3979 1540 3972 1547 3972 1555 -c 3972 1563 3979 1569 3987 1569 -c 3995 1569 4001 1563 4001 1555 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 4007 1560 M 4007 1552 4001 1545 3993 1545 -c 3985 1545 3978 1552 3978 1560 -c 3978 1568 3985 1574 3993 1574 -c 4001 1574 4007 1568 4007 1560 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 4019 1559 M 4019 1551 4013 1545 4005 1545 -c 3997 1545 3990 1551 3990 1559 -c 3990 1567 3997 1574 4005 1574 -c 4013 1574 4019 1567 4019 1559 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 4055 1553 M 4055 1545 4049 1539 4041 1539 -c 4033 1539 4026 1545 4026 1553 -c 4026 1561 4033 1568 4041 1568 -c 4049 1568 4055 1561 4055 1553 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 4061 1557 M 4061 1549 4055 1543 4047 1543 -c 4039 1543 4032 1549 4032 1557 -c 4032 1565 4039 1572 4047 1572 -c 4055 1572 4061 1565 4061 1557 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 4073 1557 M 4073 1549 4066 1543 4058 1543 -c 4050 1543 4044 1549 4044 1557 -c 4044 1565 4050 1572 4058 1572 -c 4066 1572 4073 1565 4073 1557 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 4109 1552 M 4109 1544 4102 1538 4094 1538 -c 4086 1538 4080 1544 4080 1552 -c 4080 1560 4086 1567 4094 1567 -c 4102 1567 4109 1560 4109 1552 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 4115 1556 M 4115 1548 4108 1541 4100 1541 -c 4092 1541 4086 1548 4086 1556 -c 4086 1564 4092 1570 4100 1570 -c 4108 1570 4115 1564 4115 1556 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 4127 1556 M 4127 1548 4120 1541 4112 1541 -c 4104 1541 4098 1548 4098 1556 -c 4098 1564 4104 1570 4112 1570 -c 4120 1570 4127 1564 4127 1556 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 4163 1551 M 4163 1543 4156 1537 4148 1537 -c 4140 1537 4134 1543 4134 1551 -c 4134 1559 4140 1566 4148 1566 -c 4156 1566 4163 1559 4163 1551 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 4169 1554 M 4169 1546 4162 1540 4154 1540 -c 4146 1540 4140 1546 4140 1554 -c 4140 1562 4146 1569 4154 1569 -c 4162 1569 4169 1562 4169 1554 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 4181 1554 M 4181 1546 4174 1540 4166 1540 -c 4158 1540 4152 1546 4152 1554 -c 4152 1562 4158 1569 4166 1569 -c 4174 1569 4181 1562 4181 1554 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 4216 1550 M 4216 1542 4210 1536 4202 1536 -c 4194 1536 4188 1542 4188 1550 -c 4188 1558 4194 1565 4202 1565 -c 4210 1565 4216 1558 4216 1550 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 4222 1553 M 4222 1545 4216 1538 4208 1538 -c 4200 1538 4194 1545 4194 1553 -c 4194 1561 4200 1567 4208 1567 -c 4216 1567 4222 1561 4222 1553 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 4234 1553 M 4234 1545 4228 1538 4220 1538 -c 4212 1538 4205 1545 4205 1553 -c 4205 1561 4212 1567 4220 1567 -c 4228 1567 4234 1561 4234 1553 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 4270 1550 M 4270 1542 4264 1535 4256 1535 -c 4248 1535 4241 1542 4241 1550 -c 4241 1557 4248 1564 4256 1564 -c 4264 1564 4270 1557 4270 1550 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 4276 1552 M 4276 1544 4270 1537 4262 1537 -c 4254 1537 4247 1544 4247 1552 -c 4247 1560 4254 1566 4262 1566 -c 4270 1566 4276 1560 4276 1552 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 4288 1552 M 4288 1544 4282 1537 4274 1537 -c 4266 1537 4259 1544 4259 1552 -c 4259 1560 4266 1566 4274 1566 -c 4282 1566 4288 1560 4288 1552 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 4324 1549 M 4324 1541 4318 1534 4310 1534 -c 4302 1534 4295 1541 4295 1549 -c 4295 1557 4302 1563 4310 1563 -c 4318 1563 4324 1557 4324 1549 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 4330 1551 M 4330 1543 4324 1536 4316 1536 -c 4308 1536 4301 1543 4301 1551 -c 4301 1559 4308 1565 4316 1565 -c 4324 1565 4330 1559 4330 1551 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 4342 1551 M 4342 1543 4336 1536 4328 1536 -c 4320 1536 4313 1543 4313 1551 -c 4313 1559 4320 1565 4328 1565 -c 4336 1565 4342 1559 4342 1551 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 4378 1548 M 4378 1540 4371 1534 4363 1534 -c 4355 1534 4349 1540 4349 1548 -c 4349 1556 4355 1563 4363 1563 -c 4371 1563 4378 1556 4378 1548 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 4384 1550 M 4384 1542 4377 1536 4369 1536 -c 4361 1536 4355 1542 4355 1550 -c 4355 1558 4361 1564 4369 1564 -c 4377 1564 4384 1558 4384 1550 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 4396 1550 M 4396 1542 4389 1536 4381 1536 -c 4373 1536 4367 1542 4367 1550 -c 4367 1558 4373 1564 4381 1564 -c 4389 1564 4396 1558 4396 1550 -c : [ 0.133 0 0 0.133 0 0 ] concat K 
+; 27 Lw N 4432 1548 M 4432 1540 4425 1534 4417 1534 -c 4409 1534 4403 1540 4403 1548 -c 4403 1556 4409 1562 4417 1562 -c 4425 1562 4432 1556 4432 1548 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4438 1549 M 4438 1542 4431 1535 4423 1535 -c 4415 1535 4409 1542 4409 1549 -c 4409 1557 4415 1564 4423 1564 -c 4431 1564 4438 1557 4438 1549 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4450 1549 M 4450 1542 4443 1535 4435 1535 -c 4427 1535 4421 1542 4421 1549 -c 4421 1557 4427 1564 4435 1564 -c 4443 1564 4450 1557 4450 1549 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4486 1548 M 4486 1540 4479 1533 4471 1533 -c 4463 1533 4457 1540 4457 1548 -c 4457 1556 4463 1562 4471 1562 -c 4479 1562 4486 1556 4486 1548 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4492 1549 M 4492 1541 4485 1534 4477 1534 -c 4469 1534 4463 1541 4463 1549 -c 4463 1557 4469 1563 4477 1563 -c 4485 1563 4492 1557 4492 1549 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4503 1549 M 4503 1541 4497 1534 4489 1534 -c 4481 1534 4475 1541 4475 1549 -c 4475 1557 4481 1563 4489 1563 -c 4497 1563 4503 1557 4503 1549 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4510 2622 M 4510 2614 4503 2608 4495 2608 -c 4487 2608 4481 2614 4481 2622 -c 4481 2630 4487 2636 4495 2636 -c 4503 2636 4510 2630 4510 2622 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4522 2582 M 4522 2573 4515 2567 4507 2567 -c 4499 2567 4493 2573 4493 2582 -c 4493 2589 4499 2596 4507 2596 -c 4515 2596 4522 2589 4522 2582 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4557 1641 M 4557 1634 4551 1627 4543 1627 -c 4535 1627 4528 1634 4528 1641 -c 4528 1650 4535 1656 4543 1656 -c 4551 1656 4557 1650 4557 1641 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4563 2145 M 4563 2137 4557 2130 4549 2130 -c 4541 2130 4534 2137 4534 2145 -c 4534 2153 4541 2159 4549 2159 -c 4557 2159 4563 2153 4563 2145 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4575 2092 M 4575 2084 4569 2078 4561 2078 -c 4553 2078 4546 2084 4546 2092 -c 4546 2100 4553 2106 4561 2106 -c 4569 2106 4575 2100 4575 2092 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4611 1528 M 4611 1520 4605 1514 4597 1514 -c 4589 1514 4582 1520 4582 1528 -c 4582 1536 4589 1543 4597 1543 -c 4605 1543 4611 1536 4611 1528 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4617 1807 M 4617 1799 4611 1793 4603 1793 -c 4595 1793 4588 1799 4588 1807 -c 4588 1815 4595 1822 4603 1822 -c 4611 1822 4617 1815 4617 1807 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4629 1773 M 4629 1765 4623 1759 4615 1759 -c 4607 1759 4600 1765 4600 1773 -c 4600 1781 4607 1788 4615 1788 -c 4623 1788 4629 1781 4629 1773 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4665 1467 M 4665 1460 4659 1453 4650 1453 -c 4643 1453 4636 1460 4636 1467 -c 4636 1475 4643 1482 4650 1482 -c 4659 1482 4665 1475 4665 1467 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4671 1609 M 4671 1601 4665 1594 4656 1594 -c 4649 1594 4642 1601 4642 1609 -c 4642 1616 4649 1623 4656 1623 -c 4665 1623 4671 1616 4671 1609 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4683 1588 M 4683 1580 4677 1573 4668 1573 -c 4661 1573 4654 1580 4654 1588 -c 4654 1596 4661 1602 4668 1602 -c 4677 1602 4683 1596 4683 1588 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4719 1439 M 4719 1431 4712 1424 4704 1424 -c 4696 1424 4690 1431 4690 1439 -c 4690 1447 4696 1453 4704 1453 -c 4712 1453 4719 1447 4719 1439 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4725 1498 M 4725 1490 4718 1484 4710 1484 -c 4702 1484 4696 1490 4696 1498 -c 4696 1506 4702 1513 4710 1513 -c 4718 1513 4725 1506 4725 1498 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4737 1486 M 4737 1478 4730 1471 4722 1471 -c 4714 1471 4708 1478 4708 1486 -c 4708 1494 4714 1500 4722 1500 -c 4730 1500 4737 1494 4737 1486 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4773 1429 M 4773 1421 4766 1415 4758 1415 -c 4750 1415 4744 1421 4744 1429 -c 4744 1437 4750 1444 4758 1444 -c 4766 1444 4773 1437 4773 1429 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4779 1442 M 4779 1434 4772 1427 4764 1427 -c 4756 1427 4750 1434 4750 1442 -c 4750 1450 4756 1456 4764 1456 -c 4772 1456 4779 1450 4779 1442 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4791 1434 M 4791 1426 4784 1420 4776 1420 -c 4768 1420 4762 1426 4762 1434 -c 4762 1442 4768 1448 4776 1448 -c 4784 1448 4791 1442 4791 1434 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4827 1430 M 4827 1422 4820 1416 4812 1416 -c 4804 1416 4797 1422 4797 1430 -c 4797 1438 4804 1445 4812 1445 -c 4820 1445 4827 1438 4827 1430 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4832 1417 M 4832 1408 4826 1402 4818 1402 -c 4810 1402 4803 1408 4803 1417 -c 4803 1424 4810 1431 4818 1431 -c 4826 1431 4832 1424 4832 1417 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4844 1412 M 4844 1404 4838 1398 4830 1398 -c 4822 1398 4815 1404 4815 1412 -c 4815 1420 4822 1427 4830 1427 -c 4838 1427 4844 1420 4844 1412 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4880 1437 M 4880 1429 4874 1422 4866 1422 -c 4858 1422 4851 1429 4851 1437 -c 4851 1445 4858 1451 4866 1451 -c 4874 1451 4880 1445 4880 1437 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4886 1410 M 4886 1402 4880 1395 4872 1395 -c 4864 1395 4857 1402 4857 1410 -c 4857 1418 4864 1424 4872 1424 -c 4880 1424 4886 1418 4886 1410 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4898 1407 M 4898 1399 4892 1393 4884 1393 -c 4876 1393 4869 1399 4869 1407 -c 4869 1415 4876 1422 4884 1422 -c 4892 1422 4898 1415 4898 1407 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4934 1446 M 4934 1438 4928 1432 4920 1432 -c 4912 1432 4905 1438 4905 1446 -c 4905 1454 4912 1461 4920 1461 -c 4928 1461 4934 1454 4934 1446 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4940 1414 M 4940 1405 4934 1399 4926 1399 -c 4918 1399 4911 1405 4911 1414 -c 4911 1421 4918 1428 4926 1428 -c 4934 1428 4940 1421 4940 1414 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4952 1412 M 4952 1404 4946 1398 4937 1398 -c 4930 1398 4923 1404 4923 1412 -c 4923 1420 4930 1427 4937 1427 -c 4946 1427 4952 1420 4952 1412 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4988 1457 M 4988 1449 4981 1442 4974 1442 -c 4965 1442 4959 1449 4959 1457 -c 4959 1465 4965 1471 4974 1471 -c 4981 1471 4988 1465 4988 1457 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4994 1422 M 4994 1415 4987 1408 4980 1408 -c 4971 1408 4965 1415 4965 1422 -c 4965 1431 4971 1437 4980 1437 -c 4987 1437 4994 1431 4994 1422 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5006 1422 M 5006 1414 4999 1408 4991 1408 -c 4983 1408 4977 1414 4977 1422 -c 4977 1430 4983 1437 4991 1437 -c 4999 1437 5006 1430 5006 1422 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5042 1467 M 5042 1459 5035 1453 5027 1453 -c 5019 1453 5013 1459 5013 1467 -c 5013 1475 5019 1482 5027 1482 -c 5035 1482 5042 1475 5042 1467 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5048 1434 M 5048 1426 5041 1420 5033 1420 -c 5025 1420 5019 1426 5019 1434 -c 5019 1442 5025 1448 5033 1448 -c 5041 1448 5048 1442 5048 1434 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5060 1434 M 5060 1426 5053 1419 5045 1419 -c 5037 1419 5031 1426 5031 1434 -c 5031 1442 5037 1448 5045 1448 -c 5053 1448 5060 1442 5060 1434 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5096 1477 M 5096 1469 5089 1463 5081 1463 -c 5073 1463 5067 1469 5067 1477 -c 5067 1485 5073 1491 5081 1491 -c 5089 1491 5096 1485 5096 1477 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5102 1446 M 5102 1438 5095 1432 5087 1432 -c 5079 1432 5073 1438 5073 1446 -c 5073 1454 5079 1461 5087 1461 -c 5095 1461 5102 1454 5102 1446 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5114 1446 M 5114 1438 5107 1432 5099 1432 -c 5091 1432 5084 1438 5084 1446 -c 5084 1454 5091 1461 5099 1461 -c 5107 1461 5114 1454 5114 1446 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5149 1486 M 5149 1478 5143 1472 5135 1472 -c 5127 1472 5121 1478 5121 1486 -c 5121 1494 5127 1500 5135 1500 -c 5143 1500 5149 1494 5149 1486 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5155 1458 M 5155 1450 5149 1444 5141 1444 -c 5133 1444 5127 1450 5127 1458 -c 5127 1466 5133 1473 5141 1473 -c 5149 1473 5155 1466 5155 1458 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5167 1458 M 5167 1451 5161 1444 5153 1444 -c 5145 1444 5138 1451 5138 1458 -c 5138 1466 5145 1473 5153 1473 -c 5161 1473 5167 1466 5167 1458 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5203 1494 M 5203 1486 5197 1480 5189 1480 -c 5181 1480 5174 1486 5174 1494 -c 5174 1502 5181 1509 5189 1509 -c 5197 1509 5203 1502 5203 1494 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5209 1469 M 5209 1461 5203 1455 5195 1455 -c 5187 1455 5180 1461 5180 1469 -c 5180 1477 5187 1484 5195 1484 -c 5203 1484 5209 1477 5209 1469 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5221 1470 M 5221 1462 5215 1455 5207 1455 -c 5199 1455 5192 1462 5192 1470 -c 5192 1478 5199 1484 5207 1484 -c 5215 1484 5221 1478 5221 1470 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5257 1501 M 5257 1493 5250 1487 5243 1487 -c 5234 1487 5228 1493 5228 1501 -c 5228 1509 5234 1516 5243 1516 -c 5250 1516 5257 1509 5257 1501 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5263 1480 M 5263 1471 5256 1465 5249 1465 -c 5240 1465 5234 1471 5234 1480 -c 5234 1487 5240 1494 5249 1494 -c 5256 1494 5263 1487 5263 1480 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5275 1480 M 5275 1472 5268 1465 5261 1465 -c 5252 1465 5246 1472 5246 1480 -c 5246 1488 5252 1494 5261 1494 -c 5268 1494 5275 1488 5275 1480 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5311 1507 M 5311 1500 5304 1493 5296 1493 -c 5288 1493 5282 1500 5282 1507 -c 5282 1516 5288 1522 5296 1522 -c 5304 1522 5311 1516 5311 1507 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5317 1488 M 5317 1481 5310 1474 5302 1474 -c 5294 1474 5288 1481 5288 1488 -c 5288 1497 5294 1503 5302 1503 -c 5310 1503 5317 1497 5317 1488 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5329 1489 M 5329 1481 5322 1474 5314 1474 -c 5306 1474 5300 1481 5300 1489 -c 5300 1497 5306 1503 5314 1503 -c 5322 1503 5329 1497 5329 1489 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5365 1513 M 5365 1505 5358 1498 5350 1498 -c 5342 1498 5336 1505 5336 1513 -c 5336 1521 5342 1527 5350 1527 -c 5358 1527 5365 1521 5365 1513 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5371 1496 M 5371 1488 5364 1482 5356 1482 -c 5348 1482 5342 1488 5342 1496 -c 5342 1504 5348 1511 5356 1511 -c 5364 1511 5371 1504 5371 1496 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5383 1497 M 5383 1489 5376 1482 5368 1482 -c 5360 1482 5354 1489 5354 1497 -c 5354 1505 5360 1511 5368 1511 -c 5376 1511 5383 1505 5383 1497 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5418 1517 M 5418 1510 5412 1503 5404 1503 -c 5396 1503 5390 1510 5390 1517 -c 5390 1526 5396 1532 5404 1532 -c 5412 1532 5418 1526 5418 1517 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5424 1503 M 5424 1496 5418 1489 5410 1489 -c 5402 1489 5396 1496 5396 1503 -c 5396 1511 5402 1518 5410 1518 -c 5418 1518 5424 1511 5424 1503 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5436 1504 M 5436 1496 5430 1489 5422 1489 -c 5414 1489 5408 1496 5408 1504 -c 5408 1511 5414 1518 5422 1518 -c 5430 1518 5436 1511 5436 1504 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5472 1522 M 5472 1514 5466 1507 5458 1507 -c 5450 1507 5443 1514 5443 1522 -c 5443 1530 5450 1536 5458 1536 -c 5466 1536 5472 1530 5472 1522 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5478 1509 M 5478 1501 5472 1495 5464 1495 -c 5456 1495 5449 1501 5449 1509 -c 5449 1517 5456 1524 5464 1524 -c 5472 1524 5478 1517 5478 1509 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5490 1510 M 5490 1501 5484 1495 5476 1495 -c 5468 1495 5461 1501 5461 1510 -c 5461 1517 5468 1524 5476 1524 -c 5484 1524 5490 1517 5490 1510 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5526 1525 M 5526 1517 5520 1511 5512 1511 -c 5504 1511 5497 1517 5497 1525 -c 5497 1533 5504 1539 5512 1539 -c 5520 1539 5526 1533 5526 1525 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5532 1514 M 5532 1507 5526 1500 5518 1500 -c 5510 1500 5503 1507 5503 1514 -c 5503 1523 5510 1529 5518 1529 -c 5526 1529 5532 1523 5532 1514 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5544 1515 M 5544 1507 5537 1500 5530 1500 -c 5521 1500 5515 1507 5515 1515 -c 5515 1523 5521 1529 5530 1529 -c 5537 1529 5544 1523 5544 1515 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5580 1528 M 5580 1520 5574 1514 5565 1514 -c 5558 1514 5551 1520 5551 1528 -c 5551 1536 5558 1542 5565 1542 -c 5574 1542 5580 1536 5580 1528 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5586 1519 M 5586 1511 5580 1505 5571 1505 -c 5564 1505 5557 1511 5557 1519 -c 5557 1527 5564 1533 5571 1533 -c 5580 1533 5586 1527 5586 1519 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5598 1519 M 5598 1511 5591 1505 5583 1505 -c 5575 1505 5569 1511 5569 1519 -c 5569 1527 5575 1534 5583 1534 -c 5591 1534 5598 1527 5598 1519 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5634 1530 M 5634 1523 5627 1516 5619 1516 -c 5611 1516 5605 1523 5605 1530 -c 5605 1539 5611 1545 5619 1545 -c 5627 1545 5634 1539 5634 1530 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5640 1523 M 5640 1515 5633 1509 5625 1509 -c 5617 1509 5611 1515 5611 1523 -c 5611 1531 5617 1537 5625 1537 -c 5633 1537 5640 1531 5640 1523 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5652 1523 M 5652 1515 5645 1509 5637 1509 -c 5629 1509 5623 1515 5623 1523 -c 5623 1531 5629 1537 5637 1537 -c 5645 1537 5652 1531 5652 1523 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5687 1533 M 5687 1525 5681 1518 5673 1518 -c 5665 1518 5659 1525 5659 1533 -c 5659 1541 5665 1547 5673 1547 -c 5681 1547 5687 1541 5687 1533 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5693 1526 M 5693 1518 5687 1512 5679 1512 -c 5671 1512 5665 1518 5665 1526 -c 5665 1534 5671 1541 5679 1541 -c 5687 1541 5693 1534 5693 1526 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5705 1526 M 5705 1518 5699 1512 5691 1512 -c 5683 1512 5677 1518 5677 1526 -c 5677 1534 5683 1541 5691 1541 -c 5699 1541 5705 1534 5705 1526 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5741 1534 M 5741 1527 5735 1520 5727 1520 -c 5719 1520 5712 1527 5712 1534 -c 5712 1543 5719 1549 5727 1549 -c 5735 1549 5741 1543 5741 1534 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5747 1529 M 5747 1521 5741 1514 5733 1514 -c 5725 1514 5718 1521 5718 1529 -c 5718 1537 5725 1543 5733 1543 -c 5741 1543 5747 1537 5747 1529 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5759 1529 M 5759 1521 5753 1515 5745 1515 -c 5737 1515 5730 1521 5730 1529 -c 5730 1537 5737 1543 5745 1543 -c 5753 1543 5759 1537 5759 1529 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5795 1536 M 5795 1528 5789 1522 5781 1522 -c 5773 1522 5766 1528 5766 1536 -c 5766 1544 5773 1551 5781 1551 -c 5789 1551 5795 1544 5795 1536 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5801 1532 M 5801 1523 5795 1517 5787 1517 -c 5779 1517 5772 1523 5772 1532 -c 5772 1539 5779 1546 5787 1546 -c 5795 1546 5801 1539 5801 1532 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5813 1532 M 5813 1523 5807 1517 5799 1517 -c 5791 1517 5784 1523 5784 1532 -c 5784 1539 5791 1546 5799 1546 -c 5807 1546 5813 1539 5813 1532 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5849 1537 M 5849 1530 5843 1523 5834 1523 -c 5827 1523 5820 1530 5820 1537 -c 5820 1546 5827 1552 5834 1552 -c 5843 1552 5849 1546 5849 1537 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5855 1533 M 5855 1526 5849 1519 5840 1519 -c 5833 1519 5826 1526 5826 1533 -c 5826 1542 5833 1548 5840 1548 -c 5849 1548 5855 1542 5855 1533 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5867 1533 M 5867 1526 5861 1519 5852 1519 -c 5845 1519 5838 1526 5838 1533 -c 5838 1542 5845 1548 5852 1548 -c 5861 1548 5867 1542 5867 1533 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5903 1539 M 5903 1531 5896 1524 5888 1524 -c 5880 1524 5874 1531 5874 1539 -c 5874 1547 5880 1553 5888 1553 -c 5896 1553 5903 1547 5903 1539 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5909 1535 M 5909 1527 5902 1521 5894 1521 -c 5886 1521 5880 1527 5880 1535 -c 5880 1543 5886 1550 5894 1550 -c 5902 1550 5909 1543 5909 1535 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5921 1535 M 5921 1527 5914 1521 5906 1521 -c 5898 1521 5892 1527 5892 1535 -c 5892 1543 5898 1550 5906 1550 -c 5914 1550 5921 1543 5921 1535 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5957 1540 M 5957 1532 5950 1525 5942 1525 -c 5934 1525 5928 1532 5928 1540 -c 5928 1548 5934 1554 5942 1554 -c 5950 1554 5957 1548 5957 1540 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5963 1537 M 5963 1529 5956 1522 5948 1522 -c 5940 1522 5934 1529 5934 1537 -c 5934 1545 5940 1551 5948 1551 -c 5956 1551 5963 1545 5963 1537 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5974 1537 M 5974 1529 5968 1522 5960 1522 -c 5952 1522 5946 1529 5946 1537 -c 5946 1545 5952 1551 5960 1551 -c 5968 1551 5974 1545 5974 1537 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 6011 1540 M 6011 1533 6004 1526 5996 1526 -c 5988 1526 5982 1533 5982 1540 -c 5982 1549 5988 1555 5996 1555 -c 6004 1555 6011 1549 6011 1540 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 6017 1538 M 6017 1530 6010 1524 6002 1524 -c 5994 1524 5987 1530 5987 1538 -c 5987 1546 5994 1552 6002 1552 -c 6010 1552 6017 1546 6017 1538 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 6028 1538 M 6028 1530 6022 1524 6014 1524 -c 6006 1524 5999 1530 5999 1538 -c 5999 1546 6006 1552 6014 1552 -c 6022 1552 6028 1546 6028 1538 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 6064 1541 M 6064 1533 6058 1527 6050 1527 -c 6042 1527 6035 1533 6035 1541 -c 6035 1549 6042 1556 6050 1556 -c 6058 1556 6064 1549 6064 1541 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 6070 1539 M 6070 1531 6064 1525 6056 1525 -c 6048 1525 6041 1531 6041 1539 -c 6041 1547 6048 1553 6056 1553 -c 6064 1553 6070 1547 6070 1539 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 6082 1539 M 6082 1531 6076 1525 6068 1525 -c 6060 1525 6053 1531 6053 1539 -c 6053 1547 6060 1553 6068 1553 -c 6076 1553 6082 1547 6082 1539 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 6118 1542 M 6118 1534 6112 1527 6104 1527 -c 6096 1527 6089 1534 6089 1542 -c 6089 1550 6096 1556 6104 1556 -c 6112 1556 6118 1550 6118 1542 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 6124 1540 M 6124 1532 6118 1526 6110 1526 -c 6102 1526 6095 1532 6095 1540 -c 6095 1548 6102 1555 6110 1555 -c 6118 1555 6124 1548 6124 1540 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 6136 1540 M 6136 1532 6130 1526 6121 1526 -c 6114 1526 6107 1532 6107 1540 -c 6107 1548 6114 1555 6121 1555 -c 6130 1555 6136 1548 6136 1540 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 6172 1542 M 6172 1534 6165 1528 6158 1528 -c 6149 1528 6143 1534 6143 1542 -c 6143 1550 6149 1557 6158 1557 -c 6165 1557 6172 1550 6172 1542 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 6178 1541 M 6178 1533 6171 1526 6164 1526 -c 6155 1526 6149 1533 6149 1541 -c 6149 1549 6155 1555 6164 1555 -c 6171 1555 6178 1549 6178 1541 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 6190 1541 M 6190 1533 6183 1526 6175 1526 -c 6167 1526 6161 1533 6161 1541 -c 6161 1549 6167 1555 6175 1555 -c 6183 1555 6190 1549 6190 1541 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 6226 1543 M 6226 1535 6219 1529 6211 1529 -c 6203 1529 6197 1535 6197 1543 -c 6197 1551 6203 1557 6211 1557 -c 6219 1557 6226 1551 6226 1543 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 6232 1542 M 6232 1533 6225 1527 6217 1527 -c 6209 1527 6203 1533 6203 1542 -c 6203 1549 6209 1556 6217 1556 -c 6225 1556 6232 1549 6232 1542 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 6244 1542 M 6244 1533 6237 1527 6229 1527 -c 6221 1527 6215 1533 6215 1542 -c 6215 1549 6221 1556 6229 1556 -c 6237 1556 6244 1549 6244 1542 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 6280 1543 M 6280 1535 6273 1529 6265 1529 -c 6257 1529 6251 1535 6251 1543 -c 6251 1551 6257 1558 6265 1558 -c 6273 1558 6280 1551 6280 1543 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 6286 1542 M 6286 1534 6279 1528 6271 1528 -c 6263 1528 6257 1534 6257 1542 -c 6257 1550 6263 1556 6271 1556 -c 6279 1556 6286 1550 6286 1542 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 6298 1542 M 6298 1534 6291 1528 6283 1528 -c 6275 1528 6269 1534 6269 1542 -c 6269 1550 6275 1556 6283 1556 -c 6291 1556 6298 1550 6298 1542 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; 0 0 1 1 scol 1 Lj N 902 1546 M 909 1546 I 920 1714 I 956 1742 I 962 1721 I 974 1699 I 1010 1698 I 1016 1680 I 1028 1662 I 1064 1658 I 1070 1645 I 1082 1631 I 1118 1625 I 1124 1614 I 1136 1604 I 1171 1596 I 1178 1588 I 1190 1581 I 1225 1572 I 1231 1567 I 1243 1562 I 1279 1553 I 1285 1550 I 1297 1547 I 1333 1538 I 1339 1536 I 1351 1535 I 1387 1526 I 1393 1526 I 1405 1526 I 1440 1517 I 1447 1517 I 1459 1519 I 1494 1510 I 1500 1512 I 1512 1514 I 1548 1506 I 1554 1508 I 1566 1511 I 1602 1503 I 1608 1506 I 1620 1509 I 1656 1503 I 1662 1506 I 1674 1509 I 1710 1503 I 1716 1506 I 1728 1510 I 1764 1504 I 1769 1507 I 1781 1511 I 1817 1506 I 1823 1509 I 1835 1513 I 1871 1509 I 1877 1512 I 1889 1515 I 1925 1511 I 1931 1514 I 1943 1517 I 1979 1514 I 1985 1517 I 1997 1520 I 2033 1517 I 2039 1520 I 2050 1523 I 2086 1521 I 2092 1523 I 2104 1526 I 2140 1524 I 2146 1526 I 2158 1528 I 2194 1527 I 2200 1529 I 2212 1531 I 2248 1530 I 2254 1531 I 2266 1533 I 2302 1532 I 2308 1534 I 2320 1535 I 2355 1535 I 2361 1536 I 2373 1537 I 2409 1537 I 2415 1538 I 2427 1539 I 2463 1539 I 2469 1540 I 2481 1540 I 2517 1540 I 2523 1541 I 2535 1542 I 2571 1542 I 2577 1543 I 2589 1543 I 2624 1543 I 2630 1544 I 2642 1544 I 2678 1544 I 2684 1545 I 2696 1545 I 2702 1182 I 2714 1211 I 2750 1208 I 2756 1247 I 2768 1286 I 2804 1292 I 2810 1323 I 2822 1354 I 2858 1365 I 2864 1389 I 2876 1412 I 2911 1426 I 2917 1444 I 2930 1461 I 2965 1478 I 2971 1490 I 2983 1502 I 3019 1520 I 3025 1528 I 3037 1536 I 3073 1554 I 3079 1559 I 3091 1562 I 3127 1581 I 3133 1582 I 3145 1583 I 3181 1601 I 3187 1600 I 3199 1599 I 3235 1616 I 3240 1613 I 3252 1610 I 3288 1626 I 3294 1622 I 3306 1617 I 3342 1632 I 3348 1627 I 3360 1621 I 3396 1635 I 3402 1629 I 3414 1623 I 3450 1636 I 3456 1629 I 3468 1622 I 3504 1634 I 3510 1627 I 3522 1620 I 3557 1630 I 3563 1624 I 3575 1617 I 3611 1626 I 3617 1619 I 3629 1612 I 3665 1620 I 3671 1614 I 3683 1607 I 3719 1614 I 3725 1608 I 3737 1602 I 3773 1608 I 3779 1602 I 3791 1596 I 3826 1601 I 3832 1596 I 3844 1591 I 3880 1595 I 3886 1590 I 3898 1586 I 3934 1589 I 3940 1585 I 3952 1580 I 3988 1583 I 3994 1579 I 4006 1576 I 4042 1577 I 4048 1574 I 4060 1571 I 4095 1572 I 4101 1570 I 4113 1567 I 4149 1568 I 4155 1566 I 4167 1563 I 4203 1564 I 4209 1562 I 4221 1560 I 4257 1560 I 4263 1559 I 4275 1557 I 4311 1557 I 4317 1556 I 4329 1554 I 4365 1554 I 4371 1553 I 4382 1552 I 4419 1552 I 4425 1551 I 4436 1550 I 4472 1550 I 4478 1549 I 4490 1549 I 4496 1912 I 4508 1883 I 4544 1885 I 4550 1846 I 4562 1807 I 4598 1801 I 4604 1770 I 4616 1739 I 4652 1727 I 4658 1704 I 4669 1680 I 4706 1666 I 4712 1648 I 4723 1631 I 4759 1614 I 4765 1602 I 4777 1590 I 4813 1572 I 4819 1563 I 4831 1556 I 4867 1537 I 4873 1533 I 4885 1529 I 4921 1510 I 4927 1509 I 4939 1509 I 4975 1490 I 4981 1491 I 4993 1493 I 5028 1475 I 5034 1478 I 5046 1482 I 5082 1465 I 5088 1470 I 5100 1475 I 5136 1459 I 5142 1465 I 5154 1471 I 5190 1456 I 5196 1463 I 5208 1469 I 5244 1456 I 5250 1463 I 5262 1470 I 5297 1458 I 5303 1465 I 5315 1472 I 5351 1462 I 5357 1469 I 5369 1476 I 5405 1467 I 5411 1473 I 5423 1480 I 5459 1472 I 5465 1479 I 5477 1485 I 5513 1478 I 5519 1484 I 5531 1490 I 5566 1485 I 5572 1490 I 5584 1496 I 5620 1491 I 5626 1497 I 5638 1502 I 5674 1498 I 5680 1503 I 5692 1507 I 5728 1504 I 5734 1508 I 5746 1512 I 5782 1510 I 5788 1514 I 5800 1517 I 5836 1516 I 5842 1519 I 5853 1522 I 5890 1521 I 5896 1523 I 5907 1526 I 5943 1525 I 5949 1527 I 5961 1530 I 5997 1529 I 6003 1531 I 6015 1533 I 6051 1533 I 6057 1534 I 6069 1536 I 6105 1536 I 6111 1537 I 6123 1539 I 6159 1539 I 6165 1540 I 6177 1541 I 6212 1542 I 6218 1542 I 6230 1543 I 6266 1543 I 6272 1544 I 6284 1544 I : [ 0.27 0 0 0.27 0 0 ] concat K 
+; 0 Lj 53 Lw N 889 1542 M 899 1542 I 902 1532 I 906 1542 I 916 1542 I 908 1548 I 911 1558 I 902 1552 I 894 1558 I 897 1548 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 895 1542 M 905 1542 I 908 1532 I 912 1542 I 922 1542 I 914 1548 I 917 1558 I 908 1552 I 900 1558 I 903 1548 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 906 1710 M 917 1710 I 920 1700 I 924 1710 I 934 1710 I 926 1716 I 929 1726 I 920 1720 I 912 1726 I 915 1716 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 942 1737 M 953 1737 I 956 1728 I 960 1737 I 970 1737 I 962 1744 I 965 1754 I 956 1748 I 948 1754 I 951 1744 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 948 1716 M 959 1716 I 962 1706 I 965 1716 I 976 1716 I 968 1723 I 971 1733 I 962 1727 I 954 1733 I 957 1723 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 960 1695 M 971 1695 I 974 1685 I 978 1695 I 988 1695 I 980 1701 I 983 1711 I 974 1705 I 966 1711 I 969 1701 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 996 1693 M 1007 1693 I 1010 1683 I 1013 1693 I 1024 1693 I 1016 1700 I 1019 1710 I 1010 1704 I 1001 1710 I 1004 1700 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1002 1676 M 1013 1676 I 1016 1666 I 1019 1676 I 1030 1676 I 1021 1682 I 1024 1692 I 1016 1686 I 1007 1692 I 1010 1682 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1014 1658 M 1024 1658 I 1028 1648 I 1031 1658 I 1042 1658 I 1033 1664 I 1036 1674 I 1028 1668 I 1019 1674 I 1022 1664 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1050 1654 M 1060 1654 I 1064 1644 I 1067 1654 I 1077 1654 I 1069 1660 I 1072 1670 I 1064 1664 I 1055 1670 I 1058 1660 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1056 1640 M 1066 1640 I 1070 1630 I 1073 1640 I 1083 1640 I 1075 1646 I 1078 1656 I 1070 1650 I 1061 1656 I 1064 1646 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1068 1626 M 1078 1626 I 1082 1616 I 1085 1626 I 1096 1626 I 1087 1632 I 1090 1642 I 1082 1637 I 1073 1642 I 1076 1632 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1104 1620 M 1114 1620 I 1118 1610 I 1121 1620 I 1131 1620 I 1123 1626 I 1126 1636 I 1118 1630 I 1109 1636 I 1112 1626 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1110 1610 M 1120 1610 I 1124 1600 I 1127 1610 I 1137 1610 I 1129 1616 I 1132 1626 I 1124 1620 I 1115 1626 I 1118 1616 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1122 1599 M 1132 1599 I 1136 1589 I 1139 1599 I 1149 1599 I 1141 1605 I 1144 1615 I 1136 1609 I 1127 1615 I 1130 1605 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1158 1592 M 1168 1592 I 1171 1582 I 1175 1592 I 1185 1592 I 1177 1598 I 1180 1608 I 1171 1602 I 1163 1608 I 1166 1598 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1164 1584 M 1174 1584 I 1177 1574 I 1181 1584 I 1191 1584 I 1183 1590 I 1186 1600 I 1177 1594 I 1169 1600 I 1172 1590 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1176 1576 M 1186 1576 I 1189 1566 I 1193 1576 I 1203 1576 I 1195 1583 I 1198 1592 I 1189 1587 I 1181 1592 I 1184 1583 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1211 1568 M 1222 1568 I 1225 1558 I 1229 1568 I 1239 1568 I 1231 1574 I 1234 1584 I 1225 1578 I 1217 1584 I 1220 1574 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1217 1563 M 1228 1563 I 1231 1553 I 1235 1563 I 1245 1563 I 1237 1569 I 1240 1579 I 1231 1573 I 1223 1579 I 1226 1569 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1229 1557 M 1240 1557 I 1243 1547 I 1247 1557 I 1257 1557 I 1249 1564 I 1252 1574 I 1243 1568 I 1235 1574 I 1238 1564 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1265 1549 M 1276 1549 I 1279 1539 I 1282 1549 I 1293 1549 I 1285 1555 I 1288 1565 I 1279 1559 I 1270 1565 I 1273 1555 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1271 1545 M 1282 1545 I 1285 1535 I 1288 1545 I 1299 1545 I 1291 1552 I 1294 1561 I 1285 1556 I 1276 1561 I 1280 1552 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1283 1542 M 1294 1542 I 1297 1532 I 1300 1542 I 1311 1542 I 1303 1549 I 1305 1558 I 1297 1552 I 1289 1558 I 1292 1549 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1319 1533 M 1329 1533 I 1333 1523 I 1336 1533 I 1347 1533 I 1338 1539 I 1341 1549 I 1333 1543 I 1324 1549 I 1327 1539 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1325 1532 M 1335 1532 I 1339 1522 I 1342 1532 I 1353 1532 I 1344 1538 I 1347 1548 I 1339 1542 I 1330 1548 I 1333 1538 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1337 1530 M 1347 1530 I 1351 1520 I 1354 1530 I 1365 1530 I 1356 1537 I 1359 1546 I 1351 1540 I 1342 1546 I 1345 1537 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1373 1521 M 1383 1521 I 1387 1511 I 1390 1521 I 1400 1521 I 1392 1527 I 1395 1537 I 1387 1531 I 1378 1537 I 1381 1527 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1379 1521 M 1389 1521 I 1393 1511 I 1396 1521 I 1406 1521 I 1398 1527 I 1401 1537 I 1393 1531 I 1384 1537 I 1387 1527 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1391 1521 M 1401 1521 I 1405 1511 I 1408 1521 I 1418 1521 I 1410 1527 I 1413 1537 I 1405 1531 I 1396 1537 I 1399 1527 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1427 1512 M 1437 1512 I 1440 1502 I 1444 1512 I 1454 1512 I 1446 1518 I 1449 1528 I 1440 1522 I 1432 1528 I 1435 1518 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1433 1513 M 1443 1513 I 1447 1503 I 1450 1513 I 1460 1513 I 1452 1519 I 1455 1529 I 1447 1523 I 1438 1529 I 1441 1519 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1445 1514 M 1455 1514 I 1458 1504 I 1462 1514 I 1472 1514 I 1464 1520 I 1467 1530 I 1458 1524 I 1450 1530 I 1453 1520 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1481 1506 M 1491 1506 I 1494 1496 I 1498 1506 I 1508 1506 I 1500 1512 I 1503 1522 I 1494 1516 I 1486 1522 I 1489 1512 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1487 1507 M 1497 1507 I 1500 1497 I 1504 1507 I 1514 1507 I 1506 1514 I 1509 1524 I 1500 1518 I 1492 1524 I 1495 1514 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1498 1509 M 1509 1509 I 1512 1499 I 1516 1509 I 1526 1509 I 1518 1516 I 1521 1526 I 1512 1520 I 1504 1526 I 1507 1516 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1534 1501 M 1545 1501 I 1548 1491 I 1552 1501 I 1562 1501 I 1554 1508 I 1557 1517 I 1548 1512 I 1540 1517 I 1543 1508 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1540 1504 M 1551 1504 I 1554 1494 I 1557 1504 I 1568 1504 I 1560 1510 I 1563 1520 I 1554 1514 I 1546 1520 I 1549 1510 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1552 1506 M 1563 1506 I 1566 1496 I 1569 1506 I 1580 1506 I 1572 1513 I 1575 1522 I 1566 1517 I 1558 1522 I 1561 1513 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1588 1499 M 1599 1499 I 1602 1489 I 1605 1499 I 1616 1499 I 1607 1505 I 1611 1515 I 1602 1509 I 1593 1515 I 1596 1505 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1594 1502 M 1605 1502 I 1608 1492 I 1611 1502 I 1622 1502 I 1613 1508 I 1616 1518 I 1608 1512 I 1599 1518 I 1602 1508 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1606 1505 M 1616 1505 I 1620 1495 I 1623 1505 I 1634 1505 I 1625 1511 I 1628 1521 I 1620 1515 I 1611 1521 I 1614 1511 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1642 1498 M 1652 1498 I 1656 1488 I 1659 1498 I 1670 1498 I 1661 1504 I 1664 1514 I 1656 1508 I 1647 1514 I 1650 1504 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1648 1501 M 1658 1501 I 1662 1491 I 1665 1501 I 1675 1501 I 1667 1507 I 1670 1517 I 1662 1511 I 1653 1517 I 1656 1507 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1660 1504 M 1670 1504 I 1674 1494 I 1677 1504 I 1687 1504 I 1679 1511 I 1682 1521 I 1674 1515 I 1665 1521 I 1668 1511 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1696 1498 M 1706 1498 I 1710 1488 I 1713 1498 I 1723 1498 I 1715 1504 I 1718 1514 I 1710 1509 I 1701 1514 I 1704 1504 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1702 1502 M 1712 1502 I 1716 1492 I 1719 1502 I 1729 1502 I 1721 1508 I 1724 1518 I 1716 1512 I 1707 1518 I 1710 1508 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1714 1505 M 1724 1505 I 1728 1495 I 1731 1505 I 1741 1505 I 1733 1511 I 1736 1521 I 1728 1515 I 1719 1521 I 1722 1511 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1750 1499 M 1760 1499 I 1763 1490 I 1767 1499 I 1777 1499 I 1769 1506 I 1772 1516 I 1763 1510 I 1755 1516 I 1758 1506 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1756 1503 M 1766 1503 I 1769 1493 I 1773 1503 I 1783 1503 I 1775 1509 I 1778 1519 I 1769 1513 I 1761 1519 I 1764 1509 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1768 1506 M 1778 1506 I 1781 1496 I 1785 1506 I 1795 1506 I 1787 1513 I 1790 1522 I 1781 1516 I 1773 1522 I 1776 1513 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1804 1501 M 1814 1501 I 1817 1491 I 1821 1501 I 1831 1501 I 1823 1508 I 1826 1518 I 1817 1512 I 1809 1518 I 1812 1508 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1809 1505 M 1820 1505 I 1823 1495 I 1827 1505 I 1837 1505 I 1829 1511 I 1832 1521 I 1823 1515 I 1815 1521 I 1818 1511 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1821 1508 M 1832 1508 I 1835 1498 I 1839 1508 I 1849 1508 I 1841 1514 I 1844 1524 I 1835 1518 I 1827 1524 I 1830 1514 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1857 1504 M 1868 1504 I 1871 1494 I 1874 1504 I 1885 1504 I 1876 1510 I 1880 1520 I 1871 1514 I 1863 1520 I 1865 1510 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1863 1507 M 1874 1507 I 1877 1497 I 1880 1507 I 1891 1507 I 1883 1513 I 1886 1523 I 1877 1517 I 1868 1523 I 1871 1513 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1875 1510 M 1886 1510 I 1889 1500 I 1892 1510 I 1903 1510 I 1895 1517 I 1898 1527 I 1889 1521 I 1880 1527 I 1884 1517 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1911 1507 M 1922 1507 I 1925 1497 I 1928 1507 I 1939 1507 I 1930 1513 I 1933 1523 I 1925 1517 I 1916 1523 I 1919 1513 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1917 1510 M 1927 1510 I 1931 1500 I 1934 1510 I 1945 1510 I 1936 1516 I 1939 1526 I 1931 1520 I 1922 1526 I 1925 1516 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1929 1513 M 1939 1513 I 1943 1503 I 1946 1513 I 1956 1513 I 1948 1519 I 1951 1529 I 1943 1523 I 1934 1529 I 1937 1519 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1965 1510 M 1975 1510 I 1979 1500 I 1982 1510 I 1992 1510 I 1984 1516 I 1987 1526 I 1979 1520 I 1970 1526 I 1973 1516 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1971 1513 M 1981 1513 I 1985 1503 I 1988 1513 I 1998 1513 I 1990 1519 I 1993 1529 I 1985 1523 I 1976 1529 I 1979 1519 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1983 1516 M 1993 1516 I 1997 1506 I 2000 1516 I 2010 1516 I 2002 1522 I 2005 1532 I 1997 1526 I 1988 1532 I 1991 1522 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2019 1513 M 2029 1513 I 2032 1503 I 2036 1513 I 2046 1513 I 2038 1519 I 2041 1529 I 2032 1523 I 2024 1529 I 2027 1519 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2025 1516 M 2035 1516 I 2038 1506 I 2042 1516 I 2052 1516 I 2044 1522 I 2047 1532 I 2038 1526 I 2030 1532 I 2033 1522 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2037 1518 M 2047 1518 I 2050 1508 I 2054 1518 I 2064 1518 I 2056 1524 I 2059 1534 I 2050 1529 I 2042 1534 I 2045 1524 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2073 1516 M 2083 1516 I 2086 1506 I 2090 1516 I 2100 1516 I 2092 1522 I 2095 1532 I 2086 1526 I 2078 1532 I 2081 1522 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2079 1519 M 2089 1519 I 2092 1509 I 2096 1519 I 2106 1519 I 2098 1525 I 2101 1535 I 2092 1529 I 2084 1535 I 2087 1525 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2090 1521 M 2101 1521 I 2104 1511 I 2108 1521 I 2118 1521 I 2110 1527 I 2113 1537 I 2104 1531 I 2096 1537 I 2099 1527 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2126 1519 M 2137 1519 I 2140 1509 I 2144 1519 I 2154 1519 I 2146 1526 I 2149 1535 I 2140 1529 I 2132 1535 I 2135 1526 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2132 1522 M 2143 1522 I 2146 1511 I 2149 1522 I 2160 1522 I 2152 1528 I 2155 1538 I 2146 1532 I 2138 1538 I 2141 1528 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2144 1524 M 2155 1524 I 2158 1514 I 2161 1524 I 2172 1524 I 2164 1530 I 2167 1540 I 2158 1534 I 2149 1540 I 2153 1530 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2180 1522 M 2191 1522 I 2194 1512 I 2197 1522 I 2208 1522 I 2199 1529 I 2202 1538 I 2194 1532 I 2185 1538 I 2188 1529 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2186 1524 M 2197 1524 I 2200 1514 I 2203 1524 I 2214 1524 I 2205 1530 I 2208 1540 I 2200 1534 I 2191 1540 I 2194 1530 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2198 1526 M 2208 1526 I 2212 1516 I 2215 1526 I 2226 1526 I 2217 1532 I 2220 1542 I 2212 1536 I 2203 1542 I 2206 1532 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2234 1525 M 2244 1525 I 2248 1515 I 2251 1525 I 2262 1525 I 2253 1531 I 2256 1541 I 2248 1535 I 2239 1541 I 2242 1531 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2240 1527 M 2250 1527 I 2254 1517 I 2257 1527 I 2267 1527 I 2259 1533 I 2262 1543 I 2254 1537 I 2245 1543 I 2248 1533 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2252 1528 M 2262 1528 I 2266 1519 I 2269 1528 I 2279 1528 I 2271 1535 I 2274 1545 I 2266 1539 I 2257 1545 I 2260 1535 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2288 1528 M 2298 1528 I 2302 1518 I 2305 1528 I 2315 1528 I 2307 1534 I 2310 1544 I 2302 1538 I 2293 1544 I 2296 1534 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2294 1529 M 2304 1529 I 2308 1519 I 2311 1529 I 2321 1529 I 2313 1535 I 2316 1545 I 2308 1539 I 2299 1545 I 2302 1535 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2306 1531 M 2316 1531 I 2320 1521 I 2323 1531 I 2333 1531 I 2325 1537 I 2328 1547 I 2320 1541 I 2311 1547 I 2314 1537 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2342 1530 M 2352 1530 I 2355 1520 I 2359 1530 I 2369 1530 I 2361 1536 I 2364 1546 I 2355 1540 I 2347 1546 I 2350 1536 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2348 1531 M 2358 1531 I 2361 1521 I 2365 1531 I 2375 1531 I 2367 1538 I 2370 1547 I 2361 1542 I 2353 1547 I 2356 1538 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2360 1533 M 2370 1533 I 2373 1523 I 2377 1533 I 2387 1533 I 2379 1539 I 2382 1549 I 2373 1543 I 2365 1549 I 2368 1539 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2395 1532 M 2406 1532 I 2409 1522 I 2413 1532 I 2423 1532 I 2415 1539 I 2418 1548 I 2409 1542 I 2401 1548 I 2404 1539 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2401 1533 M 2412 1533 I 2415 1523 I 2419 1533 I 2429 1533 I 2421 1540 I 2424 1550 I 2415 1544 I 2407 1550 I 2410 1540 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2413 1534 M 2424 1534 I 2427 1524 I 2431 1534 I 2441 1534 I 2433 1541 I 2436 1550 I 2427 1545 I 2419 1550 I 2422 1541 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2449 1534 M 2460 1534 I 2463 1524 I 2466 1534 I 2477 1534 I 2468 1540 I 2471 1550 I 2463 1545 I 2455 1550 I 2458 1540 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2455 1535 M 2466 1535 I 2469 1525 I 2472 1535 I 2483 1535 I 2474 1541 I 2477 1551 I 2469 1545 I 2460 1551 I 2463 1541 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2467 1536 M 2478 1536 I 2481 1526 I 2484 1536 I 2495 1536 I 2487 1542 I 2490 1552 I 2481 1546 I 2472 1552 I 2475 1542 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2503 1536 M 2513 1536 I 2517 1526 I 2520 1536 I 2531 1536 I 2522 1542 I 2525 1552 I 2517 1546 I 2508 1552 I 2511 1542 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2509 1537 M 2519 1537 I 2523 1527 I 2526 1537 I 2537 1537 I 2528 1543 I 2531 1553 I 2523 1547 I 2514 1553 I 2517 1543 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2521 1537 M 2531 1537 I 2535 1527 I 2538 1537 I 2549 1537 I 2540 1544 I 2543 1553 I 2535 1548 I 2526 1553 I 2529 1544 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2557 1537 M 2567 1537 I 2571 1527 I 2574 1537 I 2584 1537 I 2576 1544 I 2579 1554 I 2571 1548 I 2562 1554 I 2565 1544 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2563 1538 M 2573 1538 I 2577 1528 I 2580 1538 I 2590 1538 I 2582 1544 I 2585 1554 I 2577 1548 I 2568 1554 I 2571 1544 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2575 1539 M 2585 1539 I 2589 1529 I 2592 1539 I 2602 1539 I 2594 1545 I 2597 1555 I 2589 1549 I 2580 1555 I 2583 1545 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2611 1539 M 2621 1539 I 2624 1529 I 2628 1539 I 2638 1539 I 2630 1545 I 2633 1555 I 2624 1549 I 2616 1555 I 2619 1545 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2617 1539 M 2627 1539 I 2630 1529 I 2634 1539 I 2644 1539 I 2636 1545 I 2639 1555 I 2630 1549 I 2622 1555 I 2625 1545 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2629 1540 M 2639 1540 I 2642 1530 I 2646 1540 I 2656 1540 I 2648 1546 I 2651 1556 I 2642 1550 I 2634 1556 I 2637 1546 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2664 1540 M 2675 1540 I 2678 1530 I 2682 1540 I 2692 1540 I 2684 1546 I 2687 1556 I 2678 1550 I 2670 1556 I 2673 1546 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2671 1540 M 2681 1540 I 2684 1530 I 2688 1540 I 2698 1540 I 2690 1546 I 2693 1556 I 2684 1550 I 2676 1556 I 2679 1546 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2683 1540 M 2693 1540 I 2696 1530 I 2700 1540 I 2710 1540 I 2702 1547 I 2705 1557 I 2696 1551 I 2688 1557 I 2691 1547 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2688 1177 M 2699 1177 I 2702 1167 I 2706 1177 I 2716 1177 I 2708 1183 I 2711 1193 I 2702 1187 I 2694 1193 I 2697 1183 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2700 1206 M 2711 1206 I 2714 1196 I 2718 1206 I 2728 1206 I 2720 1212 I 2723 1222 I 2714 1217 I 2706 1222 I 2709 1212 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2736 1204 M 2747 1204 I 2750 1194 I 2753 1204 I 2764 1204 I 2756 1210 I 2759 1220 I 2750 1214 I 2742 1220 I 2744 1210 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2742 1242 M 2753 1242 I 2756 1232 I 2759 1242 I 2770 1242 I 2762 1249 I 2765 1258 I 2756 1253 I 2747 1258 I 2750 1249 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2754 1281 M 2765 1281 I 2768 1271 I 2771 1281 I 2782 1281 I 2774 1287 I 2777 1297 I 2768 1291 I 2760 1297 I 2763 1287 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2790 1288 M 2801 1288 I 2804 1278 I 2807 1288 I 2818 1288 I 2809 1294 I 2812 1304 I 2804 1298 I 2795 1304 I 2798 1294 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2796 1319 M 2806 1319 I 2810 1309 I 2813 1319 I 2824 1319 I 2815 1325 I 2818 1335 I 2810 1329 I 2801 1335 I 2804 1325 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2808 1349 M 2818 1349 I 2822 1339 I 2825 1349 I 2836 1349 I 2827 1355 I 2830 1365 I 2822 1359 I 2813 1365 I 2816 1355 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2844 1360 M 2854 1360 I 2858 1350 I 2861 1360 I 2871 1360 I 2863 1366 I 2866 1376 I 2858 1370 I 2849 1376 I 2852 1366 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2850 1384 M 2860 1384 I 2864 1374 I 2867 1384 I 2877 1384 I 2869 1390 I 2872 1400 I 2864 1394 I 2855 1400 I 2858 1390 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2862 1407 M 2872 1407 I 2876 1398 I 2879 1407 I 2889 1407 I 2881 1414 I 2884 1424 I 2876 1418 I 2867 1424 I 2870 1414 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2898 1422 M 2908 1422 I 2911 1412 I 2915 1422 I 2925 1422 I 2917 1428 I 2920 1438 I 2911 1432 I 2903 1438 I 2906 1428 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2904 1440 M 2914 1440 I 2917 1429 I 2921 1440 I 2931 1440 I 2923 1446 I 2926 1456 I 2917 1450 I 2909 1456 I 2912 1446 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2916 1457 M 2926 1457 I 2929 1447 I 2933 1457 I 2943 1457 I 2935 1463 I 2938 1473 I 2929 1467 I 2921 1473 I 2924 1463 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2952 1473 M 2962 1473 I 2965 1463 I 2969 1473 I 2979 1473 I 2971 1479 I 2974 1489 I 2965 1483 I 2957 1489 I 2960 1479 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2958 1486 M 2968 1486 I 2971 1476 I 2975 1486 I 2985 1486 I 2977 1492 I 2980 1502 I 2971 1496 I 2963 1502 I 2966 1492 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2970 1498 M 2980 1498 I 2983 1488 I 2987 1498 I 2997 1498 I 2989 1504 I 2992 1514 I 2983 1508 I 2975 1514 I 2978 1504 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3005 1516 M 3016 1516 I 3019 1506 I 3023 1516 I 3033 1516 I 3025 1522 I 3028 1532 I 3019 1526 I 3011 1532 I 3014 1522 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3011 1524 M 3022 1524 I 3025 1514 I 3028 1524 I 3039 1524 I 3031 1530 I 3034 1540 I 3025 1534 I 3017 1540 I 3020 1530 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3023 1531 M 3034 1531 I 3037 1521 I 3040 1531 I 3051 1531 I 3043 1537 I 3046 1547 I 3037 1541 I 3029 1547 I 3032 1537 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3059 1550 M 3070 1550 I 3073 1540 I 3076 1550 I 3087 1550 I 3078 1556 I 3081 1566 I 3073 1560 I 3064 1566 I 3067 1556 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3065 1554 M 3076 1554 I 3079 1544 I 3082 1554 I 3093 1554 I 3084 1560 I 3087 1570 I 3079 1564 I 3070 1570 I 3073 1560 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3077 1558 M 3087 1558 I 3091 1548 I 3094 1558 I 3105 1558 I 3096 1564 I 3099 1574 I 3091 1568 I 3082 1574 I 3085 1564 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3113 1576 M 3123 1576 I 3127 1566 I 3130 1576 I 3141 1576 I 3132 1583 I 3135 1593 I 3127 1587 I 3118 1593 I 3121 1583 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3119 1578 M 3129 1578 I 3133 1568 I 3136 1578 I 3146 1578 I 3138 1584 I 3141 1594 I 3133 1588 I 3124 1594 I 3127 1584 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3131 1578 M 3141 1578 I 3145 1568 I 3148 1578 I 3158 1578 I 3150 1585 I 3153 1595 I 3145 1589 I 3136 1595 I 3139 1585 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3167 1597 M 3177 1597 I 3181 1587 I 3184 1597 I 3194 1597 I 3186 1603 I 3189 1613 I 3181 1607 I 3172 1613 I 3175 1603 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3173 1596 M 3183 1596 I 3187 1586 I 3190 1596 I 3200 1596 I 3192 1602 I 3195 1612 I 3187 1606 I 3178 1612 I 3181 1602 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3185 1594 M 3195 1594 I 3199 1584 I 3202 1594 I 3212 1594 I 3204 1600 I 3207 1610 I 3199 1604 I 3190 1610 I 3193 1600 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3221 1612 M 3231 1612 I 3234 1602 I 3238 1612 I 3248 1612 I 3240 1618 I 3243 1628 I 3234 1622 I 3226 1628 I 3229 1618 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3227 1609 M 3237 1609 I 3240 1599 I 3244 1609 I 3254 1609 I 3246 1615 I 3249 1625 I 3240 1619 I 3232 1625 I 3235 1615 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3239 1605 M 3249 1605 I 3252 1595 I 3256 1605 I 3266 1605 I 3258 1611 I 3261 1621 I 3252 1615 I 3244 1621 I 3247 1611 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3274 1622 M 3285 1622 I 3288 1612 I 3292 1622 I 3302 1622 I 3294 1628 I 3297 1638 I 3288 1632 I 3280 1638 I 3283 1628 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3280 1617 M 3291 1617 I 3294 1607 I 3298 1617 I 3308 1617 I 3300 1624 I 3303 1633 I 3294 1628 I 3286 1633 I 3289 1624 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3292 1612 M 3303 1612 I 3306 1603 I 3310 1612 I 3320 1612 I 3312 1619 I 3315 1629 I 3306 1623 I 3298 1629 I 3301 1619 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3328 1628 M 3339 1628 I 3342 1618 I 3345 1628 I 3356 1628 I 3347 1634 I 3350 1644 I 3342 1638 I 3334 1644 I 3337 1634 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3334 1622 M 3345 1622 I 3348 1613 I 3351 1622 I 3362 1622 I 3353 1629 I 3357 1639 I 3348 1633 I 3339 1639 I 3342 1629 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3346 1617 M 3357 1617 I 3360 1607 I 3363 1617 I 3374 1617 I 3366 1623 I 3369 1633 I 3360 1627 I 3351 1633 I 3354 1623 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3382 1631 M 3392 1631 I 3396 1621 I 3399 1631 I 3410 1631 I 3401 1637 I 3404 1647 I 3396 1641 I 3387 1647 I 3390 1637 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3388 1625 M 3398 1625 I 3402 1615 I 3405 1625 I 3416 1625 I 3407 1631 I 3410 1641 I 3402 1635 I 3393 1641 I 3396 1631 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3400 1618 M 3410 1618 I 3414 1608 I 3417 1618 I 3428 1618 I 3419 1624 I 3422 1634 I 3414 1628 I 3405 1634 I 3408 1624 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3436 1631 M 3446 1631 I 3450 1621 I 3453 1631 I 3463 1631 I 3455 1637 I 3458 1647 I 3450 1641 I 3441 1647 I 3444 1637 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3442 1625 M 3452 1625 I 3456 1615 I 3459 1625 I 3469 1625 I 3461 1631 I 3464 1641 I 3456 1635 I 3447 1641 I 3450 1631 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3454 1618 M 3464 1618 I 3468 1608 I 3471 1618 I 3481 1618 I 3473 1624 I 3476 1634 I 3468 1628 I 3459 1634 I 3462 1624 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3490 1629 M 3500 1629 I 3503 1619 I 3507 1629 I 3517 1629 I 3509 1636 I 3512 1645 I 3503 1639 I 3495 1645 I 3498 1636 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3496 1623 M 3506 1623 I 3509 1613 I 3513 1623 I 3523 1623 I 3515 1629 I 3518 1639 I 3509 1633 I 3501 1639 I 3504 1629 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3508 1616 M 3518 1616 I 3521 1606 I 3525 1616 I 3535 1616 I 3527 1622 I 3530 1632 I 3521 1626 I 3513 1632 I 3516 1622 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3543 1626 M 3554 1626 I 3557 1616 I 3561 1626 I 3571 1626 I 3563 1632 I 3566 1642 I 3557 1636 I 3549 1642 I 3552 1632 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3550 1619 M 3560 1619 I 3563 1609 I 3567 1619 I 3577 1619 I 3569 1625 I 3572 1635 I 3563 1629 I 3555 1635 I 3558 1625 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3562 1612 M 3572 1612 I 3575 1602 I 3579 1612 I 3589 1612 I 3581 1618 I 3584 1628 I 3575 1622 I 3567 1628 I 3570 1618 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3597 1621 M 3608 1621 I 3611 1611 I 3615 1621 I 3625 1621 I 3617 1627 I 3620 1637 I 3611 1631 I 3603 1637 I 3606 1627 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3603 1615 M 3614 1615 I 3617 1605 I 3621 1615 I 3631 1615 I 3623 1621 I 3626 1631 I 3617 1625 I 3609 1631 I 3612 1621 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3615 1608 M 3626 1608 I 3629 1598 I 3632 1608 I 3643 1608 I 3635 1614 I 3638 1624 I 3629 1618 I 3621 1624 I 3623 1614 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3651 1616 M 3661 1616 I 3665 1606 I 3668 1616 I 3679 1616 I 3670 1622 I 3673 1632 I 3665 1626 I 3656 1632 I 3659 1622 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3657 1609 M 3668 1609 I 3671 1599 I 3674 1609 I 3685 1609 I 3676 1616 I 3679 1625 I 3671 1619 I 3662 1625 I 3665 1616 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3669 1603 M 3680 1603 I 3683 1593 I 3686 1603 I 3697 1603 I 3688 1609 I 3691 1619 I 3683 1613 I 3674 1619 I 3677 1609 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3705 1609 M 3715 1609 I 3719 1599 I 3722 1609 I 3733 1609 I 3724 1616 I 3727 1626 I 3719 1620 I 3710 1626 I 3713 1616 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3711 1604 M 3721 1604 I 3725 1594 I 3728 1604 I 3739 1604 I 3730 1610 I 3733 1620 I 3725 1614 I 3716 1620 I 3719 1610 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3723 1598 M 3733 1598 I 3737 1588 I 3740 1598 I 3750 1598 I 3742 1604 I 3745 1614 I 3737 1608 I 3728 1614 I 3731 1604 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3759 1603 M 3769 1603 I 3773 1593 I 3776 1603 I 3786 1603 I 3778 1609 I 3781 1619 I 3773 1613 I 3764 1619 I 3767 1609 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3765 1598 M 3775 1598 I 3779 1588 I 3782 1598 I 3792 1598 I 3784 1604 I 3787 1614 I 3779 1608 I 3770 1614 I 3773 1604 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3777 1592 M 3787 1592 I 3790 1582 I 3794 1592 I 3804 1592 I 3796 1598 I 3799 1608 I 3790 1602 I 3782 1608 I 3785 1598 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3813 1597 M 3823 1597 I 3826 1587 I 3830 1597 I 3840 1597 I 3832 1603 I 3835 1613 I 3826 1607 I 3818 1613 I 3821 1603 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3819 1592 M 3829 1592 I 3832 1582 I 3836 1592 I 3846 1592 I 3838 1598 I 3841 1608 I 3832 1602 I 3824 1608 I 3827 1598 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3831 1587 M 3841 1587 I 3844 1577 I 3848 1587 I 3858 1587 I 3850 1593 I 3853 1603 I 3844 1597 I 3836 1603 I 3839 1593 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3866 1590 M 3877 1590 I 3880 1580 I 3884 1590 I 3894 1590 I 3886 1596 I 3889 1606 I 3880 1601 I 3872 1606 I 3875 1596 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3872 1586 M 3883 1586 I 3886 1576 I 3890 1586 I 3900 1586 I 3892 1592 I 3895 1602 I 3886 1596 I 3878 1602 I 3881 1592 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3884 1581 M 3895 1581 I 3898 1571 I 3902 1581 I 3912 1581 I 3904 1587 I 3907 1597 I 3898 1591 I 3890 1597 I 3893 1587 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3920 1584 M 3931 1584 I 3934 1574 I 3937 1584 I 3948 1584 I 3940 1590 I 3942 1600 I 3934 1594 I 3926 1600 I 3929 1590 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3926 1580 M 3937 1580 I 3940 1570 I 3943 1580 I 3954 1580 I 3945 1586 I 3948 1596 I 3940 1590 I 3932 1596 I 3934 1586 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3938 1576 M 3949 1576 I 3952 1566 I 3955 1576 I 3966 1576 I 3957 1582 I 3961 1592 I 3952 1586 I 3943 1592 I 3946 1582 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3974 1578 M 3984 1578 I 3988 1568 I 3991 1578 I 4002 1578 I 3993 1585 I 3996 1594 I 3988 1588 I 3979 1594 I 3982 1585 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3980 1575 M 3990 1575 I 3994 1565 I 3997 1575 I 4008 1575 I 3999 1581 I 4002 1591 I 3994 1585 I 3985 1591 I 3988 1581 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3992 1571 M 4002 1571 I 4006 1561 I 4009 1571 I 4020 1571 I 4011 1577 I 4014 1587 I 4006 1581 I 3997 1587 I 4000 1577 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 4028 1573 M 4038 1573 I 4042 1563 I 4045 1573 I 4055 1573 I 4047 1579 I 4050 1589 I 4042 1583 I 4033 1589 I 4036 1579 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 4034 1570 M 4044 1570 I 4048 1560 I 4051 1570 I 4061 1570 I 4053 1576 I 4056 1586 I 4048 1580 I 4039 1586 I 4042 1576 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 4046 1567 M 4056 1567 I 4060 1557 I 4063 1567 I 4073 1567 I 4065 1573 I 4068 1583 I 4060 1577 I 4051 1583 I 4054 1573 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 4082 1568 M 4092 1568 I 4095 1558 I 4099 1568 I 4109 1568 I 4101 1574 I 4104 1584 I 4095 1578 I 4087 1584 I 4090 1574 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 4088 1565 M 4098 1565 I 4101 1555 I 4105 1565 I 4115 1565 I 4107 1571 I 4110 1581 I 4101 1575 I 4093 1581 I 4096 1571 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 4100 1563 M 4110 1563 I 4113 1552 I 4117 1563 I 4127 1563 I 4119 1569 I 4122 1579 I 4113 1573 I 4105 1579 I 4108 1569 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 4135 1563 M 4146 1563 I 4149 1553 I 4153 1563 I 4163 1563 I 4155 1569 I 4158 1579 I 4149 1573 I 4141 1579 I 4144 1569 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 4141 1561 M 4152 1561 I 4155 1551 I 4159 1561 I 4169 1561 I 4161 1567 I 4164 1577 I 4155 1571 I 4147 1577 I 4150 1567 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 4154 1559 M 4164 1559 I 4167 1549 I 4171 1559 I 4181 1559 I 4173 1565 I 4176 1575 I 4167 1569 I 4159 1575 I 4162 1565 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 4189 1559 M 4200 1559 I 4203 1549 I 4207 1559 I 4217 1559 I 4209 1565 I 4212 1575 I 4203 1569 I 4195 1575 I 4198 1565 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 4195 1557 M 4206 1557 I 4209 1547 I 4213 1557 I 4223 1557 I 4215 1563 I 4218 1573 I 4209 1568 I 4201 1573 I 4204 1563 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 4207 1555 M 4218 1555 I 4221 1545 I 4224 1555 I 4235 1555 I 4226 1562 I 4230 1572 I 4221 1566 I 4213 1572 I 4216 1562 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 4243 1555 M 4253 1555 I 4257 1545 I 4260 1555 I 4271 1555 I 4262 1562 I 4265 1572 I 4257 1566 I 4248 1572 I 4251 1562 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 4249 1554 M 4259 1554 I 4263 1544 I 4266 1554 I 4277 1554 I 4268 1560 I 4271 1570 I 4263 1564 I 4254 1570 I 4257 1560 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 4261 1552 M 4272 1552 I 4275 1542 I 4278 1552 I 4289 1552 I 4280 1559 I 4283 1569 I 4275 1563 I 4266 1569 I 4269 1559 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 4297 1552 M 4307 1552 I 4311 1542 I 4314 1552 I 4325 1552 I 4316 1558 I 4319 1568 I 4311 1563 I 4302 1568 I 4305 1558 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 4303 1551 M 4313 1551 I 4317 1541 I 4320 1551 I 4331 1551 I 4322 1557 I 4325 1567 I 4317 1561 I 4308 1567 I 4311 1557 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 4315 1550 M 4325 1550 I 4329 1540 I 4332 1550 I 4342 1550 I 4334 1556 I 4337 1566 I 4329 1560 I 4320 1566 I 4323 1556 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 4351 1550 M 4361 1550 I 4365 1539 I 4368 1550 I 4378 1550 I 4370 1556 I 4373 1566 I 4365 1560 I 4356 1566 I 4359 1556 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 4357 1549 M 4367 1549 I 4371 1539 I 4374 1549 I 4384 1549 I 4376 1555 I 4379 1565 I 4371 1559 I 4362 1565 I 4365 1555 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 4369 1548 M 4379 1548 I 4382 1538 I 4386 1548 I 4396 1548 I 4388 1554 I 4391 1564 I 4382 1558 I 4374 1564 I 4377 1554 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; 27 Lw N 4405 1547 M 4415 1547 I 4419 1537 I 4422 1547 I 4432 1547 I 4424 1553 I 4427 1563 I 4419 1557 I 4410 1563 I 4413 1553 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4411 1546 M 4421 1546 I 4425 1536 I 4428 1546 I 4438 1546 I 4430 1553 I 4433 1563 I 4425 1557 I 4416 1563 I 4419 1553 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4423 1546 M 4433 1546 I 4436 1536 I 4440 1546 I 4450 1546 I 4442 1552 I 4445 1562 I 4436 1556 I 4428 1562 I 4431 1552 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4458 1545 M 4469 1545 I 4472 1535 I 4476 1545 I 4486 1545 I 4478 1552 I 4481 1561 I 4472 1555 I 4464 1561 I 4467 1552 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4464 1545 M 4475 1545 I 4478 1535 I 4482 1545 I 4492 1545 I 4484 1551 I 4487 1561 I 4478 1555 I 4470 1561 I 4473 1551 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4476 1544 M 4487 1544 I 4490 1534 I 4494 1544 I 4504 1544 I 4496 1550 I 4499 1560 I 4490 1555 I 4482 1560 I 4485 1550 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4482 1907 M 4493 1907 I 4496 1898 I 4500 1907 I 4510 1907 I 4502 1914 I 4505 1924 I 4496 1918 I 4488 1924 I 4491 1914 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4494 1878 M 4505 1878 I 4508 1868 I 4512 1878 I 4522 1878 I 4514 1884 I 4517 1894 I 4508 1888 I 4500 1894 I 4503 1884 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4530 1881 M 4541 1881 I 4544 1871 I 4547 1881 I 4558 1881 I 4550 1887 I 4553 1897 I 4544 1891 I 4535 1897 I 4538 1887 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4536 1842 M 4547 1842 I 4550 1832 I 4553 1842 I 4564 1842 I 4556 1848 I 4559 1858 I 4550 1852 I 4541 1858 I 4544 1848 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4548 1803 M 4559 1803 I 4562 1793 I 4565 1803 I 4576 1803 I 4567 1809 I 4570 1819 I 4562 1813 I 4553 1819 I 4556 1809 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4584 1796 M 4594 1796 I 4598 1786 I 4601 1796 I 4612 1796 I 4603 1802 I 4606 1812 I 4598 1806 I 4589 1812 I 4592 1802 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4590 1765 M 4600 1765 I 4604 1755 I 4607 1765 I 4618 1765 I 4609 1771 I 4612 1781 I 4604 1775 I 4595 1781 I 4598 1771 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4602 1734 M 4612 1734 I 4616 1724 I 4619 1734 I 4630 1734 I 4621 1741 I 4624 1750 I 4616 1745 I 4607 1750 I 4610 1741 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4638 1723 M 4648 1723 I 4652 1713 I 4655 1723 I 4665 1723 I 4657 1729 I 4660 1739 I 4652 1733 I 4643 1739 I 4646 1729 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4644 1699 M 4654 1699 I 4658 1689 I 4661 1699 I 4671 1699 I 4663 1706 I 4666 1715 I 4658 1709 I 4649 1715 I 4652 1706 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4656 1676 M 4666 1676 I 4669 1666 I 4673 1676 I 4683 1676 I 4675 1682 I 4678 1692 I 4669 1686 I 4661 1692 I 4664 1682 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4692 1661 M 4702 1661 I 4706 1651 I 4709 1661 I 4719 1661 I 4711 1667 I 4714 1677 I 4706 1671 I 4697 1677 I 4700 1667 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4698 1644 M 4708 1644 I 4712 1634 I 4715 1644 I 4725 1644 I 4717 1650 I 4720 1660 I 4712 1654 I 4703 1660 I 4706 1650 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4710 1626 M 4720 1626 I 4723 1616 I 4727 1626 I 4737 1626 I 4729 1632 I 4732 1642 I 4723 1637 I 4715 1642 I 4718 1632 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4745 1609 M 4756 1609 I 4759 1599 I 4763 1609 I 4773 1609 I 4765 1616 I 4768 1626 I 4759 1620 I 4751 1626 I 4754 1616 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4751 1597 M 4762 1597 I 4765 1587 I 4769 1597 I 4779 1597 I 4771 1603 I 4774 1613 I 4765 1607 I 4757 1613 I 4760 1603 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4764 1585 M 4774 1585 I 4777 1575 I 4781 1585 I 4791 1585 I 4783 1591 I 4786 1601 I 4777 1595 I 4769 1601 I 4772 1591 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4799 1567 M 4810 1567 I 4813 1557 I 4816 1567 I 4827 1567 I 4819 1573 I 4822 1583 I 4813 1577 I 4805 1583 I 4808 1573 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4805 1559 M 4816 1559 I 4819 1549 I 4822 1559 I 4833 1559 I 4825 1565 I 4828 1575 I 4819 1569 I 4811 1575 I 4813 1565 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4817 1552 M 4828 1552 I 4831 1542 I 4834 1552 I 4845 1552 I 4837 1558 I 4840 1568 I 4831 1562 I 4822 1568 I 4825 1558 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4853 1533 M 4863 1533 I 4867 1523 I 4870 1533 I 4881 1533 I 4872 1539 I 4875 1549 I 4867 1543 I 4859 1549 I 4862 1539 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4859 1529 M 4869 1529 I 4873 1519 I 4876 1529 I 4887 1529 I 4878 1535 I 4881 1545 I 4873 1539 I 4864 1545 I 4867 1535 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4871 1525 M 4882 1525 I 4885 1515 I 4888 1525 I 4899 1525 I 4890 1531 I 4893 1541 I 4885 1535 I 4876 1541 I 4879 1531 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4907 1506 M 4917 1506 I 4921 1496 I 4924 1506 I 4934 1506 I 4926 1512 I 4929 1522 I 4921 1516 I 4912 1522 I 4915 1512 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4913 1505 M 4923 1505 I 4927 1495 I 4930 1505 I 4940 1505 I 4932 1511 I 4935 1521 I 4927 1515 I 4918 1521 I 4921 1511 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4925 1504 M 4935 1504 I 4939 1494 I 4942 1504 I 4952 1504 I 4944 1510 I 4947 1520 I 4939 1514 I 4930 1520 I 4933 1510 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4961 1486 M 4971 1486 I 4975 1476 I 4978 1486 I 4988 1486 I 4980 1492 I 4983 1502 I 4975 1496 I 4966 1502 I 4969 1492 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4967 1487 M 4977 1487 I 4981 1477 I 4984 1487 I 4994 1487 I 4986 1493 I 4989 1503 I 4981 1497 I 4972 1503 I 4975 1493 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4979 1489 M 4989 1489 I 4993 1479 I 4996 1489 I 5006 1489 I 4998 1495 I 5001 1505 I 4993 1499 I 4984 1505 I 4987 1495 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5014 1471 M 5025 1471 I 5028 1461 I 5032 1471 I 5042 1471 I 5034 1477 I 5037 1487 I 5028 1481 I 5020 1487 I 5023 1477 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5020 1474 M 5031 1474 I 5034 1464 I 5038 1474 I 5048 1474 I 5040 1480 I 5043 1490 I 5034 1484 I 5026 1490 I 5029 1480 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5033 1478 M 5043 1478 I 5046 1468 I 5050 1478 I 5060 1478 I 5052 1484 I 5055 1494 I 5046 1488 I 5038 1494 I 5041 1484 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5068 1461 M 5079 1461 I 5082 1451 I 5086 1461 I 5096 1461 I 5088 1467 I 5091 1477 I 5082 1471 I 5074 1477 I 5077 1467 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5074 1465 M 5085 1465 I 5088 1455 I 5092 1465 I 5102 1465 I 5094 1472 I 5097 1481 I 5088 1475 I 5080 1481 I 5083 1472 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5086 1470 M 5097 1470 I 5100 1460 I 5103 1470 I 5114 1470 I 5106 1477 I 5109 1487 I 5100 1481 I 5092 1487 I 5095 1477 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5122 1455 M 5132 1455 I 5136 1445 I 5139 1455 I 5150 1455 I 5141 1461 I 5144 1471 I 5136 1465 I 5128 1471 I 5131 1461 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5128 1460 M 5138 1460 I 5142 1450 I 5146 1460 I 5156 1460 I 5147 1467 I 5150 1477 I 5142 1471 I 5134 1477 I 5137 1467 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5140 1466 M 5151 1466 I 5154 1456 I 5157 1466 I 5168 1466 I 5159 1473 I 5162 1483 I 5154 1477 I 5146 1483 I 5148 1473 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5176 1452 M 5186 1452 I 5190 1442 I 5193 1452 I 5204 1452 I 5195 1458 I 5198 1468 I 5190 1462 I 5181 1468 I 5184 1458 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5182 1458 M 5192 1458 I 5196 1448 I 5199 1458 I 5210 1458 I 5201 1464 I 5204 1474 I 5196 1468 I 5187 1474 I 5190 1464 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5194 1465 M 5204 1465 I 5208 1455 I 5211 1465 I 5221 1465 I 5213 1471 I 5216 1481 I 5208 1475 I 5199 1481 I 5202 1471 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5230 1452 M 5240 1452 I 5244 1442 I 5247 1452 I 5257 1452 I 5249 1458 I 5252 1468 I 5244 1462 I 5235 1468 I 5238 1458 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5236 1458 M 5246 1458 I 5250 1448 I 5253 1458 I 5264 1458 I 5255 1465 I 5258 1475 I 5250 1469 I 5241 1475 I 5244 1465 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5248 1465 M 5258 1465 I 5262 1455 I 5265 1465 I 5275 1465 I 5267 1472 I 5270 1481 I 5262 1476 I 5253 1481 I 5256 1472 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5284 1454 M 5294 1454 I 5297 1444 I 5301 1454 I 5311 1454 I 5303 1460 I 5306 1470 I 5297 1464 I 5289 1470 I 5292 1460 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5290 1461 M 5300 1461 I 5303 1451 I 5307 1461 I 5317 1461 I 5309 1467 I 5312 1477 I 5303 1471 I 5295 1477 I 5298 1467 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5302 1468 M 5312 1468 I 5315 1458 I 5319 1468 I 5329 1468 I 5321 1474 I 5324 1484 I 5315 1478 I 5307 1484 I 5310 1474 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5338 1457 M 5348 1457 I 5351 1447 I 5355 1457 I 5365 1457 I 5357 1464 I 5360 1474 I 5351 1468 I 5343 1474 I 5346 1464 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5344 1464 M 5354 1464 I 5357 1454 I 5361 1464 I 5371 1464 I 5363 1470 I 5366 1480 I 5357 1474 I 5349 1480 I 5352 1470 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5355 1471 M 5366 1471 I 5369 1461 I 5373 1471 I 5383 1471 I 5375 1477 I 5378 1487 I 5369 1481 I 5361 1487 I 5364 1477 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5391 1462 M 5402 1462 I 5405 1452 I 5408 1462 I 5419 1462 I 5411 1468 I 5414 1478 I 5405 1473 I 5397 1478 I 5400 1468 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5397 1469 M 5408 1469 I 5411 1459 I 5415 1469 I 5425 1469 I 5416 1475 I 5419 1485 I 5411 1479 I 5403 1485 I 5406 1475 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5409 1475 M 5420 1475 I 5423 1466 I 5427 1475 I 5437 1475 I 5428 1482 I 5431 1492 I 5423 1486 I 5415 1492 I 5418 1482 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5445 1468 M 5456 1468 I 5459 1458 I 5462 1468 I 5473 1468 I 5465 1474 I 5467 1484 I 5459 1478 I 5450 1484 I 5453 1474 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5451 1474 M 5462 1474 I 5465 1464 I 5468 1474 I 5479 1474 I 5470 1480 I 5473 1490 I 5465 1484 I 5456 1490 I 5459 1480 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5463 1481 M 5473 1481 I 5477 1471 I 5480 1481 I 5491 1481 I 5482 1487 I 5485 1497 I 5477 1491 I 5468 1497 I 5471 1487 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5499 1474 M 5509 1474 I 5513 1464 I 5516 1474 I 5526 1474 I 5518 1480 I 5521 1490 I 5513 1484 I 5504 1490 I 5507 1480 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5505 1480 M 5515 1480 I 5519 1470 I 5522 1480 I 5533 1480 I 5524 1486 I 5527 1496 I 5519 1490 I 5510 1496 I 5513 1486 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5517 1486 M 5527 1486 I 5531 1476 I 5534 1486 I 5545 1486 I 5536 1492 I 5539 1502 I 5531 1496 I 5522 1502 I 5525 1492 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5553 1480 M 5563 1480 I 5566 1471 I 5570 1480 I 5580 1480 I 5572 1487 I 5575 1497 I 5566 1491 I 5558 1497 I 5561 1487 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5559 1486 M 5569 1486 I 5572 1476 I 5576 1486 I 5586 1486 I 5578 1492 I 5581 1502 I 5572 1496 I 5564 1502 I 5567 1492 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5571 1491 M 5581 1491 I 5584 1482 I 5588 1491 I 5598 1491 I 5590 1498 I 5593 1508 I 5584 1502 I 5576 1508 I 5579 1498 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5607 1487 M 5617 1487 I 5620 1477 I 5624 1487 I 5634 1487 I 5626 1493 I 5629 1503 I 5620 1497 I 5612 1503 I 5615 1493 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5613 1492 M 5623 1492 I 5626 1482 I 5630 1492 I 5640 1492 I 5632 1498 I 5635 1508 I 5626 1502 I 5618 1508 I 5621 1498 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5625 1497 M 5635 1497 I 5638 1487 I 5642 1497 I 5652 1497 I 5644 1503 I 5647 1513 I 5638 1507 I 5630 1513 I 5633 1503 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5660 1493 M 5671 1493 I 5674 1484 I 5677 1493 I 5688 1493 I 5680 1500 I 5683 1510 I 5674 1504 I 5666 1510 I 5669 1500 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5666 1498 M 5677 1498 I 5680 1488 I 5684 1498 I 5694 1498 I 5686 1504 I 5689 1514 I 5680 1508 I 5672 1514 I 5675 1504 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5678 1503 M 5689 1503 I 5692 1493 I 5696 1503 I 5706 1503 I 5698 1509 I 5700 1519 I 5692 1513 I 5684 1519 I 5687 1509 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5714 1500 M 5725 1500 I 5728 1490 I 5731 1500 I 5742 1500 I 5734 1506 I 5737 1516 I 5728 1510 I 5719 1516 I 5722 1506 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5720 1504 M 5731 1504 I 5734 1494 I 5737 1504 I 5748 1504 I 5740 1510 I 5743 1520 I 5734 1514 I 5725 1520 I 5728 1510 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5732 1508 M 5743 1508 I 5746 1498 I 5749 1508 I 5760 1508 I 5751 1514 I 5754 1524 I 5746 1518 I 5737 1524 I 5740 1514 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5768 1506 M 5778 1506 I 5782 1496 I 5785 1506 I 5795 1506 I 5787 1512 I 5790 1522 I 5782 1516 I 5773 1522 I 5776 1512 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5774 1509 M 5784 1509 I 5788 1499 I 5791 1509 I 5802 1509 I 5793 1515 I 5796 1525 I 5788 1519 I 5779 1525 I 5782 1515 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5786 1513 M 5796 1513 I 5800 1503 I 5803 1513 I 5814 1513 I 5805 1519 I 5808 1529 I 5800 1523 I 5791 1529 I 5794 1519 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5822 1511 M 5832 1511 I 5836 1501 I 5839 1511 I 5849 1511 I 5841 1517 I 5844 1527 I 5836 1521 I 5827 1527 I 5830 1517 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5828 1514 M 5838 1514 I 5842 1504 I 5845 1514 I 5855 1514 I 5847 1520 I 5850 1530 I 5842 1524 I 5833 1530 I 5836 1520 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5840 1517 M 5850 1517 I 5853 1507 I 5857 1517 I 5867 1517 I 5859 1524 I 5862 1533 I 5853 1527 I 5845 1533 I 5848 1524 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5876 1516 M 5886 1516 I 5890 1506 I 5893 1516 I 5903 1516 I 5895 1522 I 5898 1532 I 5890 1526 I 5881 1532 I 5884 1522 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5882 1519 M 5892 1519 I 5896 1509 I 5899 1519 I 5909 1519 I 5901 1525 I 5904 1535 I 5896 1529 I 5887 1535 I 5890 1525 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5894 1522 M 5904 1522 I 5907 1511 I 5911 1522 I 5921 1522 I 5913 1528 I 5916 1538 I 5907 1532 I 5899 1538 I 5902 1528 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5929 1521 M 5940 1521 I 5943 1511 I 5947 1521 I 5957 1521 I 5949 1527 I 5952 1537 I 5943 1531 I 5935 1537 I 5938 1527 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5935 1523 M 5946 1523 I 5949 1513 I 5953 1523 I 5963 1523 I 5955 1529 I 5958 1539 I 5949 1533 I 5941 1539 I 5944 1529 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5947 1525 M 5958 1525 I 5961 1515 I 5965 1525 I 5975 1525 I 5967 1532 I 5970 1542 I 5961 1536 I 5953 1542 I 5956 1532 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5983 1525 M 5994 1525 I 5997 1515 I 6001 1525 I 6011 1525 I 6003 1531 I 6006 1541 I 5997 1535 I 5989 1541 I 5992 1531 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5989 1527 M 6000 1527 I 6003 1517 I 6006 1527 I 6017 1527 I 6009 1533 I 6012 1543 I 6003 1537 I 5995 1543 I 5998 1533 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 6001 1529 M 6012 1529 I 6015 1519 I 6018 1529 I 6029 1529 I 6021 1535 I 6024 1545 I 6015 1539 I 6006 1545 I 6009 1535 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 6037 1529 M 6047 1529 I 6051 1519 I 6054 1529 I 6065 1529 I 6056 1535 I 6059 1545 I 6051 1539 I 6042 1545 I 6045 1535 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 6043 1530 M 6053 1530 I 6057 1520 I 6060 1530 I 6071 1530 I 6062 1536 I 6065 1546 I 6057 1540 I 6048 1546 I 6051 1536 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 6055 1532 M 6065 1532 I 6069 1522 I 6072 1532 I 6083 1532 I 6074 1538 I 6077 1548 I 6069 1542 I 6060 1548 I 6063 1538 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 6091 1532 M 6101 1532 I 6105 1522 I 6108 1532 I 6119 1532 I 6110 1538 I 6113 1548 I 6105 1542 I 6096 1548 I 6099 1538 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 6097 1533 M 6107 1533 I 6111 1523 I 6114 1533 I 6124 1533 I 6116 1539 I 6119 1549 I 6111 1543 I 6102 1549 I 6105 1539 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 6109 1534 M 6119 1534 I 6123 1524 I 6126 1534 I 6136 1534 I 6128 1540 I 6131 1550 I 6123 1545 I 6114 1550 I 6117 1540 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 6145 1534 M 6155 1534 I 6159 1525 I 6162 1534 I 6172 1534 I 6164 1541 I 6167 1551 I 6159 1545 I 6150 1551 I 6153 1541 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 6151 1536 M 6161 1536 I 6165 1526 I 6168 1536 I 6178 1536 I 6170 1542 I 6173 1552 I 6165 1546 I 6156 1552 I 6159 1542 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 6163 1536 M 6173 1536 I 6177 1527 I 6180 1536 I 6190 1536 I 6182 1543 I 6185 1553 I 6177 1547 I 6168 1553 I 6171 1543 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 6199 1537 M 6209 1537 I 6212 1527 I 6216 1537 I 6226 1537 I 6218 1543 I 6221 1553 I 6212 1547 I 6204 1553 I 6207 1543 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 6204 1538 M 6215 1538 I 6218 1528 I 6222 1538 I 6232 1538 I 6224 1544 I 6227 1554 I 6218 1548 I 6210 1554 I 6213 1544 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 6216 1538 M 6227 1538 I 6230 1529 I 6234 1538 I 6244 1538 I 6236 1545 I 6239 1555 I 6230 1549 I 6222 1555 I 6225 1545 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 6253 1539 M 6263 1539 I 6266 1529 I 6270 1539 I 6280 1539 I 6272 1545 I 6275 1555 I 6266 1549 I 6258 1555 I 6261 1545 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 6258 1539 M 6269 1539 I 6272 1530 I 6276 1539 I 6286 1539 I 6278 1546 I 6281 1556 I 6272 1550 I 6264 1556 I 6267 1546 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 6270 1539 M 6281 1539 I 6284 1530 I 6287 1539 I 6298 1539 I 6290 1546 I 6293 1556 I 6284 1550 I 6276 1556 I 6279 1546 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; 0 0 0 1 scol 1 Lj N 902 1546 M 938 1546 I 974 1662 I 1010 1661 I 1046 1645 I 1082 1629 I 1118 1614 I 1153 1601 I 1190 1589 I 1225 1579 I 1261 1570 I 1297 1562 I 1333 1555 I 1369 1549 I 1405 1543 I 1440 1539 I 1477 1535 I 1512 1532 I 1548 1529 I 1584 1527 I 1620 1526 I 1656 1524 I 1692 1523 I 1728 1523 I 1764 1522 I 1799 1522 I 1835 1522 I 1871 1523 I 1907 1523 I 1943 1523 I 1979 1524 I 2015 1525 I 2050 1526 I 2086 1526 I 2122 1527 I 2158 1528 I 2194 1529 I 2230 1530 I 2266 1531 I 2302 1532 I 2337 1533 I 2373 1533 I 2409 1534 I 2445 1535 I 2481 1536 I 2517 1536 I 2553 1537 I 2589 1538 I 2624 1539 I 2661 1539 I 2696 1540 I 2732 1309 I 2768 1313 I 2804 1345 I 2840 1377 I 2876 1407 I 2911 1434 I 2948 1457 I 2983 1478 I 3019 1497 I 3055 1513 I 3091 1528 I 3127 1540 I 3163 1551 I 3199 1560 I 3235 1568 I 3270 1574 I 3306 1580 I 3342 1584 I 3378 1588 I 3414 1590 I 3450 1592 I 3486 1593 I 3522 1594 I 3557 1595 I 3593 1595 I 3629 1594 I 3665 1593 I 3701 1593 I 3737 1591 I 3773 1590 I 3808 1589 I 3844 1587 I 3880 1585 I 3916 1583 I 3952 1582 I 3988 1580 I 4024 1578 I 4060 1576 I 4095 1575 I 4131 1573 I 4167 1571 I 4203 1570 I 4239 1568 I 4275 1567 I 4311 1565 I 4347 1564 I 4382 1563 I 4419 1561 I 4454 1560 I 4490 1559 I 4526 1789 I 4562 1785 I 4598 1753 I 4634 1720 I 4669 1690 I 4706 1663 I 4741 1639 I 4777 1617 I 4813 1598 I 4849 1582 I 4885 1567 I 4921 1555 I 4957 1544 I 4993 1534 I 5028 1526 I 5064 1520 I 5100 1514 I 5136 1510 I 5172 1506 I 5208 1503 I 5244 1501 I 5280 1500 I 5315 1499 I 5351 1498 I 5387 1498 I 5423 1499 I 5459 1500 I 5495 1500 I 5531 1501 I 5566 1503 I 5602 1504 I 5638 1506 I 5674 1508 I 5710 1509 I 5746 1511 I 5782 1513 I 5818 1514 I 5853 1516 I 5890 1518 I 5925 1520 I 5961 1522 I 5997 1523 I 6033 1525 I 6069 1526 I 6105 1528 I 6140 1529 I 6177 1530 I 6212 1532 I 6248 1533 I 6284 1534 I : [ 0.27 0 0 0.27 0 0 ] concat K 
+; 0 Lj 53 Lw N 891 1536 M 891 1557 I 913 1557 I 913 1536 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 927 1536 M 927 1557 I 949 1557 I 949 1536 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 963 1651 M 963 1673 I 985 1673 I 985 1651 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 999 1650 M 999 1671 I 1021 1671 I 1021 1650 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1035 1634 M 1035 1656 I 1057 1656 I 1057 1634 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1071 1618 M 1071 1640 I 1093 1640 I 1093 1618 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1107 1603 M 1107 1625 I 1128 1625 I 1128 1603 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1143 1590 M 1143 1612 I 1164 1612 I 1164 1590 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1179 1578 M 1179 1600 I 1200 1600 I 1200 1578 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1214 1568 M 1214 1590 I 1236 1590 I 1236 1568 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1250 1559 M 1250 1581 I 1272 1581 I 1272 1559 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1286 1551 M 1286 1573 I 1308 1573 I 1308 1551 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1322 1544 M 1322 1566 I 1344 1566 I 1344 1544 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1358 1538 M 1358 1560 I 1380 1560 I 1380 1538 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1394 1533 M 1394 1554 I 1415 1554 I 1415 1533 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1430 1528 M 1430 1550 I 1451 1550 I 1451 1528 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1466 1524 M 1466 1546 I 1487 1546 I 1487 1524 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1501 1521 M 1501 1543 I 1523 1543 I 1523 1521 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1537 1519 M 1537 1540 I 1559 1540 I 1559 1519 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1573 1516 M 1573 1538 I 1595 1538 I 1595 1516 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1609 1515 M 1609 1536 I 1631 1536 I 1631 1515 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1645 1514 M 1645 1535 I 1667 1535 I 1667 1514 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1681 1513 M 1681 1534 I 1702 1534 I 1702 1513 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1717 1512 M 1717 1534 I 1738 1534 I 1738 1512 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1753 1511 M 1753 1533 I 1774 1533 I 1774 1511 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1788 1511 M 1788 1533 I 1810 1533 I 1810 1511 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1824 1511 M 1824 1533 I 1846 1533 I 1846 1511 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1860 1512 M 1860 1533 I 1882 1533 I 1882 1512 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1896 1512 M 1896 1534 I 1918 1534 I 1918 1512 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1932 1513 M 1932 1534 I 1954 1534 I 1954 1513 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 1968 1513 M 1968 1535 I 1989 1535 I 1989 1513 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2004 1514 M 2004 1536 I 2025 1536 I 2025 1514 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2040 1515 M 2040 1536 I 2061 1536 I 2061 1515 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2075 1515 M 2075 1537 I 2097 1537 I 2097 1515 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2111 1516 M 2111 1538 I 2133 1538 I 2133 1516 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2147 1517 M 2147 1539 I 2169 1539 I 2169 1517 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2183 1518 M 2183 1540 I 2205 1540 I 2205 1518 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2219 1519 M 2219 1541 I 2241 1541 I 2241 1519 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2255 1520 M 2255 1542 I 2277 1542 I 2277 1520 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2291 1521 M 2291 1542 I 2312 1542 I 2312 1521 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2327 1522 M 2327 1543 I 2348 1543 I 2348 1522 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2362 1522 M 2362 1544 I 2384 1544 I 2384 1522 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2398 1523 M 2398 1545 I 2420 1545 I 2420 1523 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2434 1524 M 2434 1546 I 2456 1546 I 2456 1524 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2470 1525 M 2470 1547 I 2492 1547 I 2492 1525 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2506 1526 M 2506 1547 I 2528 1547 I 2528 1526 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2542 1526 M 2542 1548 I 2564 1548 I 2564 1526 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2578 1527 M 2578 1549 I 2600 1549 I 2600 1527 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2614 1528 M 2614 1549 I 2635 1549 I 2635 1528 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2650 1528 M 2650 1550 I 2671 1550 I 2671 1528 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2685 1529 M 2685 1551 I 2707 1551 I 2707 1529 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2721 1298 M 2721 1320 I 2743 1320 I 2743 1298 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2757 1302 M 2757 1324 I 2779 1324 I 2779 1302 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2793 1334 M 2793 1355 I 2815 1355 I 2815 1334 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2829 1366 M 2829 1388 I 2851 1388 I 2851 1366 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2865 1396 M 2865 1418 I 2886 1418 I 2886 1396 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2901 1423 M 2901 1444 I 2922 1444 I 2922 1423 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2937 1446 M 2937 1468 I 2958 1468 I 2958 1446 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 2972 1468 M 2972 1489 I 2994 1489 I 2994 1468 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3008 1486 M 3008 1508 I 3030 1508 I 3030 1486 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3044 1502 M 3044 1524 I 3066 1524 I 3066 1502 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3080 1517 M 3080 1538 I 3102 1538 I 3102 1517 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3116 1529 M 3116 1551 I 3138 1551 I 3138 1529 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3152 1540 M 3152 1562 I 3173 1562 I 3173 1540 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3188 1549 M 3188 1571 I 3209 1571 I 3209 1549 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3224 1557 M 3224 1578 I 3245 1578 I 3245 1557 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3259 1563 M 3259 1585 I 3281 1585 I 3281 1563 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3295 1569 M 3295 1590 I 3317 1590 I 3317 1569 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3331 1573 M 3331 1595 I 3353 1595 I 3353 1573 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3367 1577 M 3367 1598 I 3389 1598 I 3389 1577 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3403 1579 M 3403 1601 I 3425 1601 I 3425 1579 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3439 1581 M 3439 1603 I 3460 1603 I 3460 1581 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3475 1583 M 3475 1604 I 3496 1604 I 3496 1583 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3511 1584 M 3511 1605 I 3532 1605 I 3532 1584 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3546 1584 M 3546 1606 I 3568 1606 I 3568 1584 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3582 1584 M 3582 1606 I 3604 1606 I 3604 1584 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3618 1583 M 3618 1605 I 3640 1605 I 3640 1583 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3654 1583 M 3654 1604 I 3676 1604 I 3676 1583 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3690 1582 M 3690 1603 I 3712 1603 I 3712 1582 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3726 1580 M 3726 1602 I 3748 1602 I 3748 1580 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3762 1579 M 3762 1601 I 3783 1601 I 3783 1579 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3798 1578 M 3798 1599 I 3819 1599 I 3819 1578 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3833 1576 M 3833 1598 I 3855 1598 I 3855 1576 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3869 1574 M 3869 1596 I 3891 1596 I 3891 1574 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3905 1573 M 3905 1594 I 3927 1594 I 3927 1573 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3941 1571 M 3941 1593 I 3963 1593 I 3963 1571 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 3977 1569 M 3977 1591 I 3999 1591 I 3999 1569 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 4013 1567 M 4013 1589 I 4035 1589 I 4035 1567 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 4049 1566 M 4049 1587 I 4070 1587 I 4070 1566 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 4085 1564 M 4085 1586 I 4106 1586 I 4106 1564 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 4120 1562 M 4120 1584 I 4142 1584 I 4142 1562 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 4156 1560 M 4156 1582 I 4178 1582 I 4178 1560 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 4192 1559 M 4192 1580 I 4214 1580 I 4214 1559 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 4228 1557 M 4228 1579 I 4250 1579 I 4250 1557 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 4264 1556 M 4264 1578 I 4286 1578 I 4286 1556 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 4300 1554 M 4300 1576 I 4322 1576 I 4322 1554 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 4336 1553 M 4336 1575 I 4358 1575 I 4358 1553 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; N 4372 1552 M 4372 1573 I 4393 1573 I 4393 1552 I C 
+: [ 0.133 0 0 0.133 0 0 ] concat K 
+; 27 Lw N 4408 1550 M 4408 1572 I 4429 1572 I 4429 1550 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4444 1549 M 4444 1571 I 4465 1571 I 4465 1549 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4479 1548 M 4479 1570 I 4501 1570 I 4501 1548 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4515 1778 M 4515 1800 I 4537 1800 I 4537 1778 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4551 1774 M 4551 1796 I 4573 1796 I 4573 1774 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4587 1742 M 4587 1763 I 4609 1763 I 4609 1742 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4623 1709 M 4623 1731 I 4645 1731 I 4645 1709 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4659 1679 M 4659 1700 I 4680 1700 I 4680 1679 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4695 1652 M 4695 1674 I 4716 1674 I 4716 1652 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4730 1628 M 4730 1650 I 4752 1650 I 4752 1628 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4766 1606 M 4766 1628 I 4788 1628 I 4788 1606 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4802 1588 M 4802 1609 I 4824 1609 I 4824 1588 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4838 1571 M 4838 1593 I 4860 1593 I 4860 1571 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4874 1556 M 4874 1578 I 4896 1578 I 4896 1556 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4910 1544 M 4910 1565 I 4931 1565 I 4931 1544 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4946 1533 M 4946 1555 I 4968 1555 I 4968 1533 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 4982 1523 M 4982 1545 I 5003 1545 I 5003 1523 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5017 1516 M 5017 1537 I 5039 1537 I 5039 1516 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5053 1509 M 5053 1530 I 5075 1530 I 5075 1509 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5089 1503 M 5089 1525 I 5111 1525 I 5111 1503 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5125 1499 M 5125 1520 I 5147 1520 I 5147 1499 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5161 1495 M 5161 1517 I 5183 1517 I 5183 1495 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5197 1492 M 5197 1514 I 5218 1514 I 5218 1492 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5233 1490 M 5233 1512 I 5255 1512 I 5255 1490 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5269 1489 M 5269 1510 I 5290 1510 I 5290 1489 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5304 1488 M 5304 1510 I 5326 1510 I 5326 1488 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5341 1488 M 5341 1509 I 5362 1509 I 5362 1488 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5376 1488 M 5376 1509 I 5398 1509 I 5398 1488 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5412 1488 M 5412 1510 I 5434 1510 I 5434 1488 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5448 1489 M 5448 1510 I 5470 1510 I 5470 1489 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5484 1490 M 5484 1511 I 5506 1511 I 5506 1490 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5520 1491 M 5520 1512 I 5542 1512 I 5542 1491 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5556 1492 M 5556 1514 I 5577 1514 I 5577 1492 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5591 1494 M 5591 1515 I 5613 1515 I 5613 1494 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5628 1495 M 5628 1517 I 5649 1517 I 5649 1495 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5663 1497 M 5663 1519 I 5685 1519 I 5685 1497 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5699 1498 M 5699 1520 I 5721 1520 I 5721 1498 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5735 1500 M 5735 1522 I 5757 1522 I 5757 1500 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5771 1502 M 5771 1524 I 5793 1524 I 5793 1502 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5807 1504 M 5807 1525 I 5829 1525 I 5829 1504 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5843 1506 M 5843 1527 I 5864 1527 I 5864 1506 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5879 1507 M 5879 1529 I 5900 1529 I 5900 1507 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5915 1509 M 5915 1531 I 5936 1531 I 5936 1509 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5950 1511 M 5950 1532 I 5972 1532 I 5972 1511 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5986 1512 M 5986 1534 I 6008 1534 I 6008 1512 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 6022 1514 M 6022 1536 I 6044 1536 I 6044 1514 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 6058 1515 M 6058 1537 I 6080 1537 I 6080 1515 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 6094 1517 M 6094 1539 I 6116 1539 I 6116 1517 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 6130 1518 M 6130 1540 I 6151 1540 I 6151 1518 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 6166 1520 M 6166 1541 I 6187 1541 I 6187 1520 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 6202 1521 M 6202 1542 I 6223 1542 I 6223 1521 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 6237 1522 M 6237 1544 I 6259 1544 I 6259 1522 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 6273 1523 M 6273 1545 I 6295 1545 I 6295 1523 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; N 5457 378 M 5457 1134 I 6212 1134 I 6212 378 I 5457 378 I C 
+1 1 1 1 scol  O 0 0 0 1 scol F0SD8YFFFFFF27 Ji 
+5659 589 M (S)S 
+5781 589 M (L)S  5909 589 M (C)S  
+1 0 0 1 scol 1 Lj N 5479 511 M 5642 511 I : [ 0.27 0 0 0.27 0 0 ] concat K 
+; 0 Lj N 5574 510 M 5574 502 5567 495 5559 495 -c 5552 495 5545 502 5545 510 -c 5545 518 5552 524 5559 524 -c 5567 524 5574 518 5574 510 -c : [ 0.27 0 0 0.27 0 0 ] concat K 
+; 0 0 0 1 scol 5659 836 M (M)S 
+5853 836 M (J)S  5939 836 M (L)S  6067 836 M (S)S  
+0 0 1 1 scol 1 Lj N 5479 756 M 5642 756 I : [ 0.27 0 0 0.27 0 0 ] concat K 
+; 0 Lj N 5547 752 M 5557 752 I 5561 742 I 5564 752 I 5574 752 I 5566 758 I 5569 768 I 5561 762 I 5552 768 I 5555 758 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; 0 0 0 1 scol 5659 1080 M (L)S 
+5788 1080 M (Q)S  5944 1080 M (R)S  
+1 Lj N 5479 1002 M 5642 1002 I : [ 0.27 0 0 0.27 0 0 ] concat K 
+; 0 Lj N 5550 991 M 5550 1013 I 5571 1013 I 5571 991 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; 0.148 0.148 0.148 1 scol 13 Lw N 5457 1134 M 5457 378 I 6212 378 I 6212 1134 I C 
+: [ 0.27 0 0 0.27 0 0 ] concat K 
+; LH
+%%PageTrailer
+
+%%Trailer
+%%DocumentNeededResources: 
+%%+ font Times-Roman
+%%DocumentSuppliedResources: 
+%%+ procset Pscript_WinNT_VMErrorHandler 5.0 0
+%%+ procset Pscript_FatalError 5.0 0
+%%+ procset Pscript_Win_Basic 5.0 0
+%%+ procset Pscript_Win_Utils_L1 5.0 0
+%%+ procset Pscript_Win_GdiObject 5.0 0
+%%+ procset Pscript_Win_GdiObject_L1 5.0 0
+%%+ procset Pscript_Text 5.0 0
+%%+ procset Pscript_Encoding256 5.0 0
+Pscript_WinNT_Incr dup /terminate get exec
+%%EOF

@@ -1,0 +1,75 @@
+In this section, we provide a summary and give insights on some key aspects of our design approach in terms of dynamic configuration overheads, and applicability in safety-critical systems. {We also discuss the generality as well as the modularity of our design approach while highlighting the ease of switching to newer design models.} 
+
+\subsection{Result summary and insights}
+In this section, we summarize the results presented in this chapter, looking from two different perspectives: (a) exploiting error-resilience in \gls{ibc} systems and (b) sensitivity and robustness. A detailed list of parameters, optimizations and simulation settings considered for evaluation of our results is shown in Table~\ref{table_3}.  
+%\\[1ex]
+\par \noindent \textbf{Exploiting error-resilience in \gls{ibc} systems:} \gls{ibc} systems like \gls{lkas} have intrinsic error resilience and visual quality is not paramount for such applications. We exploit this by performing coarse-grained computation skipping in the \gls{isp} as well as variable lossy compression post-\gls{isp}. This significantly reduces the sensing-to-actuation delay $\tau$ at the cost of loss in image quality. Reduced $\tau$ enables faster sampling of the controller which not only negates the negative impact of image degradation on \gls{qoc} but in turn improves \gls{qoc} as shown in Sections~\ref{ss_optim_1} and \ref{ss_optim2}. We model this error as sensor noise in the approximation-aware \gls{lqg} controller, which improves the overall \gls{qoc} further as shown in Section~\ref{lqg_control}. Reduced compute workloads due to approximate \gls{isp} and a higher degree of lossy compression gives significant memory improvement as well. 
+In approximation-only mode, we obtain 88\% reduction in memory footprint and 44\% improvements in \gls{qoc} compared to accurate implementation (see Fig.~\ref{fig:optim2_1}, S6 in Q90). In \gls{qoc}-optimal mode, we obtain 78\% improvements in \gls{qoc} and 89\% reduction in memory footprint (see Fig.~\ref{fig:optim2_1}, S7 in Q90). 
+
+\begin{table}[h]
+	\small
+	\renewcommand{\arraystretch}{1.1}
+	\caption{{Summarizing details of evaluation parameters considered.}}
+	\label{table_3}
+	\centering
+		\vspace{-5 pt}
+	\begin{threeparttable}	
+		\setlength\tabcolsep{1.2pt}
+		\begin{tabular}{>{\centering\arraybackslash}p{8mm}>{\centering\arraybackslash}p{22mm}>
+				{\centering\arraybackslash}p{18mm}>{\centering\arraybackslash}p{20mm}
+				>{\centering\arraybackslash}p{15mm}}
+			\hline
+			\hline
+			\rule{0pt}{8pt}\textbf{\leavevmode{Sec.}} & \textbf{\leavevmode{Optimizations Considered}} &\textbf{\leavevmode{Platform Mappings}} & \textbf{\leavevmode{Environmental Scenarios}} & \textbf{\leavevmode{Controller Type}} \\
+			\hline
+ 			\textbf{\leavevmode{\ref{ss_optim_1}}} & \leavevmode{Optim 1} & \leavevmode{CPU\_8C+GPU} & \leavevmode{day} & \leavevmode{LQR} \\
+			\cline{1-5}
+            \textbf{\leavevmode{\ref{ss_optim2}}} & \leavevmode{Optim 1 + 2} & \leavevmode{CPU\_8C+GPU}  & \leavevmode{day} & \leavevmode{LQR} \\
+			\cline{1-5}
+			\textbf{\leavevmode{\ref{lqg_control}}} & \leavevmode{Optim 1 + 2 + 3}  & \leavevmode{CPU\_8C+GPU} & \leavevmode{day} & \leavevmode{\gls{lqg}*} \\
+			\cline{1-5}
+			 &   & \leavevmode{CPU\_8C+GPU} &  &  \\
+			\textbf{\leavevmode{\ref{mappings}}} & \leavevmode{Optim 1 + 2 + 3}  & \leavevmode{CPU\_8C} & \leavevmode{day} & \leavevmode{\gls{lqg}*} \\
+			 &   & \leavevmode{CPU\_4C} &  & \\
+			 &   & \leavevmode{CPU\_1C} &  &  \\
+			\cline{1-5}
+			 &   & \leavevmode{CPU\_} & \leavevmode{day, night} &  \\
+			\textbf{\leavevmode{\ref{robust}}} & \leavevmode{Optim 1 + 2 + 3}  & \leavevmode{8C+GPU} & \leavevmode{dawn, dusk} & \leavevmode{\gls{lqg}*} \\
+			 &   &  & \leavevmode{fog, snow} &  \\
+			\cline{1-5}
+			 &   & \leavevmode{CPU\_} & \leavevmode{day, night} &  \\
+			\textbf{\leavevmode{\ref{failure}}} & \leavevmode{Optim 1 + 2 + 3}  & \leavevmode{8C+GPU} & \leavevmode{dawn, dusk} & \leavevmode{\gls{lqg}*} \\
+			 &   &  & \leavevmode{fog, snow} &  \\
+			\hline \hline
+		\end{tabular}
+		\begin{tablenotes}[flushleft]
+			\footnotesize			
+			\item{\leavevmode{\textbf{Optim 1:} \gls{isp} approximation settings S0-S8}}
+			\item{\leavevmode{\textbf{Optim 2:} Variable lossy compression \hspace{20pt} \textbf{Platform:} NVIDIA AGX Xavier}}
+			\item{\leavevmode{\textbf{Optim 3:} Approximation-aware control}}
+			\item{\leavevmode{\textbf{Webots Settings:} Sensor images resolution $=$ 720p (with downsampling to 512 $\times$ 256), camera frame rate between 30fps, 60fps and 120fps, depending on the sampling  period  of  controller, initial vehicle position $=$ 15 cm from lane center, lane width $=$ 3.25 m, webots simulation step $=$ 1 ms, vehicle speed $=$ 50 km/hr.}}
+			\item{\leavevmode{\textbf{\gls{lqr}}: \acrlong{lqr}, \textbf{\gls{lqg}}: \acrlong{lqg}}}
+			\item{\leavevmode{* Approximation-aware control}}
+		\end{tablenotes}
+		\begin{tabular}{>{\centering\arraybackslash}p{86mm}}\\
+ 		\hline
+ 		\hline
+ 		\end{tabular}
+	\end{threeparttable}
+	\vspace{-5 pt}
+\end{table}
+%\\[1ex]
+\par \noindent \textbf{Sensitivity and robustness:} For proper in-field deployment of approximate \gls{ibc} systems, a wide range of commonly encountered environmental scenarios are tested in Section~\ref{robust}. It is observed that the choice of approximation is critical and different approximation settings should be chosen for different scenarios to get the best performance (see Fig.~\ref{fig:env_2}, \ref{fig:env_3}). However, the goal is not only to get the best performance per scenario but also to design a robust \gls{ibc} system with a low \gls{fp} as explored in Section~\ref{failure}. We observe that settings S2, S3, S4 and S6 have a low \gls{fp} across all scenarios (see Fig.~\ref{fig:fp}). However, statically choosing S2, S3, S4 or S6 does not give us the best performance and motivates dynamically switching between settings based on the operating scenario (see Fig. \ref{fig:fp_pareto}).
+\par Summing it all up, we observe that choosing S7 for day \& dusk, S3 for night \& fog, S6 for dawn and S0 for snow gives us the best balance between performance and robustness (see Fig. \ref{fig:fp_pareto}). For this solution, we obtain average improvements of 51\% in \gls{qoc}, and 83\% in memory, with the worst-case \gls{fp} (per km) of 9.6 $\times$ 10$^{-6}$\%. Thus, our design approach provides robust approximate \gls{ibc} designs (with \gls{fp} below those of the hardware and communication subsystems) with significant \gls{qoc} and memory improvements.  
+
+\subsection{Overhead of dynamic approximation selection}
+In Sections~\ref{robust} and Section~\ref{failure}, we highlight the benefits of dynamic selection of approximation settings for different environmental scenarios. In this section, we discuss the additional overheads of such an approach. First, we classify the different environmental scenarios using a state-of-the-art \gls{cnn} classifier, ResNet-50 \cite{resnet}. ResNet-50 has a classification accuracy of 94.75\% on the ImageNet 2012 classification dataset that consists of 1000 classes with 1.28 million training images, 50k validation images and 100k test images \cite{resnet}. We choose ResNet-50 pre-trained on ImageNet and train it on our dataset (see Section~\ref{failure}) using transfer learning. On our dataset, it achieves a classification accuracy of 99.72\%. The higher classification accuracy is due to the fewer number of output classes compared to ImageNet (six in this work). ResNet-50 has a runtime penalty of 1.5 ms on the NVIDIA AGX Xavier \cite{resnet_runtime}, which is 6\% of the overall runtime of \gls{lkas} (considering S0). 
+\par The proposed scenario classifier is invoked every frame to perform classification (every 25 ms for S0-S2, every 8.3 ms for S3-S8). But in real driving conditions, the transition between different weather scenarios is less frequent. So, we believe that the frequency at which the scenario classifier is invoked can be relaxed, thus, reducing the overhead of dynamic selection. Investigating this is out of the scope of this work. Moreover, the runtime overhead of the scenario classifier can be reduced by performing latency hiding. The scenario classifier can be scheduled on the DLA in parallel with the \gls{pr} stage to get a lower sensor-to-actuation delay ($\tau$).   
+
+\subsection{Approximations in safety-critical systems}
+We consider a \gls{lkas}, which is a safety-critical system. Approximations are not intuitive solutions in safety-critical systems. But recent efforts like NVIDIA PilotNet \cite{bojarski2016end, bojarski2017explaining} and LaneNet \cite{lanenet} have shown that neural network-based algorithmic approximation approaches can be used for safety-critical systems. In this work, we show that compute- and data-centric approximation approaches can be applied to a safety-critical system like \gls{lkas} when it comes with in-depth analysis and proper evaluation of the system-level \gls{qoc} and \gls{fp}. We show that the quality of the overall system improves despite errors being introduced in the intermediate sub-systems. Additionally, failure probability analysis of the approximate system shows that failure rates are bounded within acceptable limits \cite{fault_tree}.       
+
+\subsection{Generality and modularity}
+{\par \noindent \textbf{Generality: } The proposed work applies to any feedback control system with camera-based sensing. These systems have massive compute workload, which can be reduced by approximating the sensing stage, as shown in this work. In essence, approximations improve the timing and memory simultaneously at the cost of sensor noise. However, this additional sensor noise can be tolerated due to the inherent error resilience of closed-loop \gls{ibc} systems, thus, improving the overall \gls{qoc}. Although the gains reported in this work are application- and platform-specific, the general idea is applicable to other \gls{ibc} systems \cite{bengler2014three} like automatic pedestrian detection, vision-based predictive suspension systems and so on. 
+
+\par \noindent \textbf{Modularity: }This work demonstrates that approximating the compute-intensive sensing stage (\taskS) in an \gls{ibc} system provides significant \gls{qoc} and memory benefits. Computation-skipping is explored in this work, which is one of the potential solutions for approximating \taskS. Other techniques such as \gls{dnn} models can also be explored in future for replacing these compute-intensive sensing stages. They can be applied to replace either the \gls{isp} stage \cite{learning_isp} or the \gls{pr} stage \cite{lanenet} or both. To easily facilitate model changes, we have developed our framework in a modular fashion.  \glspl{dnn} can be approximated through quantization, pruning and other standard \gls{dnn} optimisation techniques \cite{mishra2020survey}. To integrate \gls{dnn}-based approximation in our framework, we just need the execution time of the \gls{dnn} model (in inference mode) on the considered hardware platform/inference engine. This parameter is used for designing approximation-aware control}.

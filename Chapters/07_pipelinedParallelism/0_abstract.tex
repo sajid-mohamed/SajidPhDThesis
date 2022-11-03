@@ -1,0 +1,11 @@
+\blfootnote{The content of this chapter is an adaptation of the following paper:\\ \bibentry{mohamed2021access}.}
+\Gls{ibc} systems have a long sensing delay due to compute-intensive image processing.
+Modern multiprocessor \gls{ibc} implementations consider either parallelisation of the sensing task or pipelining of the control loop to cope with this long delay.
+Chapter \ref{chap:parallelisation} already discusses multiprocessor \gls{ibc} implementations considering parallelisation of the sensing task, and
+Chapter \ref{chap:pipelined} discusses the pipelining of the control loop without parallelising the sensing task.
+The impact of both parallelisation and pipelining together on the \gls{qoc} of \gls{ibc} systems was not explored in the literature prior to this work.
+We present the complete version of the \gls{spade} approach (briefly summarised in Chapter \ref{chap:intro}) for multiprocessor \gls{ibc} implementation, considering both parallelisation and pipelining together. 
+In particular, we address the following problem: For a given platform allocation, what is the optimal degree of pipelining and degree of parallelisation required to maximise the \gls{qoc}?
+The proposed method takes into account image-workload variations, inter-frame dependencies and platform constraints.
+The application is efficiently modelled and analysed using a scenario-aware dataflow graph, and an implementation-aware switched controller is designed that optimises \gls{qoc} and guarantees stability.
+We validate the proposed method using simulations and hardware-in-the-loop experiments, considering the \gls{lkas} already introduced in Chapter \ref{chap:intro}.

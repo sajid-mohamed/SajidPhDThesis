@@ -1,0 +1,45 @@
+\section{Modelling and discretization}\label{sec:ch6_modeling}
+In this chapter, we consider a broad class of systems that can be described via \gls{lpv} models for the predictive control approach. Specifically, this section first describes continuous-time state-space linear models which are typically obtained from first-principles. Next, a discretization scheme is described followed by details on transformation of the linear model to (\gls{io}) form which is more suitable for the proposed control method considering the varying sensor-to-actuator delay.
+\subsection{Continuous-time model with input delay}
+The continuous-time \gls{lpv} model we consider can mathematically be described at time $t$ as
+\begin{subequations}\label{eq:ch6_lpvC}
+\begin{align}
+    \dot x(t) &= \Acont (p) x(t) + \Bcont (p) u(t - \tau)
+    \\
+    y(t) &= \Ccont (p) x(t)
+\end{align}
+\end{subequations}
+where $x \in \mathbb{R}^{n_x}$ denotes the state vector, $y \in \mathbb{R}^{n_y}$ contains measured outputs and $u \in \mathbb{R}^{n_u}$ is the vector of control inputs. Vector $p \in \mathbb{R}^{n_{p}}$ contains the scheduling parameters which determine the model coefficients in matrices $\Acont$, $\Bcont$ and $\Ccont$ as shown in Eq.~\eqref{eq:ch6_lpvC}. 
+The sensor-to-actuator delay is denoted by $\tau$ and $\tau>0$. Continuous-time models are useful for an accurate simulation of the system under study; however, for computer-based control, it is necessary to have a discrete-time model considering sampled signals. 
+\subsection{Discrete-time model}\label{sec:ch6_discmodel}
+\subsubsection{State-space description}
+Based on a \gls{zoh} approximation where we assume the input signal to be constant over each sampling interval, we can use the methods described in~\cite{aastrom2013computer} to obtain the discrete-time \gls{lpv} model
+\begin{multline}\label{eq:ch6_ssd}
+    x(kh+h) = \Phi(p) x(kh) +  \Gamma_0(p,\tau') u(kh-n_{d}h) \\+ \Gamma_1(p,\tau') u(kh-n_{d}h - h)
+\end{multline}
+where $h$ is the sampling period, $k$ is an integer indicating the time step, and
+\begin{subequations}\label{eq:ch6_matexp}
+\begin{align}
+    \Phi(p) &= e^{\Acont (p)\cdot h} \\ 
+    \Gamma_0(p,\tau') &= \int\limits_{\tau'}^{h} e^{\Acont (p)\cdot(h-s)}\text{d}s \\ 
+    \Gamma_1(p,\tau') &= \int\limits_{0}^{\tau'} e^{\Acont (p)\cdot(h-s)}\text{d}s \label{eq:ch6_gam1}
+\end{align}
+\end{subequations}
+such that the total delay $\tau$ can be expressed in multiples of the sampling period as $\tau = n_{d}h+\tau'$, where the remainder $\tau'$ is $0\leq \tau' <h$. In practice, only a numerical approximation of the matrix exponential is used to compute the model matrices in Eq.~\eqref{eq:ch6_matexp}, for which several methods exist. Specifically, for the example discussed in Section~\ref{sec:ch6_results}, we approximate the matrix exponential by using its 12th degree Taylor polynomial.
+
+When some states do not need to be controlled, the size of the control problem may unnecessarily become large especially if the number of output variables is relatively small. This motivates the use of \gls{io} models for control, which also allow an easy incorporation of delay as shown in Sections~\ref{sec:ch6_iomodel}-\ref{sec:ch6_adaptmodel}. In the linear model case, the \gls{io} equations may simply be derived from the equivalent transfer function of the state-space model. Note also that linear models obtained from data-based system identification methods are often parameterized in \gls{io} form. 
+\subsubsection{Input/output difference equations}\label{sec:ch6_iomodel}
+The state-space model~\eqref{eq:ch6_ssd} can be written as the following \gls{io} model
+\begin{multline*}
+    y(k) = \Ccont (p) \left(q\bm{I}- \Phi(p)\right)^{-1} \Gamma_0(p,\tau') u(k-n_d) \\+ \Ccont (p) \left(q\bm{I}- \Phi(p)\right)^{-1}\Gamma_1(p,\tau') u(k-n_d-1)
+\end{multline*}
+where $q$ denotes the forward shift operator such that $qy(k) = y(k+1)$ and $q^{-1}y(k) = y(k-1)$ and for ease of notation we dropped $h$ by assuming the time scale in terms of sampling period. The symbol $\bm{I}$ denotes an identity matrix of appropriate size.
+On simplification of the above difference equations, the multivariable \gls{lpv} model can be rewritten in the noise-free \gls{arx} form as
+\begin{equation}\label{eq:ch6_IOmodel}
+    y(k) = \sum_{j=1}^{n_x} A_j(p) y(k-j) + \sum_{j=1}^{n_x+n_d+1} B_j(p,\tau') u(k-j)
+\end{equation}
+where the coefficient matrices $A_j(p)$ are derived by evaluating the determinant of $\left(q\bm{I}-\Phi(p)\right)$ whereas entries of $B_j(p,\tau')$ are derived from its adjugate matrix, $\Ccont (p)$, $\Gamma_0$ and $\Gamma_1$.
+\subsubsection{Adapting the \gls{io} model with time delay}\label{sec:ch6_adaptmodel}
+Observing~\eqref{eq:ch6_IOmodel}, it is clear that for $j=\{1,\ldots,n_d\}$, $B_j=\bm{0}$, where~$\bm{0}$ is a zero matrix. Therefore, an increase in delay~$n_d$ implies an according zeroing of the foremost input coefficients, 
+without a change in the size of the \gls{mpc} problem as clarified in Section~\ref{sec:ch6_MPC}. This also allows fixing the memory allocation for the model and the control algorithm based on the worst-case delay which can reasonably be assumed to be known.
+For further simplicity in the design and implementation of the controller, we assume $\tau'$ and $h$ to be constant. The delay~$\tau'$ can be set to zero, especially when it varies, by a unit increment in $n_d$ to simplify the model evaluation as~$\Gamma_1$ becomes a zero matrix referring Eq.~\eqref{eq:ch6_gam1}. The influence of this simplification is negligible when $h$ is sufficiently small. 

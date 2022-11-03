@@ -1,0 +1,10 @@
+\blfootnote{The content of this chapter is an adaptation of the following paper:\\ \bibentry{mohamed2020adaptive}.}
+\Gls{ibc} systems have a long sensing delay. 
+The advent of multiprocessor platforms helps to cope with this delay by pipelining of the sensing task.
+However, existing pipelined \gls{ibc} system designs are based on linear time-invariant models and do not consider constraint satisfaction, system nonlinearities, workload variations and/or given inter-frame dependencies, which are crucial for practical implementation.
+A pipelined \gls{ibc} system implementation using a \gls{mpc} approach that can address these limitations making a step forward towards real-life adoption is thus promising.
+We present an adaptive \gls{spade} \gls{mpc} formulation based on linear parameter-varying input/output models for a pipelined implementation of \gls{ibc} systems.
+The proposed method maximizes quality-of-control by taking into account workload variations in the image processing for individual pipes in the sensing pipeline in order to exploit the latest measurements,
+besides explicitly considering given inter-frame dependencies, system nonlinearities and constraints on system variables. The practical benefits are highlighted through simulations using vision-based vehicle lateral control as a case study (already introduced in Chapter \ref{chap:intro}).
+In this chapter, the \gls{spade} approach focuses on pipelining without parallelising the sensing task. 
+Chapter \ref{chap:pipelined_parallelism} focuses on pipelined parallelism.

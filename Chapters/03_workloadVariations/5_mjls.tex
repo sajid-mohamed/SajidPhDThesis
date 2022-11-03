@@ -1,0 +1,70 @@
+In this section, we characterise the workload variations as a \gls{dtmc}. The states of a \gls{dtmc} model the workload scenarios and the transitions model the scenario switching. We aggregate workload scenarios into system scenarios as explained in Section~\ref{sec:ch5_ch5_sys_scenario}, and then recompute transition and steady-state probabilities for the \gls{dtmc}. This results in a \gls{dtmc} with number of states equal to the number of identified system scenarios, with each state representing a system scenario. 
+We assume that the switching between the different control configurations is governed by this \gls{dtmc} and show how the system in \eqref{eq:ch3_contsys} can be re-cast as a \gls{mjls}~\cite{costa2006discrete}. For the sake of simplicity, we illustrate the formulation using only three states in the \gls{dtmc} representing three system scenarios. Note, however, that it is applicable to any number of identified system scenarios (as explained in Section~\ref{sec:ch5_ch5_sys_scenario}).
+
+A Markov chain consists of a tuple $\mathcal{M} = (X, P)$ where $X$ represents the state space, and $P$ represents the one-step transition probability matrix. In our context of system scenarios annotated with sampling period and sensor-to-actuator delay, the state-space of $\mathcal{M}$ is given by $X = \{s_1, s_2, s_3\}$, 
+where $s_i = (h_i,\tau_i), i \in \{1,2,3\}$ represent three system scenarios, and \begin{align}
+P = 
+\begin{bmatrix}
+p_{11} & p_{12} & p_{13} \\
+p_{21} & p_{22} & p_{23} \\
+p_{31} & p_{32} & p_{33} \nonumber
+\end{bmatrix}.
+\end{align}
+Associated with $\mathcal{M}$ is a discrete-time stochastic process $\theta : \Natural \rightarrow X$ such that for all times sampling instances $k \in \Natural$, and states $s_i, s_j \in X$, $i,j \in \{1,2,3\}$, one has:
+\begin{align}
+\mathsf{Prob}(\theta[k+1] = s_j \mid \theta[k] = s_i) = p_{ij}, \nonumber 
+\end{align}
+i.e., $p_{ij}$ represents the probability of transitioning from state $s_i$ to $s_j$. We assume that the initial condition of the stochastic process, i.e., $\theta[0]$, is deterministic. 
+
+Using a zero order sample-and-hold approach, it can be readily shown that Eq.~\eqref{eq:ch3_contsys} can be re-formulated into an \gls{mjls} governed by the following stochastic difference equations:
+\begin{align}
+x[k+1] &= A_{\theta[k]}x[k] + B_{0,\theta[k]}u[k] + B_{1,\theta[k]}u[k-1], \nonumber\\
+y[k] &= \Ccont x[k]
+~\label{eq:mjls}
+\end{align}
+where for each $s_i \in X$, $i \in \{1,2,3\}$: $A_{s_i},\ B_{0,s_i},$ and $B_{1,s_i}$ are computed using Eq.~\ref{eq:ch5_ch5_A_sk}.
+In Eq.~\ref{eq:mjls}, we assume that $u[-1] = 0$ for $k = 0$. We define the new system states $z[k] = \begin{bmatrix}x[k] & u[k-1]\end{bmatrix}^T$ with $z[0] = \begin{bmatrix}x[0] & 0\end{bmatrix}^T$ to obtain a higher-order augmented system as follows:
+\begin{align}
+z[k+1] &= A_{aug,\theta[k]}z[k] + B_{aug,\theta[k]}u[k],\nonumber \\
+y_z[k] &= C_{aug}z[k] \nonumber
+\end{align}
+where for each $s_i \in X, i \in \{1,2,3\}$, $A_{aug,s_i}$  and  $B_{aug,s_i}$ are computed using Eq.~\ref{eq:ch5_ch5_aug} and $C_{aug}=
+\begin{bmatrix}
+\Ccont & 0
+\end{bmatrix}$. 
+\\
+
+\noindent\textbf{Infinite-horizon quadratic optimal controller:}
+Here, we present the control law design for the \gls{mjls} of Eq.~\ref{eq:mjls}. We design a controller to minimize the infinite-horizon cost given by
+
+\begin{equation}
+J(\theta[0], z[0], u[0]) = \sum\limits_{k=0}^{\infty} \mathds{E}[z[k]^TC_{aug}^TC_{aug}z[k] + d_u^2|u[k]|^2],\nonumber
+\end{equation}
+where $d_u \in \Real_{>0}$ represents the input weight and the notation $\Expectation{X}$ represents the expected value of a random variable $X$. 
+
+It is shown in \cite{costa2006discrete} that the solution to the above infinite-horizon optimal-control problem can be obtained by solving the {\it coupled algebraic Riccati (matrix) equations} (CARE) 
+\small
+\begin{align}
+\label{eq:care}
+&\Gamma_{i} = \Aaugi^T\mathcal{E}_{i}(\Gamma)\Aaugi + \Ccont^T\Ccont \nonumber\\
+&- \Aaugi^T\mathcal{E}_i(\Gamma)\Baugi (\Baugi^T\mathcal{E}_i\Baugi)^{-1}\Baugi^T\mathcal{E}_i(\Gamma)\Aaugi \nonumber
+\end{align}
+\normalsize
+ %\vspace{-2em}
+ where
+ \vspace{-2em}
+\begin{align}
+\mathcal{E}_i(\Gamma) = \sum\limits_{j = 0}^{3} p_{ij}\Gamma_j \nonumber
+\end{align}
+where $i \in\{1,2,3\}$ and $\Gamma = \{\Gamma_1,\Gamma_2, \Gamma_3\}$ are the unknown matrices to be solved for. The mean-square stabilizing optimal control law is then given by
+\begin{align}
+u[k] = \Kgain_{\theta[k]}(\Gamma) x[k] + \Fgain_{\theta[k]} \controlRef, \nonumber
+\end{align}
+where 
+\begin{align}
+\Kgain_{\workloadScenario} &= -(\Baugi^T\mathcal{E}_i(\Gamma)\Baugi)^{-1}\Baugi^T\mathcal{E}_i(\Gamma)\Aaugi,\nonumber \\
+\Fgain_{\workloadScenario} &= \frac{1}{C_{aug}(I - \Aaugi - \Kgain_{\workloadScenario}\Baugi))^{-1} \Baugi},\nonumber
+\end{align}
+where $i \in\{1,2,3\}$. It is shown in Theorem A.12 in \cite{costa2006discrete} that the above CARE can be solved by solving a related convex optimization problem.
+
+In the context of \gls{spade}, the control configuration for a workload scenario $\workloadScenario$ is then ($\tau_{\workloadScenario},\ h_{\workloadScenario},\ \Kgain_{\workloadScenario},\ \Fgain_{\workloadScenario}$).

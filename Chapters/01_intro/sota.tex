@@ -1,0 +1,48 @@
+\section{State-of-the-art}
+\label{sec:sota}
+This thesis explores techniques to cope with the long variable sensing delay by considering application-specific \gls{ibc} system characteristics and exploiting the benefits of multiprocessor platforms. Effectively handling the long variable sensing delay helps to optimise \gls{ibc} system performance while guaranteeing \gls{ibc} system stability.
+State-of-the-art methods do not fully exploit the \gls{ibc} system characteristics and advantages of the multiprocessor platforms for optimising the sensing delay. The \gls{ibc} system sensing delay is also variable with a significant degree of variation between the best-case and worst-case delay due to application-specific image-processing workload variations and platform characteristics. A long variable sensing delay degrades system performance and stability. A tight predictable sensing delay is required to optimise the \gls{ibc} system performance and to guarantee the stability of the \gls{ibc} system. Analytical computation of sensing delay is often pessimistic due to image-dependent workload variations or challenging platform timing analysis.
+
+Relevant literature deals with the following questions: 
+\begin{itemize}
+    \item What are the relevant overall design approaches for such embedded control problems? 
+    \item What are the relevant \gls{ibc} system modelling and analysis techniques?
+    \item What are the techniques for \gls{ibc} system design to deal with long delays in a feedback control loop?
+\end{itemize}
+
+\noindent\textbf{Design approaches:} An \gls{ibc} system is often designed based on the \emph{separation-of-concerns} principle between the control theory and embedded systems disciplines~\cite{arzen2000introduction,saidi2018future}.
+Co-design of control and scheduling is another design paradigm explored in the literature~\cite{cervin2003does}.
+The emphasis is on platform-based design methods that take into account platform resource constraints while designing the controller~\cite{arzen2000introduction,goswami2013multirate}.
+Contract-based design~\cite{sangiovanni2012taming} is a platform-based design paradigm for cyber-physical systems where the interactions between control theory and embedded design are defined based on contracts.
+
+From the embedded-systems discipline, a system-scenario-based design approach~\cite{gheorghita2009system} is proposed where different behaviours (scenarios) of an application are explicitly considered to avoid over-dimensioning or sub-optimal performance due to worst-case design. 
+Identifying, characterising and modelling these scenarios and dealing with the runtime scenario transitions are specific for each application and generally not trivial.
+In this thesis, we combine scenario-based and platform-based design methods into a coherent \gls{spade} approach for \gls{ibc} system design and implementation.
+\\[1ex]
+\noindent\textbf{\gls{ibc} system modelling:} Model-based design~\cite{lee1998framework,thiele2000real} approaches focus on designing applications based on abstract models of application and platform such that the implementation is guaranteed to behave with predictable performance. 
+Numerous \gls{moc} are available in literature~\cite{theelen2006scenario,stuijk2010predictable, ChakrabortyKT03, DavisBBL07}. 
+The approaches in this thesis do not depend on a specific \gls{moc}.
+They need a \gls{moc} that can capture the dynamic behaviours (scenarios) of the application, can analyse timing and has support for platform-aware mapping analysis. 
+\\[1ex]
+\noindent\textbf{\gls{ibc} system design - control engineering perspective:}
+The main challenge in designing an \gls{ibc} system is to cope with the long sensing delay.
+Control engineers tackle a long delay using advanced state estimation~\cite{wang2014multirate}, robust design~\cite{kawamura2012robust}, predictive control~\cite{macesanu2014time}, observer-based~\cite{van2018data} methods, and multi-rate
+sampling~\cite{fujimoto2003visual} methods. 
+These methods rely heavily on the system model and are vulnerable to modelling errors with longer delays.
+Also, control engineers typically design an \gls{ibc} system considering the worst-case image workload~\cite{saidi2018future} and do not explicitly consider the platform constraints.
+In literature, workload variations are typically considered only for sequential \gls{ibc} implementation~\cite{fontantelli2013optimal} and not for parallel and pipelined implementations~\cite{medina2019designing},~\cite{krautgartner1998performance}. 
+In~\cite{medina2019implementation}, pipelining is considered along with variable delay.
+However, these approaches do not consider system nonlinearities, i.e., the variations in system dynamics, and constraints imposed on the system variables, which can be crucial when considering a practical implementation.  
+\\[1ex]
+\noindent\textbf{\gls{ibc} system design - embedded systems perspective:}
+Embedded systems engineers aim to reduce processing delay and period by parallel implementations of the algorithms using heterogeneous multiprocessor platforms having specialised hardware such as GPUs~\cite{agrawal2014gpu} and FPGAs~\cite{kestur2012emulating}. 
+Pipelined control~\cite{krautgartner1998performance,medina2019designing} is another approach targeting homogeneous multiprocessor implementations that reduce the effective sampling period without changing the processing delay.
+Inter-frame dependencies, i.e. the data or algorithmic dependencies between consecutive frame processing, e.g. due to video coding~\cite{li2015lagrangian} or visual tracking~\cite{smeulders2013visual}, and resource sharing between pipes, which are crucial aspects for a practical pipelined \gls{ibc} system implementation, are not explicitly considered in the literature.
+Additionally, we observe that an integral approach to pipelined parallelism can provide immense benefits to the \gls{ibc} system design and implementation. However, such an integral approach is lacking in literature. 
+\\[1ex]
+\noindent\textbf{\gls{ibc} system design - approximate computing perspective:}
+Approximate computing is another technique that can help reduce the processing delay by trading off computation accuracy for speed. 
+Approximations reduce the compute workload across algorithm, architecture and circuit levels. Commonly used algorithmic approximations are computation skipping \cite{comp_skip}, precision scaling \cite{precision_scaling} and replacing error-resilient compute-intensive functions with neural networks \cite{nn_invoke}. A learning approach to design \glspl{isp} for new camera systems is proposed in \cite{learning_isp}. At the architecture level, research efforts have focused on both approximating general-purpose processors\cite{ProACt} as well as domain-specific accelerators \cite{sde}. At the circuit level, research efforts focus on manual design techniques for adders and multipliers \cite{approx_maual}, as well as automated methodologies for designing energy-efficient approximate circuits \cite{sde2}.
+
+Approximation benefits in a camera-based biometric security system, using an iris recognition application, is showcased in \cite{8342029}. An approximate smart camera system is introduced in \cite{araha}, using camera resolution scaling, reducing memory refresh rate and computation skipping. An approximate \gls{isp} pipeline tuned for computer-vision algorithms is designed in \cite{buckler}, by skipping selected \gls{isp} stages. An algorithm-hardware co-designed system is showcased in \cite{euphrates}. 
+However, these approximation techniques do not consider a closed-loop feedback system. Approximation decisions in a closed-loop system have quality implications at a later point in time. Optimising a system while accounting for the temporal approximate behaviour is not explored in any of the mentioned work.

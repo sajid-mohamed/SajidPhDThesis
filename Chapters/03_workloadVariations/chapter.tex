@@ -1,0 +1,39 @@
+%% CDC 2019
+% *****************************************************
+
+\input{0_abstract.tex}
+
+\section{Background and contributions}
+\input{1_introduction.tex}
+
+\section{Embedded image-based control}~\label{sec:ch3_ProblemSetting}
+\input{2_embeddedIBC.tex}
+\section{\texorpdfstring{\Gls{ibc}}{IBC} model, mapping and configurations}~\label{sec:ch3_sys_model}
+\input{3_systemModelling.tex}
+\section{Control problem and \texorpdfstring{\gls{qoc}}{QoC} metrics}~\label{sec:ch3_control_problem}
+\input{4_controlProblem.tex}
+\section{Control design}~\label{sec:ch3_control_design}
+The control design technique we choose decides the controller feedback and feedforward gains $\Kgain$ and $\Fgain$ for the control law defined in Section~\ref{sec:ch3_control law}. To design a controller, we assume that the sampling period $h_i$ and sensor-to-actuator delay $\tau_i$ are known.
+\subsection{\Gls{mjls} synthesis}~\label{sec:ch3_MJLS}
+\input{5_mjls.tex}
+\subsection{\Gls{lqr} design with worst-case workload}~\label{sec:ch3_LQR}
+We consider the system scenario for the worst-case workload $s_{wc}$ having the worst-case period and delay $(h_{wc},\tau_{wc})$ (one of the scenarios as explained in Section~\ref{sec:ch5_ch5_sys_scenario}) for designing the control law. The worst-case system scenario for the \gls{mjls} formulation is same as $s_{wc}$. We design a controller to minimize the following cost function
+\begin{align}
+J(u) = \sum\limits_{k=0}^{\infty} z[k]^Td_sC_{aug}^TC_{aug}z[k] + d_u^2|u[k]|^2,\nonumber
+\end{align}
+where $d_u,d_s \in \Real_{>0}$ represents the input weight and the state weights respectively. The weights are optimized for the considered \gls{qoc} metric. Typically, $d_u\ll d_s$ so as to optimise for control performance and $d_u\gg d_s$ to optimise for control energy (see Section~\ref{sec:ch3_observations}).
+\subsection{Switched linear control design}~\label{sec:ch3_SPADe}
+The switched linear control design we consider is explained in Section \ref{sec:ch5_embeddedIBC}. This is the basic principle used in the controller designs presented in Chapters \ref{chap:parallelisation} and \ref{chap:pipelined_parallelism}. Frequently occurring workload scenarios are characterised using the the PERT distribution. A set of optimal system scenarios are identified. \gls{lqr} controllers are designed for each of these scenarios $s_s$ with $(h_s,\tau_s)$ that minimises the cost function given in Section~\ref{sec:ch3_LQR}. Further, the stability of this switched system is analysed by deriving \glspl{lmi} that check for the existence of a \gls{cqlf}.
+
+\section{Results, observations and guidelines}~\label{sec:ch3_Results}
+\input{6_results.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%Conclusion%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusions}~\label{sec:ch3_Conclusion}
+We presented a \gls{mjls} formulation for controller synthesis for image-based control systems considering workload variations and platform implementation constraints.
+Within the scope of \gls{spade}, we further compare this method with two relevant control paradigms: \gls{lqr} and switched linear control system design. 
+We also provide design guidelines on the control technique to use for given constraints on the system knowledge, the \gls{qoc}, and the implementation.
+
+The synthesis method assumes that the workload variations can be characterised as a \gls{dtmc}. A \gls{dtmc} is sensitive to the data used for its modelling. As a future work, sensitivity analysis of the \gls{dtmc} towards the \gls{qoc} needs to be evaluated. 
+Further, the current design guidelines are provided based on multiple empirical simulation runs of the controller for varying workloads, number of scenarios, camera frame rate and given platform allocation. A formal mathematical analysis would strengthen our design guidelines. The challenge for a formal analysis of the control design is that we do not know the exact sequence of occurrence of the workload variations apriori.

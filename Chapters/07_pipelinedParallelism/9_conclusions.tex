@@ -1,0 +1,8 @@
+\section{Conclusions}
+\label{sec:ch7_conclusion}
+We have presented the \gls{spade} flow for \gls{ibc} system implementation that considers both pipelining and parallelism in an integral fashion to improve \gls{qoc} of multiprocessor \gls{ibc} implementations. 
+We propose model transformations for modelling, analyzing and mapping the \gls{ibc} system.
+We explain how the \gls{spade} approach can explicitly take into account inter-frame dependencies in pipelining, image workload variations, application parallelism, resource sharing, camera frame rate and a given platform allocation. 
+We validate the \gls{spade} approach using Matlab simulations considering the predictable \gls{compsoc} platform and using hardware-in-the-loop experiments with an NVIDIA AGX Xavier platform.
+We observe that considering pipelined parallelism has inherent advantages over considering pipelining and parallelism separately. Exploiting parallelism should be prioritized over pipelining. But pipelined parallelism is better when an application has a limited degree of parallelism or when the inter-frame dependencies are significant.
+Future work may involve exploring the optimal degree of pipelining and parallelism when multiple \gls{ibc} systems are sharing a platform.

@@ -1,0 +1,7 @@
+\section{Conclusions}\label{sec:ch6_conclusions}
+We presented a pipelined, multiprocessor, adaptive \gls{mpc} formulation for \gls{ibc} systems while considering workload variations, inter-frame dependencies, system nonlinearities and constraints on system variables.
+The proposed approach aims to reduce the gap between current state-of-the-art multiprocessor \gls{ibc} approaches and practical control requirements while optimizing quality-of-control and making a step forward towards real-life adoption. 
+First results based on simulations suggest that by using the proposed method one can address practical implementation challenges not directly dealt with in the past approaches, which either did not consider variations in sensing delay, or inter-frame dependencies, presence of nonlinearities in system dynamics, or practical constraints on system variables. 
+The results presented in this chapter assume that each pipe in the pipeline is mapped to a single (unique) processing core and there is no resource sharing between the individual pipes.
+In addition, the allocated processing cores are assumed to be homogeneous so that mapping a single pipe to any of the cores would result in the same throughput and latency.
+These assumptions will be relaxed in Chapter \ref{chap:pipelined_parallelism}.
