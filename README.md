@@ -1,12 +1,3 @@
-# SRC
+This is the source of my PhD Thesis.
 
-This directory contains the sources of the document.
-
-## Figures
-
-Figures used should be part of this folder, or in a subfolder.
-
-
-## Build system
-
-If needed, please include a makefile to build the document.
+Run 'main.tex' to compile and generate the pdf.
